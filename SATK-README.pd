@@ -1,0 +1,80 @@
+#N canvas 1992 -159 1104 753 12;
+#X text 11 114 The Sound Art Toolkit is a collection of modules that
+provide fundamental \, high-level building-blocks for creating sound
+within Pure Data (Pd). I have always found the workflow of coding languages
+to promote unique sound productions that lent themselves towards Sound
+Art (as opposed to traditional composition or production that DAWs
+and even modular synthesis can sometimes direct an artist towards).
+However \, even in the more user-friendly coding languages of MaxMSP
+or Pd \, I have found in my own experince working with those new to
+Sound Art \, the learning curve of these languages still served as
+a road-block \, particularly for those without computer coding background.
+The SATK is far from the first package for Pd or Max to provide high-level
+modules for sound exploration \, but I believe it to be more accessible
+than current packages that I have come across in my own explorations
+\, and therefore I find it very well suited for those new to the field.
+All of the modules have been built using only Pd-Vanilla (the core
+Pd code that comes with the Pd distribution from Miller Puckette) \,
+so all inlets and outlets communicate through standard Pd messaging.
+This makes the toolkit easily extended with Pd code \, allowing beginners
+to gradually develop Pd coding skills using the toolkit as the basis
+for unique code. So while the kit is geared towards beginners \, with
+the inclusion of Pd code \, I have been able to develop pieces that
+are on par with works I have developed from the ground up with code.
+, f 153;
+#X text 11 323 The most straightforward way to use the SATK is to open
+the file "satk-main.pd". This is a blank Pd document that you can build
+your project in. The benefit of using this file is that all of the
+SATK modules (and any dependency files) can all be automatically seen
+by Pd \, and so no search-path configurations need to be performed.
+To save your project \, perform a "Save As..." \, rename it \, and
+save it in the SATK folder., f 153;
+#X text 11 502 If you wish to use the SATK as a set of modules that
+can be called upon by Pd \, you must put the SATK folder in a place
+that is included in Pd's search path. You then must use the [declare]
+object with argument "-path satk" and Pd *should* see the objects inside
+\, but (as outlined below) this has yet to be tested., f 153;
+#X text 11 623 The most straightforward way to use the SATK is to open
+the file "satk-main.pd". This is a blank Pd document that you can build
+your project in. The benefit of using this file is that all of the
+SATK modules (and any dependency files) can all be automatically seen
+by Pd \, and so no search-path configurations need to be performed.
+To save your project \, perform a "Save As..." \, rename it \, and
+save it in the SATK folder., f 153;
+#X text 11 683 To insert a SATK module into the blank canvas \, insert
+a new object using the Put menu (Put -> Object) \, and type the name
+of the module (which is the same as the name of the Pd files in the
+SATK folder \, without the ".pd"). So \, to insert the Audio File module
+\, type in "satk.audiofile~" (without the quotes). The module names
+are not case-sensitive \, but they are character sensistive \, so make
+sure to include periods \, underscores \, or tildes (~) whenever a
+module has those characters in their name (for those new to Max/Pd
+\, the tilde indicates an audio processing module \, vs a data processing
+module)., f 153;
+#X obj 1 -1 cnv 15 1097 31 empty empty Sound\\\ Art\\\ Toolkit\\\ (SATK)
+20 12 0 14 #e0e0e0 #404040 0;
+#X obj 1 79 cnv 8 1100 8 empty empty About 20 15 0 14 #e0e0e0 #404040
+0;
+#X obj 1 286 cnv 8 1100 8 empty empty Using\\\ The\\\ SATK 20 15 0
+14 #e0e0e0 #404040 0;
+#X obj 1 593 cnv 8 1100 8 empty empty Disclaimer\\\ and\\\ Things\\\ To\\\ Do
+20 15 0 14 #e0e0e0 #404040 0;
+#X text 11 562 If you are brand new to Pure Data \, you may want to
+open the file "satk.intro-to.pd" to learn the basics of patching in
+Pure Data (forthcoming)., f 153;
+#X text 11 34 (c) 2021 Travis Houldcroft / thouldcroft@gmail.com /
+travishouldcroft.com, f 105;
+#X text 11 383 To insert a SATK module into the blank canvas \, insert
+a new object using the Put menu (Put -> Object) \, and type the name
+of the module (which is the same as the name of the Pd files in the
+SATK folder \, without the ".pd"). So \, to insert the Audio File module
+\, type in "satk.util.audiofile~" (without the quotes). The module
+names are not case-sensitive \, but they are character sensistive \,
+so make sure to include periods \, underscores \, or tildes (~) whenever
+a module has those characters in their name (for those new to Max/Pd
+\, the tilde indicates an audio processing module \, vs a data processing
+module)., f 153;
+#X text 11 54 Ver 0.4, f 105;
+#X text 11 462 The SATK is beginning to include help files \, but there
+are not help files for every object. Hopefully they will be ready in
+the future., f 153;
