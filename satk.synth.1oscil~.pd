@@ -1,4 +1,4 @@
-#N canvas 1918 -273 828 764 10;
+#N canvas 1825 -180 828 764 10;
 #X declare -path tdh.lib;
 #X obj 115 140 vradio 15 0 0 8 empty empty Shape -5 -8 0 10 #fcfcfc
 #000000 #000000 0;
@@ -2857,7 +2857,6 @@ in [message( objects get saved to the patch., f 84;
 #X text 32 -342 (sig);
 #X text 1 -252 tdhlib (tdh.util.declick \, tdh.synth.oscil-tri~ \,
 tdh.synth.oscil-saw~ \, tdh.synth.oscil-pulse~), f 94;
-#X text 1 -232 cyclone (cyclone/pink~);
 #X text 1 -272 DEPENDENCIES:;
 #X text 1 -202 TO DO:;
 #X text 82 -342 Signal output (linear amplitude 0.0-1.0);
@@ -2880,10 +2879,12 @@ to DSP code, f 71;
 #X obj 228 601 outlet sync;
 #X text 255 322 frq sync;
 #X text 286 101 Vol;
+#X text -1 -233 Contains the abstraction [pink~] from iemlib (c) Thomas
+Musil 2000 - 2005, f 74;
 #X connect 0 0 7 0;
 #X connect 1 0 14 0;
 #X connect 2 0 5 0;
-#X connect 2 0 85 0;
+#X connect 2 0 84 0;
 #X connect 3 0 4 0;
 #X connect 8 0 16 2;
 #X connect 9 0 16 1;
