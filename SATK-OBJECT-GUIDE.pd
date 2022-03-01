@@ -1,43 +1,43 @@
-#N canvas 2874 -469 1126 1397 12;
-#X text 11 -196 (c) 2021 Travis Houldcroft / thouldcroft@gmail.com
-/ houldcroftt@easternct.edu / travishouldcroft.com, f 105;
-#X text 11 -176 Ver 0.3;
-#X obj 1 -231 cnv 15 1097 31 empty empty SOUND\\\ ART\\\ TOOLKIT\\\ MODULE\\\ GUIDE
+#N canvas 2874 -473 1126 1395 12;
+#X obj 1 -221 cnv 15 1097 31 empty empty SOUND\\\ ART\\\ TOOLKIT\\\ MODULE\\\ GUIDE
 20 12 0 14 #e0e0e0 #404040 0;
-#X obj 1 -151 cnv 8 1100 8 empty empty Input-Signals 20 15 0 14 #e0e0e0
+#X obj 1 -141 cnv 8 1100 8 empty empty Input-Signals 20 15 0 14 #e0e0e0
 #404040 0;
-#X obj 1 466 cnv 8 1100 8 empty empty Signal\\\ Processors 20 15 0
+#X obj 1 476 cnv 8 1100 8 empty empty Signal\\\ Processors 20 15 0
 14 #e0e0e0 #404040 0;
-#X obj 1 733 cnv 8 1100 8 empty empty Utilities 20 15 0 14 #e0e0e0
+#X obj 1 743 cnv 8 1100 8 empty empty Utilities 20 15 0 14 #e0e0e0
 #404040 0;
-#X obj 53 514 tdh.satk.mmfilt~;
-#X text 1097 1918 _;
-#X text 15 406 tdh.satk.3oscil~;
-#X text 502 1217 tdh.satk.adsr~;
-#X text 524 400 tdh.satk.audiofile~;
-#X text 611 34 tdh.satk.2opfm~;
-#X text 339 667 tdh.satk.delay~;
-#X text 51 670 tdh.satk.mmfilt~;
-#X text 883 1338 tdh.satk.scope~;
-#X text 300 1027 tdh.satk.seq;
-#X text 634 1655 tdh.satk.spectrograph~;
-#X obj 14 -112 satk.synth.3oscil~;
-#X obj 614 -110 satk.synth.2op.fm~;
-#X obj 524 80 satk.util.audiofile~;
-#X obj 339 512 satk.sigproc.delay~;
-#X obj 33 761 satk.seq.sequence;
-#X obj 429 1082 satk.util.adsr~;
-#X obj 40 1086 satk.util.channelstripMono~;
-#X obj 172 1058 satk.util.channelstripStereo~;
-#X text 171 1337 satk.util.channelstripStereo~;
-#X text 38 1368 satk.util.channelstripMono~;
-#X obj 38 1680 satk.util.audioout~;
-#X text 34 1642 satk.util.record~;
-#X obj 37 1445 satk.util.record~;
-#X obj 833 1113 satk.util.scope~;
-#X obj 379 1401 satk.util.spectrograph~;
-#X obj 806 802 satk.seq.gesture;
-#X text 881 1037 satk.seq.gesture;
-#X obj 303 1686 satk.util.audioin~;
-#X text 299 1840 satk.util.audioIn~;
-#X text 38 1794 satk.util.audioOut~;
+#X text 1097 1928 _;
+#X text 611 44 tdh.satk.2opfm~;
+#X obj 492 511 satk.sigproc.delay~;
+#X obj 33 771 satk.seq.sequence;
+#X obj 429 1092 satk.util.adsr~;
+#X obj 40 1096 satk.util.channelstripMono~;
+#X obj 172 1068 satk.util.channelstripStereo~;
+#X text 171 1347 satk.util.channelstripStereo~;
+#X text 38 1378 satk.util.channelstripMono~;
+#X obj 38 1690 satk.util.audioout~;
+#X text 34 1652 satk.util.record~;
+#X obj 37 1455 satk.util.record~;
+#X obj 833 1123 satk.util.scope~;
+#X obj 379 1411 satk.util.spectrograph~;
+#X obj 806 812 satk.seq.gesture;
+#X text 881 1047 satk.seq.gesture;
+#X obj 303 1696 satk.util.audioin~;
+#X text 299 1850 satk.util.audioIn~;
+#X text 38 1804 satk.util.audioOut~;
+#X obj 53 524 satk.sigproc.mmfilt~;
+#X text 51 679 satk.sigproc.mmfilt~;
+#X text 492 666 satk.sigproc.delay~;
+#X text 15 416 satk.synth.3oscil~;
+#X text 524 410 satk.util.audiofile~;
+#X text 300 1037 satk.seq.seq;
+#X text 502 1227 satk.util.adsr~;
+#X text 634 1665 satk.util.spectrograph~;
+#X text 883 1348 satk.util.scope~;
+#X text 11 -188 (c) 2022 Travis Houldcroft / thouldcroft@gmail.com
+/ houldcroftt@easternct.edu / travishouldcroft.com, f 105;
+#X text 11 -166 Ver 0.4;
+#X obj 21 -102 satk.synth.3oscil~;
+#X obj 614 -100 satk.synth.2op.fm~;
+#X obj 499 87 satk.util.audiofile~;
