@@ -1,43 +1,76 @@
-#N canvas 2874 -473 1126 1395 12;
-#X obj 1 -221 cnv 15 1097 31 empty empty SOUND\\\ ART\\\ TOOLKIT\\\ MODULE\\\ GUIDE
+#N canvas 2074 -209 1126 1035 12;
+#X obj 1 -361 cnv 15 1097 31 empty empty SOUND\\\ ART\\\ TOOLKIT\\\ MODULE\\\ GUIDE
 20 12 0 14 #e0e0e0 #404040 0;
-#X obj 1 -141 cnv 8 1100 8 empty empty Input-Signals 20 15 0 14 #e0e0e0
+#X obj 1 -281 cnv 8 1100 8 empty empty Input-Signals 20 15 0 14 #e0e0e0
 #404040 0;
-#X obj 1 476 cnv 8 1100 8 empty empty Signal\\\ Processors 20 15 0
+#X obj 1 736 cnv 8 1100 8 empty empty Signal\\\ Processors 20 15 0
 14 #e0e0e0 #404040 0;
-#X obj 1 743 cnv 8 1100 8 empty empty Utilities 20 15 0 14 #e0e0e0
+#X obj 1 1713 cnv 8 1100 8 empty empty Utilities 20 15 0 14 #e0e0e0
 #404040 0;
-#X text 1097 1928 _;
-#X text 611 44 tdh.satk.2opfm~;
-#X obj 492 511 satk.sigproc.delay~;
-#X obj 33 771 satk.seq.sequence;
-#X obj 429 1092 satk.util.adsr~;
-#X obj 40 1096 satk.util.channelstripMono~;
-#X obj 172 1068 satk.util.channelstripStereo~;
-#X text 171 1347 satk.util.channelstripStereo~;
-#X text 38 1378 satk.util.channelstripMono~;
-#X obj 38 1690 satk.util.audioout~;
-#X text 34 1652 satk.util.record~;
-#X obj 37 1455 satk.util.record~;
-#X obj 833 1123 satk.util.scope~;
-#X obj 379 1411 satk.util.spectrograph~;
-#X obj 806 812 satk.seq.gesture;
-#X text 881 1047 satk.seq.gesture;
-#X obj 303 1696 satk.util.audioin~;
-#X text 299 1850 satk.util.audioIn~;
-#X text 38 1804 satk.util.audioOut~;
-#X obj 53 524 satk.sigproc.mmfilt~;
-#X text 51 679 satk.sigproc.mmfilt~;
-#X text 492 666 satk.sigproc.delay~;
-#X text 15 416 satk.synth.3oscil~;
-#X text 524 410 satk.util.audiofile~;
-#X text 300 1037 satk.seq.seq;
-#X text 502 1227 satk.util.adsr~;
-#X text 634 1665 satk.util.spectrograph~;
-#X text 883 1348 satk.util.scope~;
-#X text 11 -188 (c) 2022 Travis Houldcroft / thouldcroft@gmail.com
+#X text 1097 2318 _;
+#X obj 362 826 satk.sigproc.delay~;
+#X obj 374 1318 satk.seq.sequence;
+#X obj 27 1263 satk.util.adsr~;
+#X obj 673 843 satk.util.channelstripMono~;
+#X obj 805 815 satk.util.channelstripStereo~;
+#X text 804 1094 satk.util.channelstripStereo~;
+#X text 671 1125 satk.util.channelstripMono~;
+#X obj 287 2091 satk.util.audioout~;
+#X text 14 2282 satk.util.record~;
+#X obj 17 2085 satk.util.record~;
+#X obj 787 1799 satk.util.scope~;
+#X obj 13 1799 satk.util.spectrograph~;
+#X obj 28 1428 satk.seq.gesture;
+#X text 103 1663 satk.seq.gesture;
+#X text 287 2205 satk.util.audioOut~;
+#X obj 43 824 satk.sigproc.mmfilt~;
+#X text 41 979 satk.sigproc.mmfilt~;
+#X text 362 981 satk.sigproc.delay~;
+#X text 22 704 satk.synth.3oscil~;
+#X text 211 127 satk.util.audiofile~;
+#X text 641 1624 satk.seq.seq;
+#X text 100 1398 satk.util.adsr~;
+#X text 268 2053 satk.util.spectrograph~;
+#X text 837 2024 satk.util.scope~;
+#X text 11 -328 (c) 2022 Travis Houldcroft / thouldcroft@gmail.com
 / houldcroftt@easternct.edu / travishouldcroft.com, f 105;
-#X text 11 -166 Ver 0.4;
-#X obj 21 -102 satk.synth.3oscil~;
-#X obj 614 -100 satk.synth.2op.fm~;
-#X obj 499 87 satk.util.audiofile~;
+#X obj 21 198 satk.synth.3oscil~;
+#X obj 495 196 satk.synth.2op.fm~;
+#X obj 211 -176 satk.util.audiofile~;
+#X obj 22 -184 satk.util.audioin~;
+#X obj 23 -198 cnv 5 1000 2 empty empty External\ Input\ and\ Soundfile\ Playback
+0 -6 0 14 #dfdfdf #404040 0;
+#X text 20 -257 Sound experiments need to start with \, well \, sound!
+That sound typically comes from one of 3 places - live microphone input
+(or input from another piece of software) \, the playback of a pre-recorded
+sound as a sound file \, or synthesized sound., f 151;
+#X text 20 -27 satk.util.audioIn~;
+#X obj 23 172 cnv 5 1000 2 empty empty Sound\ Synthesizers 0 -6 0 14
+#dfdfdf #404040 0;
+#X obj 1 1153 cnv 8 1100 8 empty empty Parameter\ Control\ and\ Sequencing
+20 15 0 14 #e0e0e0 #404040 0;
+#X text 17 762 A common approach to developing interesting sounds is
+to process that sound in some capacity. This ranges rom creating echo
+(delay) or modifying the spectrum (Multi-Mode Filter) \, to adjusting
+the volume (Channel Strip). While these options are relatively standard
+tools in a sound studio or software \, the modules can be combined
+and creatively routed here to produce more experimental results!,
+f 153;
+#X text 21 1180 Some interesting results can be produced \, when the
+parameters of the modules are changed as the sounds are heard. This
+can range from adjusting the volume of a signal while it plays (i.e.
+fading) \, to adjusting delay time. With so many so many parameters
+\, actively shaping the sounds is difficult when you only have 1 mouse
+cursor to control the parameters. Fortunately \, all parameter modules
+in the SATK can be externally controlled. You can control a single
+parameter with the ADSR module \, you can control multiple modules
+with the Gesture module \, and you can sequence a series of module
+parameters using the Sequence module., f 153;
+#X text 23 1741 Sometimes you need tools that \, while they may not
+significantly change the sound you are producing \, can be extremely
+helpful in developing your sounds. Spectrograph and Oscilloscopes help
+you see the spectral and waveform aspects of your sound \, the Sound
+Recorder allows you to document your sounds \, and the Audio Output
+module sends audio out to your soundcard and speakers., f 153;
+#X text 493 312 satk.synth.2opfm~;
+#X text 11 -306 Ver 0.5;

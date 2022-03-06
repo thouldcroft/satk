@@ -1,4 +1,4 @@
-#N canvas 1440 40 1390 853 10;
+#N canvas 1440 -27 1390 853 10;
 #X obj -249 328 lop~;
 #X obj -207 328 hip~;
 #X obj -166 328 bp~;
@@ -124,8 +124,8 @@ Ariza's abstration "mgGate4~" \, a part of the Martingale Library (https://code.
 #X obj 29 95 change;
 #X obj 496 55 inlet drywet;
 #X text 326 100 D/W;
-#X obj 101 204 cnv 15 248 27 empty empty Delay 20 12 0 14 #e0e0e0 #404040
-0;
+#X obj 101 204 cnv 15 248 27 empty empty Multi-Mode\ Filter 20 12 0
+14 #e0e0e0 #404040 0;
 #X connect 0 0 39 0;
 #X connect 1 0 39 0;
 #X connect 2 0 39 0;
