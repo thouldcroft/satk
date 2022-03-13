@@ -1,4 +1,4 @@
-#N canvas 2211 -308 1012 923 10;
+#N canvas 2206 -473 1012 965 10;
 #X obj 342 494 noise~;
 #X text 173 546 Change cut-off frequency-->;
 #X text 6 566 Adjust Q (aka bandwidth - for bandpass filter only) -->
@@ -25,7 +25,7 @@ and original signal is controlled by the DRY/WET control \, where 0
 is the original signal (dry) \, and 1 is only the filtered signal (wet).
 , f 163;
 #X obj 342 515 satk.sigproc.mmfilt~;
-#X obj 201 629 satk.util.spectrograph~;
+#X obj 201 699 satk.util.spectrograph~;
 #X text 17 48 Travis Houldcroft || travishouldcroft.com;
 #X obj 3 1 cnv 15 1000 40 empty \$0-helpPatchTitleBar satk.sigproc.mmfilt~
 9 20 0 18 #580050 #dce4fc 0;

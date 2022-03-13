@@ -1,38 +1,14 @@
-#N canvas 1560 -208 721 1029 10;
-#X obj 13 561 tdh.synth.3oscil~;
-#X text 51 410 From tdh.lib: tdh.util.declick \, tdh.synth.oscil-tri~
-\, tdh.synth.oscil-saw~ \, tdh.synth.oscial-pulse~, f 101;
-#X text 19 390 Requires the following objects or libraries:;
-#X text 49 430 Cyclone library;
-#X floatatom 13 460 5 0 0 0 - - - 0;
-#X floatatom 49 480 5 0 0 0 - - - 0;
-#X floatatom 86 500 5 0 0 0 - - - 0;
-#X floatatom 123 520 5 0 0 0 - - - 0;
-#X text 53 460 Osc1 Waveshape (Set with integers 0-7);
-#X text 89 480 Osc1 Octave (Using standard octave designations 1-9)
+#N canvas 2184 -327 722 855 10;
+#X floatatom 13 393 5 0 0 0 - - - 0;
+#X floatatom 49 413 5 0 0 0 - - - 0;
+#X floatatom 86 433 5 0 0 0 - - - 0;
+#X floatatom 123 453 5 0 0 0 - - - 0;
+#X text 53 393 Osc1 Waveshape (Set with integers 0-7);
+#X text 89 413 Osc1 Octave (Using standard octave designations 1-9)
 ;
-#X text 126 500 Osc1 Frequency in Pitch Class (0-11 in FLOATING POINT)
+#X text 126 433 Osc1 Frequency in Pitch Class (0-11 in FLOATING POINT)
 ;
-#X text 173 520 Osc1 Linear Gain (0-1 in FLOATING POINT);
-#X text 33 410 •;
-#X text 33 430 •;
-#X text 17 -72 Travis Houldcroft || travishouldcroft.com;
-#X obj 3 -119 cnv 15 700 40 empty \$0-helpPatchTitleBar tdh.synth.3oscil~
-9 20 0 18 #a0a0a0 #202020 0;
-#X obj 2 -7 cnv 2 700 3 empty \$0-helpPatchSecLabelInlets Inlets 20
-15 0 16 #a0a0a0 #202020 0;
-#X obj 3 263 cnv 2 700 3 empty \$0-helpPatchSecLabelOutlets Outlets
-20 15 0 16 #a0a0a0 #202020 0;
-#X obj 3 363 cnv 2 700 3 empty \$0-helpPatchSecLabelNotes Notes 20
-15 0 16 #a0a0a0 #202020 0;
-#X obj 3 453 cnv 1 700 1 empty \$0-helpPatchSecDivider empty 9 20 0
-18 #a0a0a0 #202020 0;
-#X obj 3 313 cnv 2 700 3 empty \$0-helpPatchSecLabelArgs Arguments
-20 15 0 16 #a0a0a0 #202020 0;
-#X obj 3 -53 cnv 1 700 1 empty \$0-helpPatchSecDivider empty 9 20 0
-18 #a0a0a0 #202020 0;
-#X obj 24 293 cnv 14 14 14 empty empty 0 4 8 0 12 #606060 #dcdcdc 0
-;
+#X text 173 453 Osc1 Linear Gain (0-1 in FLOATING POINT);
 #N canvas 1838 -134 1149 842 help-audio-out 0;
 #X obj 32 30 inlet~;
 #X obj 192 30 inlet~;
@@ -173,60 +149,111 @@ Mute 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X connect 49 0 50 0;
 #X connect 51 0 9 0;
 #X coords 0 -1 1 1 127 110 2 250 100;
-#X restore 436 953 pd help-audio-out;
-#X obj 25 19 cnv 14 18 14 empty empty 0 2 8 0 12 #606060 #dcdcdc 0
+#X restore 436 886 pd help-audio-out;
+#X obj 85 130 cnv 14 18 14 empty empty 0 2 8 0 12 #606060 #dcdcdc 0
 ;
-#X obj 25 79 cnv 14 18 14 empty empty 3 2 8 0 12 #606060 #dcdcdc 0
+#X obj 85 190 cnv 14 18 14 empty empty 3 2 8 0 12 #606060 #dcdcdc 0
 ;
-#X obj 25 39 cnv 14 18 14 empty empty 1 2 8 0 12 #606060 #dcdcdc 0
+#X obj 85 150 cnv 14 18 14 empty empty 1 2 8 0 12 #606060 #dcdcdc 0
 ;
-#X obj 25 59 cnv 14 18 14 empty empty 2 2 8 0 12 #606060 #dcdcdc 0
+#X obj 85 170 cnv 14 18 14 empty empty 2 2 8 0 12 #606060 #dcdcdc 0
 ;
-#X obj 25 99 cnv 14 18 14 empty empty 4 2 8 0 12 #606060 #dcdcdc 0
+#X obj 85 210 cnv 14 18 14 empty empty 4 2 8 0 12 #606060 #dcdcdc 0
 ;
-#X obj 25 139 cnv 14 18 14 empty empty 6 2 8 0 12 #606060 #dcdcdc 0
-;
-#X obj 25 119 cnv 14 18 14 empty empty 5 2 8 0 12 #606060 #dcdcdc 0
-;
-#X obj 25 159 cnv 14 18 14 empty empty 7 2 8 0 12 #606060 #dcdcdc 0
-;
-#X obj 25 219 cnv 14 18 14 empty empty 10 2 8 0 12 #606060 #dcdcdc
+#X obj 415 130 cnv 14 18 14 empty empty 6 2 8 0 12 #606060 #dcdcdc
 0;
-#X obj 25 179 cnv 14 18 14 empty empty 8 2 8 0 12 #606060 #dcdcdc 0
+#X obj 85 230 cnv 14 18 14 empty empty 5 2 8 0 12 #606060 #dcdcdc 0
 ;
-#X obj 25 199 cnv 14 18 14 empty empty 9 2 8 0 12 #606060 #dcdcdc 0
-;
-#X obj 25 239 cnv 14 18 14 empty empty 11 2 8 0 12 #606060 #dcdcdc
+#X obj 415 150 cnv 14 18 14 empty empty 7 2 8 0 12 #606060 #dcdcdc
 0;
-#X text 47 17 (float);
-#X text 97 17 Oscillator 1 Shape (0-7);
-#X text 47 37 (float);
-#X text 97 37 Oscillator 1 Octave (1-9);
-#X text 47 57 (float);
-#X text 97 57 Oscillator 1 Frequency (Hz);
-#X text 97 77 Oscillator 1 Volume (0.0-1.0);
-#X text 47 77 (float);
-#X text 47 97 (float);
-#X text 47 117 (float);
-#X text 47 137 (float);
-#X text 47 157 (float);
-#X text 47 177 (float);
-#X text 47 197 (float);
-#X text 47 217 (float);
-#X text 47 237 (float);
-#X text 97 97 Oscillator 2 Shape (0-7);
-#X text 97 117 Oscillator 2 Octave (1-9);
-#X text 97 137 Oscillator 2 Frequency (Hz);
-#X text 97 157 Oscillator 2 Volume (0.0-1.0);
-#X text 97 177 Oscillator 3 Shape (0-7);
-#X text 97 197 Oscillator 3 Octave (1-9);
-#X text 97 217 Oscillator 3 Frequency (Hz);
-#X text 97 237 Oscillator 3 Volume (0.0-1.0);
-#X text 22 339 None;
-#X text 48 292 (sig);
-#X text 98 292 Signal output (linear amplitude 0.0-1.0);
-#N canvas 2342 321 621 281 help-init 0;
-#N canvas 2229 -169 1435 1029 cnv-set 0;
+#X obj 415 210 cnv 14 18 14 empty empty 10 2 8 0 12 #606060 #dcdcdc
+0;
+#X obj 415 170 cnv 14 18 14 empty empty 8 2 8 0 12 #606060 #dcdcdc
+0;
+#X obj 415 190 cnv 14 18 14 empty empty 9 2 8 0 12 #606060 #dcdcdc
+0;
+#X obj 415 230 cnv 14 18 14 empty empty 11 2 8 0 12 #606060 #dcdcdc
+0;
+#X text 107 128 (float);
+#X text 157 128 Oscillator 1 Shape (0-7);
+#X text 107 148 (float);
+#X text 157 148 Oscillator 1 Octave (1-9);
+#X text 107 168 (float);
+#X text 157 188 Oscillator 1 Volume (0.0-1.0);
+#X text 107 188 (float);
+#X text 107 208 (float);
+#X text 107 228 (float);
+#X text 437 128 (float);
+#X text 437 148 (float);
+#X text 437 168 (float);
+#X text 437 188 (float);
+#X text 437 208 (float);
+#X text 437 228 (float);
+#X text 157 208 Oscillator 2 Shape (0-7);
+#X text 157 228 Oscillator 2 Octave (1-9);
+#X text 487 148 Oscillator 2 Volume (0.0-1.0);
+#X text 487 168 Oscillator 3 Shape (0-7);
+#X text 487 188 Oscillator 3 Octave (1-9);
+#X text 487 228 Oscillator 3 Volume (0.0-1.0);
+#X text 168 260 (sig);
+#X text 218 260 Signal output (linear amplitude 0.0-1.0);
+#N canvas 1408 87 491 306 osc2_3_externalControls 0;
+#X floatatom 91 98 5 0 0 0 - - - 0;
+#X floatatom 128 118 5 0 0 0 - - - 0;
+#X floatatom 165 138 5 0 0 0 - - - 0;
+#X floatatom 201 163 5 0 0 1 Osc3\ Waveshape - - 0;
+#X floatatom 238 182 5 0 0 0 - - - 0;
+#X floatatom 275 202 5 0 0 0 - - - 0;
+#X floatatom 312 222 5 0 0 0 - - - 0;
+#X text 278 182 Osc3 Octave;
+#X text 308 202 Osc3 Freq/PC;
+#X text 128 98 Osc2 Octave;
+#X text 168 118 Osc2 Freq/PC;
+#X text 198 138 Osc2 Gain;
+#X obj 91 148 outlet;
+#X obj 128 168 outlet;
+#X obj 165 188 outlet;
+#X obj 201 213 outlet;
+#X obj 238 232 outlet;
+#X obj 275 252 outlet;
+#X obj 312 272 outlet;
+#X text 346 222 Osc3 Gain;
+#X floatatom 55 80 5 0 0 0 - - - 0;
+#X text 95 80 Osc2 Waveshape;
+#X obj 55 120 outlet;
+#X text 38 22 these took up too much room in the help-patch \, so they
+reside here for external control demonstration;
+#X connect 0 0 12 0;
+#X connect 1 0 13 0;
+#X connect 2 0 14 0;
+#X connect 3 0 15 0;
+#X connect 4 0 16 0;
+#X connect 5 0 17 0;
+#X connect 6 0 18 0;
+#X connect 20 0 22 0;
+#X restore 159 473 pd osc2_3_externalControls;
+#X f 44;
+#X text 636 1092 _;
+#X obj 13 1004 throw~ \$0-3oscHelp;
+#X obj 436 865 catch~ \$0-3oscHelp;
+#X obj 13 494 satk.synth.3oscil~;
+#X text 17 48 Travis Houldcroft || travishouldcroft.com;
+#X obj 3 1 cnv 15 700 40 empty \$0-helpPatchTitleBar satk.synth.3oscil~
+9 20 0 18 #580050 #dce4fc 0;
+#X obj 2 123 cnv 2 700 3 empty \$0-helpPatchSecLabelInlets Inlets 20
+15 0 16 #a0a0a0 #202020 0;
+#X obj 3 253 cnv 2 700 3 empty \$0-helpPatchSecLabelOutlets Outlets
+20 15 0 16 #a0a0a0 #202020 0;
+#X obj 3 325 cnv 2 700 3 empty \$0-helpPatchSecLabelNotes Notes 20
+15 0 16 #a0a0a0 #202020 0;
+#X obj 3 387 cnv 1 700 1 empty \$0-helpPatchSecDivider empty 9 20 0
+18 #a0a0a0 #202020 0;
+#X obj 3 293 cnv 2 700 3 empty \$0-helpPatchSecLabelArgs Arguments
+20 15 0 16 #a0a0a0 #202020 0;
+#X obj 3 77 cnv 1 700 1 empty \$0-helpPatchSecDivider empty 9 20 0
+18 #a0a0a0 #202020 0;
+#N canvas 1440 319 621 281 help-init 0;
+#N canvas 1813 -209 1435 1029 cnv-set 0;
 #N canvas 1440 23 349 258 canvas-ctrl 0;
 #X obj 291 1 inlet;
 #N canvas 248 270 1089 459 graph 0;
@@ -313,7 +340,7 @@ Mute 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 700 40 empty \$0-test_canvas tdh.synth.3oscil~
+#X obj 738 322 cnv 2 700 40 empty \$0-test_canvas satk.synth.3oscil~
 20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
@@ -531,9 +558,6 @@ and pasted for easy initializing formatting)., f 89;
 #X connect 2 0 1 0;
 #X restore 343 355 pd canvas-ctrl;
 #X text 142 332 \$0-helpPatchTitleBar;
-#X msg 343 319 doll 1 \, rec helpPatchTitleBar \, size 15 \, visw 501
-\, vish 40 \, lblfon 0 \, lblsz 18 \, lblx 9 \, lbly 20 \, bgclr 1
-\, lblclr 12, f 123;
 #X msg 438 572 symbol Inlets;
 #X msg 343 549 doll 1 \, rec helpPatchSecLabelInlets \, size 2 \, visw
 501 \, vish 3 \, lblfon 0 \, lblsz 16 \, lblx 20 \, lbly 15 \, bgclr
@@ -642,7 +666,7 @@ bgclr 1 \, lblclr 12, f 123;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 700 40 empty \$0-test_canvas tdh.synth.3oscil~
+#X obj 738 322 cnv 2 700 40 empty \$0-test_canvas satk.synth.3oscil~
 20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
@@ -945,7 +969,7 @@ and pasted for easy initializing formatting)., f 89;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 700 40 empty \$0-test_canvas tdh.synth.3oscil~
+#X obj 738 322 cnv 2 700 40 empty \$0-test_canvas satk.synth.3oscil~
 20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
@@ -1248,7 +1272,7 @@ and pasted for easy initializing formatting)., f 89;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 700 40 empty \$0-test_canvas tdh.synth.3oscil~
+#X obj 738 322 cnv 2 700 40 empty \$0-test_canvas satk.synth.3oscil~
 20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
@@ -1551,7 +1575,7 @@ and pasted for easy initializing formatting)., f 89;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 700 40 empty \$0-test_canvas tdh.synth.3oscil~
+#X obj 738 322 cnv 2 700 40 empty \$0-test_canvas satk.synth.3oscil~
 20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
@@ -1854,7 +1878,7 @@ and pasted for easy initializing formatting)., f 89;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 700 40 empty \$0-test_canvas tdh.synth.3oscil~
+#X obj 738 322 cnv 2 700 40 empty \$0-test_canvas satk.synth.3oscil~
 20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
@@ -2204,37 +2228,40 @@ canbas name has "\$0-" at the start of its receive name., f 123;
 with a message, f 72;
 #X obj 244 155 cnv 5 5 5 empty empty ⟵ -3 3 0 30 #fcfcfc #9c00fc
 0;
-#X connect 2 0 0 0;
-#X connect 3 0 16 1;
-#X connect 4 0 16 0;
-#X connect 5 0 15 0;
-#X connect 6 0 17 0;
-#X connect 7 0 17 1;
-#X connect 9 0 18 1;
-#X connect 10 0 18 0;
-#X connect 12 0 19 0;
-#X connect 13 0 19 1;
-#X connect 21 0 28 0;
-#X connect 22 0 24 0;
-#X connect 24 0 25 0;
-#X connect 25 0 36 0;
-#X connect 28 0 0 1;
-#X connect 34 0 2 0;
-#X connect 35 0 5 0;
-#X connect 37 0 0 0;
+#X msg 343 318 doll 1 \, rec helpPatchTitleBar \, size 15 \, visw 701
+\, vish 40 \, lblfon 0 \, lblsz 18 \, lblx 9 \, lbly 20 \, bgclr 29
+\, lblclr 8, f 123;
+#X connect 2 0 15 1;
+#X connect 3 0 15 0;
+#X connect 4 0 14 0;
+#X connect 5 0 16 0;
+#X connect 6 0 16 1;
+#X connect 8 0 17 1;
+#X connect 9 0 17 0;
+#X connect 11 0 18 0;
+#X connect 12 0 18 1;
+#X connect 20 0 27 0;
+#X connect 21 0 23 0;
+#X connect 23 0 24 0;
+#X connect 24 0 35 0;
+#X connect 27 0 0 1;
+#X connect 33 0 59 0;
+#X connect 34 0 4 0;
+#X connect 36 0 0 0;
+#X connect 37 0 14 0;
 #X connect 38 0 15 0;
-#X connect 39 0 16 0;
-#X connect 40 0 4 0;
-#X connect 40 0 3 0;
-#X connect 41 0 17 0;
-#X connect 42 0 6 0;
-#X connect 42 0 7 0;
-#X connect 43 0 18 0;
-#X connect 44 0 10 0;
-#X connect 44 0 9 0;
-#X connect 45 0 19 0;
-#X connect 46 0 12 0;
-#X connect 46 0 13 0;
+#X connect 39 0 3 0;
+#X connect 39 0 2 0;
+#X connect 40 0 16 0;
+#X connect 41 0 5 0;
+#X connect 41 0 6 0;
+#X connect 42 0 17 0;
+#X connect 43 0 9 0;
+#X connect 43 0 8 0;
+#X connect 44 0 18 0;
+#X connect 45 0 11 0;
+#X connect 45 0 12 0;
+#X connect 59 0 0 0;
 #X restore 191 233 pd cnv-set;
 #X f 34;
 #X obj 3 15 cnv 5 5 5 empty empty | 0 0 0 14 #fcfcfc #404040 0;
@@ -2253,67 +2280,56 @@ in [message( objects get saved to the patch., f 84;
 #X text 16 4 This subpatch (and nested subpatches) helps set the uniform
 titles and graphics for ABSTRACTIONS., f 84;
 #X msg 426 179 700;
-#X msg 191 177 symbol tdh.synth.3oscil~;
+#X msg 191 177 symbol satk.synth.3oscil~;
 #X connect 2 0 3 0;
 #X connect 3 0 11 0;
 #X connect 3 0 10 0;
 #X connect 10 0 0 1;
 #X connect 11 0 0 0;
-#X restore 623 -74 pd help-init;
-#X text 19 -40 A 3 oscillator synth voice \, akin to the MiniMoog.
-Has GUI control of waveshape \, octave \, frequency \, and volume \,
-plus inlets for external control of all parameters., f 111;
-#N canvas 1408 87 491 306 osc2_3_externalControls 0;
-#X floatatom 91 98 5 0 0 0 - - - 0;
-#X floatatom 128 118 5 0 0 0 - - - 0;
-#X floatatom 165 138 5 0 0 0 - - - 0;
-#X floatatom 201 163 5 0 0 1 Osc3\ Waveshape - - 0;
-#X floatatom 238 182 5 0 0 0 - - - 0;
-#X floatatom 275 202 5 0 0 0 - - - 0;
-#X floatatom 312 222 5 0 0 0 - - - 0;
-#X text 278 182 Osc3 Octave;
-#X text 308 202 Osc3 Freq/PC;
-#X text 128 98 Osc2 Octave;
-#X text 168 118 Osc2 Freq/PC;
-#X text 198 138 Osc2 Gain;
-#X obj 91 148 outlet;
-#X obj 128 168 outlet;
-#X obj 165 188 outlet;
-#X obj 201 213 outlet;
-#X obj 238 232 outlet;
-#X obj 275 252 outlet;
-#X obj 312 272 outlet;
-#X text 346 222 Osc3 Gain;
-#X floatatom 55 80 5 0 0 0 - - - 0;
-#X text 95 80 Osc2 Waveshape;
-#X obj 55 120 outlet;
-#X text 38 22 these took up too much room in the help-patch \, so they
-reside here for external control demonstration;
-#X connect 0 0 12 0;
-#X connect 1 0 13 0;
-#X connect 2 0 14 0;
-#X connect 3 0 15 0;
-#X connect 4 0 16 0;
-#X connect 5 0 17 0;
-#X connect 6 0 18 0;
-#X connect 20 0 22 0;
-#X restore 159 540 pd osc2_3_externalControls;
-#X f 44;
-#X text 656 1081 _;
-#X obj 13 1071 throw~ \$0-3oscHelp;
-#X obj 436 932 catch~ \$0-3oscHelp;
-#X connect 0 0 67 0;
-#X connect 4 0 0 0;
-#X connect 5 0 0 1;
-#X connect 6 0 0 2;
-#X connect 7 0 0 3;
-#X connect 65 0 0 4;
-#X connect 65 1 0 5;
-#X connect 65 2 0 6;
-#X connect 65 3 0 7;
-#X connect 65 4 0 8;
-#X connect 65 5 0 9;
-#X connect 65 6 0 10;
-#X connect 65 7 0 11;
-#X connect 68 0 23 0;
-#X connect 68 0 23 1;
+#X restore 620 49 pd help-init;
+#X obj 548 4 cnv 8 150 32 empty empty SATK 14 8 0 14 #dfdfdf #131255
+0;
+#X obj 548 21 cnv 8 150 16 empty empty Sound\\\ Art\\\ Tool-Kit 14
+8 0 10 #dfdfdf #131255 0;
+#X text 141 332 Requires the following libraries:;
+#X obj 145 260 cnv 14 18 14 empty empty 0 2 8 0 12 #606060 #dcdcdc
+0;
+#X text 487 128 Oscillator 2 Frequency (PC);
+#X text 487 208 Oscillator 3 Frequency (PC);
+#X text 141 300 None;
+#X text 408 332 Revision History;
+#X text 163 347 • tdh.lib;
+#X text 161 364 • Cyclone;
+#X text 19 90 A bank of 3 oscillators akin to the oscillator and mixer
+sections of the Moog MiniMoog, f 92;
+#X text 157 168 Oscillator 1 Freq. as pitch class 0-11;
+#X obj 470 404 cnv 15 200 320 empty empty empty 20 12 0 14 #dfdfdf
+#404040 0;
+#X text 480 407 satk.synth.3oscil~ is a bank of 3 oscillators similar
+to the Moog MiniMoog's oscillator section. Each oscillator has independent
+waveshape \, octave \, frequency \, and gain designation \, or \, the
+3 oscillators can sync to oscillator., f 29;
+#X text 480 517 Each oscillator's waveshape \, octave \, frequency
+and gain can be defined by external messages., f 29;
+#X text 480 577 The frequency inlet for each oscillator doesn't take
+frequency indication in Hertz \, but pitch class values from 0-11.
+While the frequency inlet is specified in these integer values \, these
+inlets accept floating point values allowing you to specify frequencies
+outside of CMN & 12 tone-equal-temperment., f 29;
+#X text 428 363 • 211227 - ver 0.2;
+#X text 428 347 • 210930 - ver 0.1;
+#X connect 0 0 48 0;
+#X connect 1 0 48 1;
+#X connect 2 0 48 2;
+#X connect 3 0 48 3;
+#X connect 44 0 48 4;
+#X connect 44 1 48 5;
+#X connect 44 2 48 6;
+#X connect 44 3 48 7;
+#X connect 44 4 48 8;
+#X connect 44 5 48 9;
+#X connect 44 6 48 10;
+#X connect 44 7 48 11;
+#X connect 47 0 8 0;
+#X connect 47 0 8 1;
+#X connect 48 0 46 0;
