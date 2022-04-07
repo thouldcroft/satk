@@ -1,117 +1,104 @@
-#N canvas 2728 -371 806 855 10;
-#X obj 57 492 bng 15 250 50 0 empty empty Trigger\\\ all\\\ gestures
+#N canvas 2382 -432 882 928 10;
+#X obj 65 550 bng 15 250 50 0 empty empty Trigger\\\ all\\\ gestures
 17 7 0 10 #fcfcfc #000000 #000000;
-#X floatatom 57 828 5 0 0 0 - - - 0;
-#X floatatom 141 828 5 0 0 0 - - - 0;
-#X floatatom 225 828 5 0 0 0 - - - 0;
-#X floatatom 310 828 5 0 0 0 - - - 0;
-#X obj 99 510 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
-#X text 15 437 All inlets for each gesture also accept the symbols
-"delay" \, "start" \, "end" \, & "dur" followed by a float value to
-set the respective parameter for each gesture. This allows external
-setting of values \, particularly useful for paramter initialization.
-The trigger message "bang" can also sent within the same message box
-(as depicted below)., f 96;
-#X obj 162 534 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#X floatatom 65 886 5 0 0 0 - - - 0;
+#X floatatom 134 886 5 0 0 0 - - - 0;
+#X floatatom 206 886 5 0 0 0 - - - 0;
+#X floatatom 277 886 5 0 0 0 - - - 0;
+#X obj 114 568 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 225 553 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#X obj 185 592 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 289 572 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#X obj 256 611 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X text 436 533 Gesture 2 trigger and parameters;
-#X text 504 554 Gesture 3 trigger and parameters;
-#X text 566 573 Gesture 4 trigger and parameters;
-#X text 363 511 Trigger gesture 1 or set parameters;
-#X text 388 642 Parameters can be set and gesture can be triggered
-within a single message., f 26;
-#N canvas 2321 337 583 235 init 0;
+#X obj 320 630 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X text 509 591 Gesture 2 trigger and parameters;
+#X text 577 612 Gesture 3 trigger and parameters;
+#X text 649 631 Gesture 4 trigger and parameters;
+#X text 428 569 Trigger gesture 1 or set parameters;
+#X text 709 653 Parameters can be set and gesture can be triggered
+within a single message., f 17;
+#N canvas 3051 -253 583 235 init 0;
 #X obj 9 189 outlet;
 #X obj 72 189 outlet;
 #X obj 135 189 outlet;
 #X obj 199 189 outlet;
 #X obj 16 14 loadbang;
-#X msg 9 69 delay 0 \, start 0 \, end 100 \, dur 5000;
 #X msg 72 99 delay 5000 \, start 100 \, end 200 \, dur 5000;
 #X msg 135 130 delay 10000 \, start 200 \, end 300 \, dur 5000;
 #X msg 199 159 delay 15000 \, start 300 \, end 400 \, dur 5000;
+#X msg 9 69 delay 0 \, start 0 \, end 100 \, dur 5000 \, chain 1;
+#X connect 4 0 8 0;
 #X connect 4 0 5 0;
 #X connect 4 0 6 0;
 #X connect 4 0 7 0;
-#X connect 4 0 8 0;
-#X connect 5 0 0 0;
-#X connect 6 0 1 0;
-#X connect 7 0 2 0;
-#X connect 8 0 3 0;
-#X restore 6 565 pd init;
+#X connect 5 0 1 0;
+#X connect 6 0 2 0;
+#X connect 7 0 3 0;
+#X connect 8 0 0 0;
+#X restore 14 623 pd init;
 #X f 5;
-#X msg 328 622 delay 500 \, start 8000 \, end 8900 \, dur 7000 \, bang
+#X msg 396 650 delay 500 \, start 8000 \, end 8900 \, dur 7000 \, bang
 ;
-#X text 363 828 Gesture values;
-#X msg 120 510 delay 10 \, start 100 \, end 200 \, dur 1500;
-#X msg 183 532 delay 3000 \, start 200 \, end 300 \, dur 8521;
-#X msg 246 553 delay 6000 \, start 300 \, end 400 \, dur 985;
-#X msg 310 572 delay 9000 \, start 400 \, end 500 \, dur 2200;
-#X obj 125 121 cnv 14 18 14 empty empty 0 2 8 0 12 #606060 #dcdcdc
+#X text 11 877 Gesture values, f 8;
+#X obj 133 124 cnv 14 18 14 empty empty 0 2 8 0 12 #606060 #dcdcdc
 0;
-#X obj 125 186 cnv 14 18 14 empty empty 3 2 8 0 12 #606060 #dcdcdc
+#X obj 133 216 cnv 14 18 14 empty empty 3 2 8 0 12 #606060 #dcdcdc
 0;
-#X obj 125 141 cnv 14 18 14 empty empty 1 2 8 0 12 #606060 #dcdcdc
+#X obj 133 144 cnv 14 18 14 empty empty 1 2 8 0 12 #606060 #dcdcdc
 0;
-#X obj 125 166 cnv 14 18 14 empty empty 2 2 8 0 12 #606060 #dcdcdc
+#X obj 133 196 cnv 14 18 14 empty empty 2 2 8 0 12 #606060 #dcdcdc
 0;
-#X obj 125 236 cnv 14 18 14 empty empty 0 2 8 0 12 #606060 #dcdcdc
+#X obj 133 266 cnv 14 18 14 empty empty 0 2 8 0 12 #606060 #dcdcdc
 0;
-#X obj 125 296 cnv 14 18 14 empty empty 3 2 8 0 12 #606060 #dcdcdc
+#X obj 133 326 cnv 14 18 14 empty empty 3 2 8 0 12 #606060 #dcdcdc
 0;
-#X obj 125 256 cnv 14 18 14 empty empty 1 2 8 0 12 #606060 #dcdcdc
+#X obj 133 286 cnv 14 18 14 empty empty 1 2 8 0 12 #606060 #dcdcdc
 0;
-#X obj 125 276 cnv 14 18 14 empty empty 2 2 8 0 12 #606060 #dcdcdc
+#X obj 133 306 cnv 14 18 14 empty empty 2 2 8 0 12 #606060 #dcdcdc
 0;
-#X obj 125 206 cnv 14 18 14 empty empty 4 2 8 0 12 #606060 #dcdcdc
+#X obj 133 236 cnv 14 18 14 empty empty 4 2 8 0 12 #606060 #dcdcdc
 0;
-#X text 147 120 (bang);
-#X text 197 120 Trigger all gestures simultaneously;
-#X text 147 140 (bang/message);
-#X text 147 165 (bang/message);
-#X text 147 185 (bang/message);
-#X text 147 205 (bang/message);
-#X text 247 140 "Bang" triggers gesture 1 \, a message of "delay" \,
-"start" \, "end" \, or "dur" followed by a float value sets the respective
-value for each parameter of the gesture., f 91;
-#X text 147 235 (float);
-#X text 147 255 (float);
-#X text 147 275 (float);
-#X text 147 295 (float);
-#X text 128 323 None;
-#X text 125 367 Dependencies: None;
-#X text 247 165 "Bang" triggers gesture 2 \, messages set parameters
+#X text 155 123 (bang);
+#X text 205 123 Trigger all gestures simultaneously;
+#X text 155 143 (bang/message);
+#X text 155 195 (bang/message);
+#X text 155 215 (bang/message);
+#X text 155 235 (bang/message);
+#X text 155 265 (float);
+#X text 155 285 (float);
+#X text 155 305 (float);
+#X text 155 325 (float);
+#X text 136 353 None;
+#X text 133 397 Dependencies: None;
+#X text 255 195 "Bang" triggers gesture 2 \, messages set parameters
 same as inlet 1 for gesture 2, f 80;
-#X text 207 235 Gesture 1 as a linear ramp of float values;
-#X text 207 255 Gesture 2 as a linear ramp of float values;
-#X text 207 275 Gesture 3 as a linear ramp of float values;
-#X text 207 295 Gesture 4 as a linear ramp of float values;
-#X text 247 185 "Bang" triggers gesture 3 \, messages set parameters
+#X text 215 265 Gesture 1 as a linear ramp of float values;
+#X text 215 285 Gesture 2 as a linear ramp of float values;
+#X text 215 305 Gesture 3 as a linear ramp of float values;
+#X text 215 325 Gesture 4 as a linear ramp of float values;
+#X text 255 215 "Bang" triggers gesture 3 \, messages set parameters
 same as inlet 1 for gesture 2, f 80;
-#X text 247 205 "Bang" triggers gesture 4 \, messages set parameters
+#X text 255 235 "Bang" triggers gesture 4 \, messages set parameters
 same as inlet 1 for gesture 2, f 80;
-#X text 19 87 A module to send ramps of values in order to generate
+#X text 27 90 A module to send ramps of values in order to generate
 sonic gestures, f 77;
-#X obj 57 592 satk.seq.gesture;
-#X text 17 50 Travis Houldcroft || travishouldcroft.com;
-#X obj 3 1 cnv 15 800 40 empty \$0-helpPatchTitleBar satk.seq.gesture
+#X obj 65 650 satk.seq.gesture;
+#X text 25 53 Travis Houldcroft || travishouldcroft.com;
+#X obj 11 4 cnv 15 860 40 empty \$0-helpPatchTitleBar satk.seq.gesture
 9 20 0 18 #580050 #dce4fc 0;
-#X obj 2 113 cnv 2 800 3 empty \$0-helpPatchSecLabelInlets Inlets 20
-15 0 16 #a0a0a0 #202020 0;
-#X obj 3 228 cnv 2 800 3 empty \$0-helpPatchSecLabelOutlets Outlets
+#X obj 10 116 cnv 2 860 3 empty \$0-helpPatchSecLabelInlets Inlets
 20 15 0 16 #a0a0a0 #202020 0;
-#X obj 3 360 cnv 2 800 3 empty \$0-helpPatchSecLabelNotes Notes 20
-15 0 16 #a0a0a0 #202020 0;
-#X obj 3 393 cnv 1 800 1 empty \$0-helpPatchSecDivider empty 9 20 0
-18 #a0a0a0 #202020 0;
-#X obj 3 315 cnv 2 800 3 empty \$0-helpPatchSecLabelArgs Arguments
+#X obj 11 258 cnv 2 860 3 empty \$0-helpPatchSecLabelOutlets Outlets
 20 15 0 16 #a0a0a0 #202020 0;
-#X obj 3 77 cnv 1 800 1 empty \$0-helpPatchSecDivider empty 9 20 0
+#X obj 11 390 cnv 2 860 3 empty \$0-helpPatchSecLabelNotes Notes 20
+15 0 16 #a0a0a0 #202020 0;
+#X obj 11 423 cnv 1 860 1 empty \$0-helpPatchSecDivider empty 9 20
+0 18 #a0a0a0 #202020 0;
+#X obj 11 345 cnv 2 860 3 empty \$0-helpPatchSecLabelArgs Arguments
+20 15 0 16 #a0a0a0 #202020 0;
+#X obj 11 80 cnv 1 860 1 empty \$0-helpPatchSecDivider empty 9 20 0
 18 #a0a0a0 #202020 0;
 #N canvas 2413 319 621 281 help-init 0;
 #N canvas 1813 -209 1435 1029 cnv-set 0;
@@ -201,7 +188,7 @@ sonic gestures, f 77;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 800 40 empty \$0-test_canvas satk.seq.gesture
+#X obj 738 322 cnv 2 860 40 empty \$0-test_canvas satk.seq.gesture
 20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
@@ -527,7 +514,7 @@ bgclr 1 \, lblclr 12, f 123;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 800 40 empty \$0-test_canvas satk.seq.gesture
+#X obj 738 322 cnv 2 860 40 empty \$0-test_canvas satk.seq.gesture
 20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
@@ -830,7 +817,7 @@ and pasted for easy initializing formatting)., f 89;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 800 40 empty \$0-test_canvas satk.seq.gesture
+#X obj 738 322 cnv 2 860 40 empty \$0-test_canvas satk.seq.gesture
 20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
@@ -1133,7 +1120,7 @@ and pasted for easy initializing formatting)., f 89;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 800 40 empty \$0-test_canvas satk.seq.gesture
+#X obj 738 322 cnv 2 860 40 empty \$0-test_canvas satk.seq.gesture
 20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
@@ -1436,7 +1423,7 @@ and pasted for easy initializing formatting)., f 89;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 800 40 empty \$0-test_canvas satk.seq.gesture
+#X obj 738 322 cnv 2 860 40 empty \$0-test_canvas satk.seq.gesture
 20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
@@ -1739,7 +1726,7 @@ and pasted for easy initializing formatting)., f 89;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 800 40 empty \$0-test_canvas satk.seq.gesture
+#X obj 738 322 cnv 2 860 40 empty \$0-test_canvas satk.seq.gesture
 20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
@@ -2140,38 +2127,79 @@ in [message( objects get saved to the patch., f 84;
 #X text 486 168 EDIT HERE to change patch WIDTH, f 12;
 #X text 16 4 This subpatch (and nested subpatches) helps set the uniform
 titles and graphics for ABSTRACTIONS., f 84;
-#X msg 426 179 800;
 #X msg 191 177 symbol satk.seq.gesture;
+#X msg 426 178 860;
 #X connect 2 0 3 0;
-#X connect 3 0 11 0;
 #X connect 3 0 10 0;
-#X connect 10 0 0 1;
-#X connect 11 0 0 0;
-#X restore 720 49 pd help-init;
-#X obj 648 4 cnv 8 150 32 empty empty SATK 14 8 0 14 #dfdfdf #131255
+#X connect 3 0 11 0;
+#X connect 10 0 0 0;
+#X connect 11 0 0 1;
+#X restore 788 52 pd help-init;
+#X obj 716 7 cnv 8 150 32 empty empty SATK 14 8 0 14 #dfdfdf #131255
 0;
-#X obj 648 21 cnv 8 150 16 empty empty Sound\\\ Art\\\ Tool-Kit 14
+#X obj 716 24 cnv 8 150 16 empty empty Sound\\\ Art\\\ Tool-Kit 14
 8 0 10 #dfdfdf #131255 0;
-#X text 15 396 [satk.seq.gesture] is a tool for sequencing and automating
+#X obj 347 887 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X text 368 883 Sends out a [bang( when a gesture has "Chain" enabled
+and that gesture is triggered, f 29;
+#X msg 135 568 delay 10 \, start 100 \, end 200 \, dur 1500 \, chain
+0;
+#X msg 206 590 delay 3000 \, start 200 \, end 300 \, dur 8521 \, chain
+1;
+#X msg 277 611 delay 6000 \, start 300 \, end 400 \, dur 985 \, chain
+1;
+#X msg 341 630 delay 9000 \, start 400 \, end 500 \, dur 2200;
+#X msg 435 721 delay 1000;
+#X text 255 143 "Bang" triggers gesture 1 \, a message of "delay" or
+"dur" followed by a float value in milliseconds sets the respective
+value for those parameters \, a message of "start" or "end" followed
+by a floating point value sets those parameters \, and a message of
+"chain" followed by a "1" sets the chain function for that gesture
+ON \, "0" turns it off., f 91;
+#X msg 425 741 start 200;
+#X msg 405 761 end 500;
+#X msg 385 781 dur 10000;
+#X msg 365 801 chain 1;
+#X text 406 697 Messages can be sent individually as well;
+#X text 687 652 <-;
+#X text 23 487 All inlets for each gesture also accepts the symbols
+"delay" \, "start" \, "end" \, & "dur" followed by a float value to
+set the respective parameter for each gesture. The symbol "chain" followed
+by a 1 or a 0 turns the chain function on or off. This allows external
+setting of values \, particularly useful for paramter initialization.
+The trigger message "bang" can also sent within the same message box
+(as depicted below)., f 141;
+#X text 23 426 [satk.seq.gesture] is a tool for sequencing and automating
 gestures \, in the form of streams of linear floating point data. The
 gestures can be triggered simultaneously or individually \, via trigger
 inlets or GUI. A sequence can be created through the use of the delay
-fields., f 96;
-#X connect 0 0 52 0;
-#X connect 5 0 52 1;
-#X connect 7 0 52 2;
-#X connect 8 0 52 3;
-#X connect 9 0 52 4;
-#X connect 15 0 52 1;
-#X connect 15 1 52 2;
-#X connect 15 2 52 3;
-#X connect 15 3 52 4;
-#X connect 16 0 52 4;
-#X connect 18 0 52 1;
-#X connect 19 0 52 2;
-#X connect 20 0 52 3;
-#X connect 21 0 52 4;
-#X connect 52 0 1 0;
-#X connect 52 1 2 0;
-#X connect 52 2 3 0;
-#X connect 52 3 4 0;
+fields. A chain outlet and parameter is also available \, allowing
+the triggering of a gesture to link with the inlet of another [satk.seq.gesture]
+module \, which allows you to chain multiple modules together. The
+gesture that causes the chain output is defined by the chain toggle
+aligned with the other parameters., f 141;
+#X connect 0 0 46 0;
+#X connect 5 0 46 1;
+#X connect 6 0 46 2;
+#X connect 7 0 46 3;
+#X connect 8 0 46 4;
+#X connect 14 0 46 1;
+#X connect 14 1 46 2;
+#X connect 14 2 46 3;
+#X connect 14 3 46 4;
+#X connect 15 0 46 4;
+#X connect 46 0 1 0;
+#X connect 46 1 2 0;
+#X connect 46 2 3 0;
+#X connect 46 3 4 0;
+#X connect 46 4 58 0;
+#X connect 60 0 46 1;
+#X connect 61 0 46 2;
+#X connect 62 0 46 3;
+#X connect 63 0 46 4;
+#X connect 64 0 46 4;
+#X connect 66 0 46 4;
+#X connect 67 0 46 4;
+#X connect 68 0 46 4;
+#X connect 69 0 46 4;

@@ -1,36 +1,30 @@
 #N canvas 1825 -180 828 764 10;
-#X declare -path tdh.lib;
-#X obj 115 140 vradio 15 0 0 8 empty empty Shape -5 -8 0 10 #fcfcfc
+#X obj 116 144 vradio 15 0 0 8 empty empty Shape -5 -8 0 10 #fcfcfc
 #000000 #000000 0;
-#X obj 276 144 vsl 15 128 0.01 1 1 0 empty empty Vol -1 -9 0 10 #ffffff
+#X obj 277 148 vsl 15 128 0.01 1 1 0 empty empty Vol -1 -9 0 10 #ffffff
 #000000 #000000 0 1;
-#X obj 228 143 vsl 15 128 0 11 0 0 empty empty Freq -5 -9 0 10 #fcfcfc
+#X obj 229 147 vsl 15 128 0 11 0 0 empty empty Freq -5 -9 0 10 #fcfcfc
 #000000 #000000 0 1;
-#X obj 175 140 vradio 15 1 0 9 empty empty Range -7 -8 0 10 #fcfcfc
+#X obj 176 144 vradio 15 1 0 9 empty empty Range -7 -8 0 10 #fcfcfc
 #000000 #000000 0;
-#X obj 175 370 s \$0-octave1;
-#X obj 228 400 s \$0-freq1;
-#X obj 276 470 s \$0-gain1;
-#X obj 115 350 s \$0-shape1;
-#X obj 134 518 r \$0-octave1;
-#X obj 107 498 r \$0-freq1;
-#X obj 161 538 r \$0-gain1;
-#X obj 80 478 r \$0-shape1;
-#X obj 80 598 outlet~;
-#X obj 57 40 loadbang;
-#X obj 276 430 expr if($f1 < 0.011 \, 0 \, $f1), f 15;
-#X text 101 322 out (sig);
-#N canvas 1440 32 1159 607 oscillators1 0;
-#X obj 62 230 osc~;
-#X obj 181 167 tdh.util.declick;
-#X obj 322 167 tdh.util.declick;
-#X obj 452 167 tdh.util.declick;
-#X obj 950 230 noise~;
-#X obj 181 230 tdh.synth.oscil-tri~;
-#X obj 452 230 tdh.synth.oscil-pulse~;
-#X obj 322 230 tdh.synth.oscil-saw~;
-#X msg 50 -60 0;
-#X msg 20 -60 1;
+#X obj 176 365 s \$0-octave1;
+#X obj 229 384 s \$0-freq1;
+#X obj 277 444 s \$0-gain1;
+#X obj 116 346 s \$0-shape1;
+#X obj 135 442 r \$0-octave1;
+#X obj 108 422 r \$0-freq1;
+#X obj 162 462 r \$0-gain1;
+#X obj 81 402 r \$0-shape1;
+#X obj 81 522 outlet~;
+#X obj 58 60 loadbang;
+#X obj 277 404 expr if($f1 < 0.011 \, 0 \, $f1), f 15;
+#X text 100 325 out (sig);
+#N canvas 1908 -424 1432 636 oscillators1 0;
+#X obj 12 390 osc~;
+#X obj 1150 390 noise~;
+#X obj 1250 390 cyclone/pink~;
+#X msg 50 100 0;
+#X msg 20 100 1;
 #N canvas 0 22 450 300 on-off 0;
 #X obj 124 63 inlet~;
 #X obj 237 61 inlet onOff;
@@ -43,7 +37,7 @@
 #X connect 2 0 5 0;
 #X connect 3 0 2 1;
 #X connect 4 0 3 0;
-#X restore 62 280 pd on-off;
+#X restore 12 440 pd on-off;
 #N canvas 0 22 450 300 on-off 0;
 #X obj 124 63 inlet~;
 #X obj 237 61 inlet onOff;
@@ -56,7 +50,7 @@
 #X connect 2 0 5 0;
 #X connect 3 0 2 1;
 #X connect 4 0 3 0;
-#X restore 181 280 pd on-off;
+#X restore 201 440 pd on-off;
 #N canvas 0 22 450 300 on-off 0;
 #X obj 124 63 inlet~;
 #X obj 237 61 inlet onOff;
@@ -69,7 +63,7 @@
 #X connect 2 0 5 0;
 #X connect 3 0 2 1;
 #X connect 4 0 3 0;
-#X restore 322 280 pd on-off;
+#X restore 402 440 pd on-off;
 #N canvas 0 22 450 300 on-off 0;
 #X obj 124 63 inlet~;
 #X obj 237 61 inlet onOff;
@@ -82,11 +76,7 @@
 #X connect 2 0 5 0;
 #X connect 3 0 2 1;
 #X connect 4 0 3 0;
-#X restore 452 280 pd on-off;
-#X obj 620 167 tdh.util.declick;
-#X obj 620 230 tdh.synth.oscil-pulse~;
-#X obj 780 167 tdh.util.declick;
-#X obj 780 230 tdh.synth.oscil-pulse~;
+#X restore 582 440 pd on-off;
 #N canvas 0 22 450 300 on-off 0;
 #X obj 124 63 inlet~;
 #X obj 237 61 inlet onOff;
@@ -99,7 +89,7 @@
 #X connect 2 0 5 0;
 #X connect 3 0 2 1;
 #X connect 4 0 3 0;
-#X restore 620 280 pd on-off;
+#X restore 780 440 pd on-off;
 #N canvas 0 22 450 300 on-off 0;
 #X obj 124 63 inlet~;
 #X obj 237 61 inlet onOff;
@@ -112,9 +102,9 @@
 #X connect 2 0 5 0;
 #X connect 3 0 2 1;
 #X connect 4 0 3 0;
-#X restore 780 280 pd on-off;
-#X obj 580 100 loadbang;
-#X text 640 100 Set the pulsewidth of the pulse oscil;
+#X restore 980 440 pd on-off;
+#X obj 720 260 loadbang;
+#X text 820 260 Set the pulsewidth of the pulse oscil;
 #N canvas 0 22 450 300 on-off 0;
 #X obj 124 63 inlet~;
 #X obj 237 61 inlet onOff;
@@ -127,7 +117,7 @@
 #X connect 2 0 5 0;
 #X connect 3 0 2 1;
 #X connect 4 0 3 0;
-#X restore 950 280 pd on-off;
+#X restore 1150 440 pd on-off;
 #N canvas 0 22 450 300 on-off 0;
 #X obj 124 63 inlet~;
 #X obj 237 61 inlet onOff;
@@ -140,350 +130,357 @@
 #X connect 2 0 5 0;
 #X connect 3 0 2 1;
 #X connect 4 0 3 0;
-#X restore 1050 280 pd on-off;
-#X obj 20 -90 sel 0 1 2 3 4 5 6 7, f 100;
-#X obj 132 280 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 252 280 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 401 280 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 532 280 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 690 280 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 860 280 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 1010 280 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 1120 280 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X msg 124 -60 0;
-#X msg 94 -60 1;
-#X msg 199 -60 0;
-#X msg 169 -60 1;
-#X msg 273 -60 0;
-#X msg 243 -60 1;
-#X msg 348 -60 0;
-#X msg 318 -60 1;
-#X msg 423 -60 0;
-#X msg 393 -60 1;
-#X msg 497 -60 0;
-#X msg 467 -60 1;
-#X msg 572 -60 0;
-#X msg 542 -60 1;
-#X text 20 -160 _;
-#X obj 710 -150 inlet freq;
-#X obj 920 340 *~;
-#X obj 933 -120 inlet gain;
-#X text 110 -150 All oscillators are live \, so this code handles the
+#X restore 1250 440 pd on-off;
+#X obj 20 70 sel 0 1 2 3 4 5 6 7, f 100;
+#X msg 124 100 0;
+#X msg 94 100 1;
+#X msg 199 100 0;
+#X msg 169 100 1;
+#X msg 273 100 0;
+#X msg 243 100 1;
+#X msg 348 100 0;
+#X msg 318 100 1;
+#X msg 423 100 0;
+#X msg 393 100 1;
+#X msg 497 100 0;
+#X msg 467 100 1;
+#X msg 572 100 0;
+#X msg 542 100 1;
+#X text 20 3 _;
+#X obj 710 10 inlet freq;
+#X obj 1120 500 *~;
+#X obj 933 40 inlet gain;
+#X text 110 10 All oscillators are live \, so this code handles the
 radio button input and turns on output for the oscillator that corresponds
 with the radio button input \, and silences all other oscillators;
-#X obj 920 430 outlet~;
-#X obj 810 -150 inlet octave;
-#X obj 810 -100 * 12;
-#X obj 710 -30 +;
-#X text 750 -10 Frequency is handled in MIDI (sort of - it is still
+#X obj 1120 590 outlet~;
+#X obj 810 10 inlet octave;
+#X obj 810 60 * 12;
+#X obj 710 130 +;
+#X text 750 150 Frequency is handled in MIDI (sort of - it is still
 floating point) \, and oct# * 12 offsets a MIDI pitch to a new octave
 , f 25;
-#X obj 64 140 mtof;
-#X obj 182 140 mtof;
-#X obj 324 140 mtof;
-#X obj 452 140 mtof;
-#X obj 620 140 mtof;
-#X obj 780 140 mtof;
-#X obj 20 -120 inlet shape;
-#X floatatom 730 -120 5 0 0 0 - - - 0;
-#X floatatom 850 -120 5 0 0 0 - - - 0;
-#X floatatom 960 -90 5 0 0 0 - - - 0;
-#X obj 710 -62 f;
-#X obj 810 -72 t b f;
-#X msg 580 130 0.05;
-#X msg 748 130 0.2;
-#X msg 909 130 0.5;
-#X obj 920 400 lop~ 15000;
-#X obj 1010 -120 inlet~ fm;
-#X text 1199 461 _;
-#X obj 920 365 *~;
-#X obj 1100 -120 inlet~ am;
-#X obj 1120 -90 loadbang;
-#X msg 1120 -65 1;
-#X obj 1120 -40 sig~;
-#X obj 20 -10 s \$0-sin1;
-#X obj 90 -10 s \$0-tri1;
-#X obj 170 -10 s \$0-saw1;
-#X obj 240 -10 s \$0-sqr1a;
-#X obj 330 -10 s \$0-sqr1b;
-#X obj 410 -10 s \$0-sqr1c;
-#X obj 510 -10 s \$0-noise1;
-#X obj 600 -10 s \$0-pink1;
-#X obj 132 250 r \$0-sin1;
-#X obj 252 250 r \$0-tri1;
-#X obj 401 250 r \$0-saw1;
-#X obj 532 250 r \$0-sqr1a;
-#X obj 690 250 r \$0-sqr1b;
-#X obj 860 250 r \$0-sqr1c;
-#X obj 970 250 r \$0-noise1;
-#X obj 1100 250 r \$0-pink1;
-#X obj 980 340 r~ \$0-am1;
-#X obj 1100 10 s~ \$0-am1;
-#X obj 62 200 +~;
-#X obj 1030 -80 loadbang;
-#X msg 1030 -55 1;
-#X obj 1030 -30 sig~;
-#X obj 1010 10 s~ \$0-fm1;
-#X obj 960 160 r~ \$0-fm1;
-#X obj 234 201 +~;
-#X obj 376 204 +~;
-#X obj 529 210 +~;
-#X obj 692 202 +~;
-#X obj 848 200 +~;
-#X obj 810 -125 + 2;
-#X obj 62 167 tdh.util.declick;
-#X obj 24 41 declare -path tdh.lib;
-#N canvas 1440 189 450 300 iemlib/pink~ 0;
-#X text 27 150 signal-out;
-#X obj 29 129 outlet~;
-#X obj 29 49 noise~;
-#X text 14 7 pink~;
-#X text 65 8 pink-noise-generator with -3 dB per oktave;
-#X obj 29 88 biquad~ 1.83221 -0.836851 0.271264 -0.456311 0.18969;
-#X obj 29 108 biquad~ 0.273097 0.087865 0.505803 0.171365 -0.03813
-;
-#X obj 29 68 biquad~ 1.98893 -0.988954 1.00554 -1.9889 0.983444;
-#X text 166 195 IEM KUG;
-#X text 150 183 musil;
-#X text 180 183 @;
-#X text 186 183 iem.at;
-#X text 101 172 (c) Thomas Musil 2000 - 2005;
-#X text 149 205 Graz \, Austria;
-#X connect 2 0 7 0;
-#X connect 5 0 6 0;
-#X connect 6 0 1 0;
-#X connect 7 0 5 0;
-#X restore 1050 226 pd iemlib/pink~;
-#X connect 0 0 10 0;
-#X connect 1 0 104 0;
-#X connect 1 0 5 0;
-#X connect 2 0 105 0;
-#X connect 2 0 7 0;
-#X connect 3 0 6 0;
-#X connect 4 0 22 0;
-#X connect 5 0 11 0;
-#X connect 6 0 13 0;
-#X connect 7 0 12 0;
-#X connect 8 0 81 0;
-#X connect 8 0 82 0;
-#X connect 8 0 83 0;
-#X connect 8 0 84 0;
-#X connect 8 0 85 0;
-#X connect 8 0 86 0;
-#X connect 8 0 87 0;
-#X connect 9 0 80 0;
-#X connect 10 0 49 0;
-#X connect 11 0 49 0;
-#X connect 12 0 49 0;
-#X connect 13 0 49 0;
-#X connect 14 0 107 0;
-#X connect 14 0 15 0;
-#X connect 15 0 18 0;
-#X connect 16 0 108 0;
-#X connect 16 0 17 0;
-#X connect 17 0 19 0;
-#X connect 18 0 49 0;
-#X connect 19 0 49 0;
-#X connect 20 0 69 0;
-#X connect 20 0 70 0;
-#X connect 20 0 71 0;
-#X connect 22 0 49 0;
-#X connect 23 0 49 0;
-#X connect 24 0 9 0;
-#X connect 24 0 8 0;
-#X connect 24 1 34 0;
-#X connect 24 1 33 0;
-#X connect 24 2 36 0;
-#X connect 24 2 35 0;
-#X connect 24 3 38 0;
-#X connect 24 3 37 0;
-#X connect 24 4 40 0;
-#X connect 24 4 39 0;
-#X connect 24 5 42 0;
-#X connect 24 5 41 0;
-#X connect 24 6 44 0;
-#X connect 24 6 43 0;
-#X connect 24 7 46 0;
-#X connect 24 7 45 0;
-#X connect 33 0 80 0;
-#X connect 33 0 82 0;
-#X connect 33 0 83 0;
-#X connect 33 0 84 0;
-#X connect 33 0 85 0;
-#X connect 33 0 86 0;
-#X connect 33 0 87 0;
-#X connect 34 0 81 0;
-#X connect 35 0 80 0;
-#X connect 35 0 81 0;
-#X connect 35 0 83 0;
-#X connect 35 0 84 0;
-#X connect 35 0 85 0;
-#X connect 35 0 86 0;
-#X connect 35 0 87 0;
-#X connect 36 0 82 0;
-#X connect 37 0 80 0;
-#X connect 37 0 81 0;
-#X connect 37 0 82 0;
-#X connect 37 0 84 0;
-#X connect 37 0 85 0;
-#X connect 37 0 86 0;
-#X connect 37 0 87 0;
-#X connect 38 0 83 0;
-#X connect 39 0 80 0;
-#X connect 39 0 81 0;
-#X connect 39 0 82 0;
-#X connect 39 0 83 0;
-#X connect 39 0 85 0;
-#X connect 39 0 86 0;
-#X connect 39 0 87 0;
-#X connect 40 0 84 0;
-#X connect 41 0 80 0;
-#X connect 41 0 81 0;
-#X connect 41 0 82 0;
-#X connect 41 0 83 0;
-#X connect 41 0 84 0;
-#X connect 41 0 86 0;
-#X connect 41 0 87 0;
-#X connect 42 0 85 0;
-#X connect 43 0 80 0;
-#X connect 43 0 81 0;
-#X connect 43 0 82 0;
-#X connect 43 0 83 0;
-#X connect 43 0 84 0;
-#X connect 43 0 85 0;
-#X connect 43 0 87 0;
-#X connect 44 0 86 0;
-#X connect 45 0 80 0;
-#X connect 45 0 81 0;
-#X connect 45 0 82 0;
-#X connect 45 0 83 0;
-#X connect 45 0 84 0;
-#X connect 45 0 85 0;
-#X connect 45 0 86 0;
-#X connect 46 0 87 0;
-#X connect 48 0 64 0;
-#X connect 48 0 67 0;
-#X connect 49 0 75 0;
-#X connect 50 0 49 1;
-#X connect 50 0 66 0;
-#X connect 53 0 65 0;
-#X connect 53 0 109 0;
-#X connect 54 0 68 0;
-#X connect 55 0 57 0;
-#X connect 55 0 58 0;
-#X connect 55 0 59 0;
-#X connect 55 0 60 0;
-#X connect 55 0 61 0;
-#X connect 55 0 62 0;
-#X connect 57 0 110 0;
-#X connect 58 0 1 0;
-#X connect 59 0 2 0;
-#X connect 60 0 3 0;
-#X connect 61 0 14 0;
-#X connect 62 0 16 0;
-#X connect 63 0 24 0;
-#X connect 67 0 55 0;
-#X connect 68 0 67 0;
-#X connect 68 1 55 1;
-#X connect 69 0 6 2;
-#X connect 70 0 15 2;
-#X connect 71 0 17 2;
-#X connect 72 0 52 0;
-#X connect 73 0 102 0;
-#X connect 75 0 72 0;
-#X connect 76 0 97 0;
-#X connect 77 0 78 0;
+#X obj 14 300 mtof;
+#X obj 202 300 mtof;
+#X obj 404 300 mtof;
+#X obj 582 300 mtof;
+#X obj 780 300 mtof;
+#X obj 980 300 mtof;
+#X obj 20 40 inlet shape;
+#X floatatom 730 40 5 0 0 0 - - - 0;
+#X floatatom 850 40 5 0 0 0 - - - 0;
+#X floatatom 960 70 5 0 0 0 - - - 0;
+#X obj 710 98 f;
+#X obj 810 88 t b f;
+#X obj 1010 40 inlet~ fm;
+#X text 1399 601 _;
+#X obj 1120 525 *~;
+#X obj 1100 40 inlet~ am;
+#X obj 1120 70 loadbang;
+#X msg 1120 95 1;
+#X obj 1120 120 sig~;
+#X obj 20 150 s \$0-sin1;
+#X obj 90 150 s \$0-tri1;
+#X obj 170 150 s \$0-saw1;
+#X obj 240 150 s \$0-sqr1a;
+#X obj 330 150 s \$0-sqr1b;
+#X obj 410 150 s \$0-sqr1c;
+#X obj 510 150 s \$0-noise1;
+#X obj 600 150 s \$0-pink1;
+#X obj 82 410 r \$0-sin1;
+#X obj 272 410 r \$0-tri1;
+#X obj 481 410 r \$0-saw1;
+#X obj 662 410 r \$0-sqr1a;
+#X obj 850 410 r \$0-sqr1b;
+#X obj 1060 410 r \$0-sqr1c;
+#X obj 1170 410 r \$0-noise1;
+#X obj 1300 410 r \$0-pink1;
+#X obj 1180 500 r~ \$0-am1;
+#X obj 1100 170 s~ \$0-am1;
+#X obj 12 360 +~;
+#X obj 1030 80 loadbang;
+#X msg 1030 105 1;
+#X obj 1030 130 sig~;
+#X obj 1010 170 s~ \$0-fm1;
+#X obj 1160 320 r~ \$0-fm1;
+#X obj 254 361 +~;
+#X obj 456 364 +~;
+#X obj 659 370 +~;
+#X obj 852 362 +~;
+#X obj 1048 360 +~;
+#X obj 810 35 + 2;
+#X msg 740 289 0.5;
+#X msg 948 290 0.75;
+#X msg 1109 290 0.9;
+#X obj 1010 23 cnv 4 500 1 empty empty **\\\ TO\\\ DO\\\ ** 0 -6 0
+12 #ff0400 #ff0400 0;
+#X obj 12 327 tdh.lib/tdh.util.declick;
+#X obj 201 327 tdh.lib/tdh.util.declick;
+#X obj 402 327 tdh.lib/tdh.util.declick;
+#X obj 582 327 tdh.lib/tdh.util.declick;
+#X obj 780 327 tdh.lib/tdh.util.declick;
+#X obj 980 327 tdh.lib/tdh.util.declick;
+#X obj 201 390 tdh.lib/tdh.synth.oscilaTri~;
+#X obj 402 390 tdh.lib/tdh.synth.oscilaSaw~;
+#X obj 582 390 tdh.lib/tdh.synth.oscilaPulse~;
+#X obj 780 390 tdh.lib/tdh.synth.oscilaPulse~;
+#X obj 980 390 tdh.lib/tdh.synth.oscil-pulse~;
+#X connect 0 0 5 0;
+#X connect 1 0 13 0;
+#X connect 2 0 14 0;
+#X connect 3 0 60 0;
+#X connect 3 0 61 0;
+#X connect 3 0 62 0;
+#X connect 3 0 63 0;
+#X connect 3 0 64 0;
+#X connect 3 0 65 0;
+#X connect 3 0 66 0;
+#X connect 4 0 59 0;
+#X connect 5 0 32 0;
+#X connect 6 0 32 0;
+#X connect 7 0 32 0;
+#X connect 8 0 32 0;
+#X connect 9 0 32 0;
+#X connect 10 0 32 0;
+#X connect 11 0 89 0;
+#X connect 11 0 90 0;
+#X connect 11 0 91 0;
+#X connect 13 0 32 0;
+#X connect 14 0 32 0;
+#X connect 15 0 4 0;
+#X connect 15 0 3 0;
+#X connect 15 1 17 0;
+#X connect 15 1 16 0;
+#X connect 15 2 19 0;
+#X connect 15 2 18 0;
+#X connect 15 3 21 0;
+#X connect 15 3 20 0;
+#X connect 15 4 23 0;
+#X connect 15 4 22 0;
+#X connect 15 5 25 0;
+#X connect 15 5 24 0;
+#X connect 15 6 27 0;
+#X connect 15 6 26 0;
+#X connect 15 7 29 0;
+#X connect 15 7 28 0;
+#X connect 16 0 59 0;
+#X connect 16 0 61 0;
+#X connect 16 0 62 0;
+#X connect 16 0 63 0;
+#X connect 16 0 64 0;
+#X connect 16 0 65 0;
+#X connect 16 0 66 0;
+#X connect 17 0 60 0;
+#X connect 18 0 59 0;
+#X connect 18 0 60 0;
+#X connect 18 0 62 0;
+#X connect 18 0 63 0;
+#X connect 18 0 64 0;
+#X connect 18 0 65 0;
+#X connect 18 0 66 0;
+#X connect 19 0 61 0;
+#X connect 20 0 59 0;
+#X connect 20 0 60 0;
+#X connect 20 0 61 0;
+#X connect 20 0 63 0;
+#X connect 20 0 64 0;
+#X connect 20 0 65 0;
+#X connect 20 0 66 0;
+#X connect 21 0 62 0;
+#X connect 22 0 59 0;
+#X connect 22 0 60 0;
+#X connect 22 0 61 0;
+#X connect 22 0 62 0;
+#X connect 22 0 64 0;
+#X connect 22 0 65 0;
+#X connect 22 0 66 0;
+#X connect 23 0 63 0;
+#X connect 24 0 59 0;
+#X connect 24 0 60 0;
+#X connect 24 0 61 0;
+#X connect 24 0 62 0;
+#X connect 24 0 63 0;
+#X connect 24 0 65 0;
+#X connect 24 0 66 0;
+#X connect 25 0 64 0;
+#X connect 26 0 59 0;
+#X connect 26 0 60 0;
+#X connect 26 0 61 0;
+#X connect 26 0 62 0;
+#X connect 26 0 63 0;
+#X connect 26 0 64 0;
+#X connect 26 0 66 0;
+#X connect 27 0 65 0;
+#X connect 28 0 59 0;
+#X connect 28 0 60 0;
+#X connect 28 0 61 0;
+#X connect 28 0 62 0;
+#X connect 28 0 63 0;
+#X connect 28 0 64 0;
+#X connect 28 0 65 0;
+#X connect 29 0 66 0;
+#X connect 31 0 47 0;
+#X connect 31 0 50 0;
+#X connect 32 0 54 0;
+#X connect 33 0 32 1;
+#X connect 33 0 49 0;
+#X connect 36 0 48 0;
+#X connect 36 0 88 0;
+#X connect 37 0 51 0;
+#X connect 38 0 40 0;
+#X connect 38 0 41 0;
+#X connect 38 0 42 0;
+#X connect 38 0 43 0;
+#X connect 38 0 44 0;
+#X connect 38 0 45 0;
+#X connect 40 0 93 0;
+#X connect 41 0 94 0;
+#X connect 42 0 95 0;
+#X connect 43 0 96 0;
+#X connect 44 0 97 0;
+#X connect 45 0 98 0;
+#X connect 46 0 15 0;
+#X connect 50 0 38 0;
+#X connect 51 0 50 0;
+#X connect 51 1 38 1;
+#X connect 52 0 81 0;
+#X connect 54 0 35 0;
+#X connect 55 0 76 0;
+#X connect 56 0 57 0;
+#X connect 57 0 58 0;
+#X connect 58 0 76 0;
+#X connect 67 0 5 1;
+#X connect 68 0 6 1;
+#X connect 69 0 7 1;
+#X connect 70 0 8 1;
+#X connect 71 0 9 1;
+#X connect 72 0 10 1;
+#X connect 73 0 13 1;
+#X connect 74 0 14 1;
+#X connect 75 0 54 1;
+#X connect 77 0 0 0;
 #X connect 78 0 79 0;
-#X connect 79 0 97 0;
-#X connect 88 0 25 0;
-#X connect 88 0 10 1;
-#X connect 89 0 26 0;
-#X connect 89 0 11 1;
-#X connect 90 0 27 0;
-#X connect 90 0 12 1;
-#X connect 91 0 28 0;
-#X connect 91 0 13 1;
-#X connect 92 0 29 0;
-#X connect 92 0 18 1;
-#X connect 93 0 30 0;
-#X connect 93 0 19 1;
-#X connect 94 0 22 1;
-#X connect 94 0 31 0;
-#X connect 95 0 32 0;
-#X connect 95 0 23 1;
-#X connect 96 0 75 1;
-#X connect 98 0 0 0;
-#X connect 99 0 100 0;
-#X connect 100 0 101 0;
-#X connect 101 0 102 0;
-#X connect 103 0 108 1;
-#X connect 103 0 107 1;
-#X connect 103 0 106 1;
-#X connect 103 0 105 1;
-#X connect 103 0 104 1;
-#X connect 103 0 98 1;
-#X connect 106 0 6 1;
-#X connect 107 0 15 1;
-#X connect 108 0 17 1;
-#X connect 109 0 54 0;
-#X connect 110 0 98 0;
-#X connect 112 0 23 0;
-#X restore 80 568 pd oscillators1;
+#X connect 79 0 80 0;
+#X connect 80 0 81 0;
+#X connect 82 0 87 1;
+#X connect 82 0 86 1;
+#X connect 82 0 85 1;
+#X connect 82 0 84 1;
+#X connect 82 0 83 1;
+#X connect 82 0 77 1;
+#X connect 88 0 37 0;
+#X connect 89 0 101 1;
+#X connect 90 0 102 1;
+#X connect 91 0 103 2;
+#X connect 93 0 77 0;
+#X connect 94 0 83 0;
+#X connect 94 0 99 0;
+#X connect 95 0 84 0;
+#X connect 95 0 100 0;
+#X connect 96 0 101 0;
+#X connect 97 0 86 0;
+#X connect 97 0 102 0;
+#X connect 98 0 87 0;
+#X connect 98 0 103 0;
+#X connect 99 0 6 0;
+#X connect 100 0 7 0;
+#X connect 101 0 8 0;
+#X connect 102 0 9 0;
+#X connect 103 0 10 0;
+#X restore 81 492 pd oscillators1;
 #X f 23;
-#X text 1 -182 Number fields for all sliders \, settable via number
+#X text 17 -162 Number fields for all sliders \, settable via number
 fields;
-#X obj 115 -20 inlet 1-shape;
-#X obj 175 0 inlet 1-octve;
-#X obj 228 40 inlet 1-freq;
-#X obj 276 62 inlet 1-gain;
-#X text 132 79 |;
-#X text 213 69 |;
-#X text 302 79 |;
-#X msg 57 70 1;
-#X text 1 -159 Freq and gain inputs in Voltage;
-#X text 132 140 Sin;
-#X text 132 155 Tri;
-#X text 132 170 Saw;
-#X text 132 185 Pls1;
-#X text 132 200 Pls2;
-#X text 132 214 Pls3;
-#X text 132 229 PnkNs;
-#X text 132 244 WhtNs;
-#X text 192 140 1;
-#X text 192 155 2;
-#X text 192 170 3;
-#X text 192 185 4;
-#X text 192 200 5;
-#X text 192 214 6;
-#X text 192 230 7;
-#X text 192 245 8;
-#X text 192 259 9;
-#X obj 175 20 - 1;
-#X text 3 -586 Travis Houldcroft || travishouldcroft.com;
-#X obj -14 -632 cnv 15 800 40 empty \$0-abstrPatchTitleBar tdh.synth.1oscil~
-9 20 0 18 #3c50fc #a0a0a0 0;
-#X obj -14 -302 cnv 2 800 3 empty \$0-abstrPatchSecLabelNotes Notes
-20 15 0 16 #a0a0a0 #202020 0;
-#X obj -14 -39 cnv 2 800 2 empty \$0-abstrPatchSecDivider empty 9 20
+#X obj 116 20 inlet 1-shape;
+#X obj 176 40 inlet 1-octve;
+#X obj 229 60 inlet 1-freq;
+#X obj 277 82 inlet 1-gain;
+#X msg 58 90 1;
+#X text 17 -139 Freq and gain inputs in Voltage;
+#X text 133 144 Sin;
+#X text 133 159 Tri;
+#X text 133 174 Saw;
+#X text 133 189 Pls1;
+#X text 133 204 Pls2;
+#X text 133 218 Pls3;
+#X text 133 233 PnkNs;
+#X text 133 248 WhtNs;
+#X text 193 144 1;
+#X text 193 159 2;
+#X text 193 174 3;
+#X text 193 189 4;
+#X text 193 204 5;
+#X text 193 218 6;
+#X text 193 234 7;
+#X text 193 249 8;
+#X text 193 263 9;
+#X obj 176 60 - 1;
+#X text 19 -566 Travis Houldcroft || travishouldcroft.com;
+#X obj 2 -612 cnv 15 800 40 empty \$0-abstrPatchTitleBar satk.seq.gesture
+9 20 0 18 #f430f0 #404040 0;
+#X obj 2 -282 cnv 2 800 3 empty \$0-abstrPatchSecLabelNotes Notes 20
+15 0 16 #a0a0a0 #202020 0;
+#X obj 2 -19 cnv 2 800 2 empty \$0-abstrPatchSecDivider empty 9 20
 0 18 #a0a0a0 #202020 0;
-#X obj -14 -112 cnv 2 800 3 empty \$0-abstrPatchSecLabelRevHist Revision\ History
+#X obj 2 -92 cnv 2 800 3 empty \$0-abstrPatchSecLabelRevHist Revision\ History
 20 15 0 16 #a0a0a0 #202020 0;
-#X obj -14 -562 cnv 2 800 3 empty \$0-abstrPatchSecLabelArgs Arguments
+#X obj 2 -542 cnv 2 800 3 empty \$0-abstrPatchSecLabelArgs Arguments
 20 15 0 16 #a0a0a0 #202020 0;
-#X text 9 -81 21/09/30 - ver 0.1, f 21;
+#X text 25 -61 21/09/30 - ver 0.1, f 21;
+#X obj 2 -472 cnv 2 800 3 empty \$0-abstrPatchSecLabelInlets Inlets
+20 15 0 16 #a0a0a0 #202020 0;
+#X obj 2 -352 cnv 2 800 3 empty \$0-abstrPatchSecLabelOutlets Outlets
+20 15 0 16 #a0a0a0 #202020 0;
+#X text 19 -506 None;
+#X obj 26 -441 cnv 14 18 14 empty empty 0 2 8 0 12 #606060 #dcdcdc
+0;
+#X obj 26 -381 cnv 14 18 14 empty empty 3 2 8 0 12 #606060 #dcdcdc
+0;
+#X obj 26 -421 cnv 14 18 14 empty empty 1 2 8 0 12 #606060 #dcdcdc
+0;
+#X obj 26 -401 cnv 14 18 14 empty empty 2 2 8 0 12 #606060 #dcdcdc
+0;
+#X text 48 -443 (float);
+#X text 98 -443 Oscillator 1 Shape (0-7);
+#X text 48 -423 (float);
+#X text 98 -423 Oscillator 1 Octave (1-9);
+#X text 48 -403 (float);
+#X text 98 -403 Oscillator 1 Frequency (Hz);
+#X text 98 -383 Oscillator 1 Volume (0.0-1.0);
+#X text 48 -383 (float);
+#X obj 26 -321 cnv 14 18 14 empty empty 0 2 8 0 12 #606060 #dcdcdc
+0;
+#X text 48 -322 (sig);
+#X text 17 -232 tdhlib (tdh.util.declick \, tdh.synth.oscil-tri~ \,
+tdh.synth.oscil-saw~ \, tdh.synth.oscil-pulse~), f 94;
+#X text 17 -212 cyclone (cyclone/pink~);
+#X text 17 -252 DEPENDENCIES:;
+#X text 17 -182 TO DO:;
+#X text 98 -322 Signal output (linear amplitude 0.0-1.0);
+#X obj 97 20 cnv 14 18 14 empty empty 0 2 8 0 12 #606060 #dcdcdc 0
+;
+#X obj 256 82 cnv 14 18 14 empty empty 3 2 8 0 12 #606060 #dcdcdc 0
+;
+#X obj 157 40 cnv 14 18 14 empty empty 1 2 8 0 12 #606060 #dcdcdc 0
+;
+#X obj 208 60 cnv 14 18 14 empty empty 2 2 8 0 12 #606060 #dcdcdc 0
+;
+#X text 25 -41 21/12/27 - ver 0.2, f 21;
+#X text 17 -119 Inlets send remotely to GUI \, which sends remotely
+to DSP code, f 71;
+#X text 154 100 Range;
+#X obj 103 289 cnv 15 206 30 empty empty Oscillator 10 15 0 14 #e0e0e0
+#404040 0;
+#X text 101 100 Shp;
+#X text 225 100 Frq;
+#X obj 229 525 outlet sync;
+#X text 257 325 frq sync;
+#X text 285 100 Vol;
 #N canvas 1440 293 656 414 abstr-init 0;
 #X obj 3 21 cnv 5 5 5 empty empty | 0 0 0 14 #fcfcfc #404040 0;
 #X obj 215 126 loadbang;
 #X obj 215 152 del 10;
-#N canvas 1280 23 1414 755 abstr-cnv-set 0;
+#N canvas 1440 23 1414 755 abstr-cnv-set 0;
 #X text 121 406 \$0-abstrPatchSecDivider;
 #X text 120 1003 \$0-abstrPatchSecLabelNotes;
 #X text 120 1139 \$0-abstrPatchSecLabelRevHist;
@@ -573,7 +570,7 @@ fields;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 800 40 empty \$0-test_canvas tdh.synth.1oscil~
+#X obj 738 322 cnv 2 800 40 empty \$0-test_canvas satk.seq.gesture
 20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
@@ -876,7 +873,7 @@ and pasted for easy initializing formatting)., f 89;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 800 40 empty \$0-test_canvas tdh.synth.1oscil~
+#X obj 738 322 cnv 2 800 40 empty \$0-test_canvas satk.seq.gesture
 20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
@@ -1179,7 +1176,7 @@ and pasted for easy initializing formatting)., f 89;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 800 40 empty \$0-test_canvas tdh.synth.1oscil~
+#X obj 738 322 cnv 2 800 40 empty \$0-test_canvas satk.seq.gesture
 20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
@@ -1482,7 +1479,7 @@ and pasted for easy initializing formatting)., f 89;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 800 40 empty \$0-test_canvas tdh.synth.1oscil~
+#X obj 738 322 cnv 2 800 40 empty \$0-test_canvas satk.seq.gesture
 20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
@@ -1785,7 +1782,7 @@ and pasted for easy initializing formatting)., f 89;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 800 40 empty \$0-test_canvas tdh.synth.1oscil~
+#X obj 738 322 cnv 2 800 40 empty \$0-test_canvas satk.seq.gesture
 20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
@@ -2225,7 +2222,7 @@ bgclr 1 \, lblclr 12, f 123;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 800 40 empty \$0-test_canvas tdh.synth.1oscil~
+#X obj 738 322 cnv 2 800 40 empty \$0-test_canvas satk.seq.gesture
 20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
@@ -2533,7 +2530,7 @@ and pasted for easy initializing formatting)., f 89;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 800 40 empty \$0-test_canvas tdh.synth.1oscil~
+#X obj 738 322 cnv 2 800 40 empty \$0-test_canvas satk.seq.gesture
 20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
@@ -2767,19 +2764,19 @@ bgclr 1 \, lblclr 12, f 123;
 visw 501 \, vish 3 \, lblfon 0 \, lblsz 16 \, lblx 20 \, lbly 15 \,
 bgclr 1 \, lblclr 12, f 123;
 #X msg 438 842 symbol Outlets;
-#X msg 343 309 doll 1 \, rec abstrPatchTitleBar \, size 15 \, visw
-501 \, vish 40 \, lblfon 0 \, lblsz 18 \, lblx 9 \, lbly 20 \, bgclr
-18 \, lblclr 1, f 123;
 #X msg 343 433 doll 1 \, rec abstrPatchSecDivider \, size 2 \, visw
 501 \, vish 2 \, lblfon 0 \, lblsz 18 \, lblx 9 \, lbly 20 \, bgclr
 1 \, lblclr 12, f 123;
+#X msg 343 309 doll 1 \, rec abstrPatchTitleBar \, size 15 \, visw
+701 \, vish 40 \, lblfon 0 \, lblsz 18 \, lblx 9 \, lbly 20 \, bgclr
+19 \, lblclr 2, f 123;
 #X connect 8 0 15 0;
 #X connect 9 0 11 0;
 #X connect 11 0 12 0;
 #X connect 12 0 23 0;
 #X connect 15 0 3 1;
-#X connect 21 0 65 0;
-#X connect 22 0 66 0;
+#X connect 21 0 66 0;
+#X connect 22 0 65 0;
 #X connect 24 0 3 0;
 #X connect 25 0 4 0;
 #X connect 26 0 5 0;
@@ -2807,15 +2804,15 @@ bgclr 1 \, lblclr 12, f 123;
 #X connect 62 0 5 1;
 #X connect 63 0 54 0;
 #X connect 64 0 54 1;
-#X connect 65 0 3 0;
-#X connect 66 0 4 0;
+#X connect 65 0 4 0;
+#X connect 66 0 3 0;
 #X restore 166 244 pd abstr-cnv-set;
 #X f 30;
 #X obj 147 196 cnv 5 5 5 empty empty ⟶ -3 3 0 30 #fcfcfc #000000
 0;
-#X obj 414 198 cnv 5 5 5 empty empty ⟵ -3 3 0 30 #fcfcfc #000000
+#X obj 444 198 cnv 5 5 5 empty empty ⟵ -3 3 0 30 #fcfcfc #000000
 0;
-#X text 435 186 EDIT HERE to change patch WIDTH, f 16;
+#X text 465 186 EDIT HERE to change patch WIDTH, f 16;
 #X text 16 12 This subpatch (and nested subpatches) helps set the uniform
 titles and graphics for ABSTRACTIONS., f 84;
 #X text 10 180 EDIT HERE text after "symbol" to change the abstraction's
@@ -2823,81 +2820,35 @@ DISPLAY NAME, f 20;
 #X text 13 60 The two most commonly changed fields \, DISPLAY NAME
 and WIDTH can be changed by editing the [message( boxes below. Text
 in [message( objects get saved to the patch., f 84;
-#X msg 166 194 symbol tdh.synth.1oscil~;
-#X msg 373 196 800;
+#X msg 166 194 symbol satk.seq.gesture;
+#X msg 403 193 800;
 #X connect 1 0 2 0;
 #X connect 2 0 10 0;
 #X connect 2 0 11 0;
 #X connect 10 0 3 0;
 #X connect 11 0 3 1;
-#X restore 699 -585 pd abstr-init;
-#X obj -14 -492 cnv 2 800 3 empty \$0-abstrPatchSecLabelInlets Inlets
-20 15 0 16 #a0a0a0 #202020 0;
-#X obj -14 -372 cnv 2 800 3 empty \$0-abstrPatchSecLabelOutlets Outlets
-20 15 0 16 #a0a0a0 #202020 0;
-#X text 3 -526 None;
-#X obj 10 -461 cnv 14 18 14 empty empty 0 2 8 0 12 #606060 #dcdcdc
+#X restore 710 -563 pd abstr-init;
+#X obj 648 -608 cnv 8 150 32 empty empty SATK 14 8 0 14 #dfdfdf #131255
 0;
-#X obj 10 -401 cnv 14 18 14 empty empty 3 2 8 0 12 #606060 #dcdcdc
-0;
-#X obj 10 -441 cnv 14 18 14 empty empty 1 2 8 0 12 #606060 #dcdcdc
-0;
-#X obj 10 -421 cnv 14 18 14 empty empty 2 2 8 0 12 #606060 #dcdcdc
-0;
-#X text 32 -463 (float);
-#X text 82 -463 Oscillator 1 Shape (0-7);
-#X text 32 -443 (float);
-#X text 82 -443 Oscillator 1 Octave (1-9);
-#X text 32 -423 (float);
-#X text 82 -423 Oscillator 1 Frequency (Hz);
-#X text 82 -403 Oscillator 1 Volume (0.0-1.0);
-#X text 32 -403 (float);
-#X obj 10 -341 cnv 14 18 14 empty empty 0 2 8 0 12 #606060 #dcdcdc
-0;
-#X text 32 -342 (sig);
-#X text 1 -252 tdhlib (tdh.util.declick \, tdh.synth.oscil-tri~ \,
-tdh.synth.oscil-saw~ \, tdh.synth.oscil-pulse~), f 94;
-#X text 1 -272 DEPENDENCIES:;
-#X text 1 -202 TO DO:;
-#X text 82 -342 Signal output (linear amplitude 0.0-1.0);
-#X obj 96 -20 cnv 14 18 14 empty empty 0 2 8 0 12 #606060 #dcdcdc 0
-;
-#X obj 255 62 cnv 14 18 14 empty empty 3 2 8 0 12 #606060 #dcdcdc 0
-;
-#X obj 156 0 cnv 14 18 14 empty empty 1 2 8 0 12 #606060 #dcdcdc 0
-;
-#X obj 207 40 cnv 14 18 14 empty empty 2 2 8 0 12 #606060 #dcdcdc 0
-;
-#X text 9 -61 21/12/27 - ver 0.2, f 21;
-#X text 1 -139 Inlets send remotely to GUI \, which sends remotely
-to DSP code, f 71;
-#X text 155 101 Range;
-#X obj 102 285 cnv 15 206 30 empty empty Oscillator 10 15 0 14 #e0e0e0
-#404040 0;
-#X text 102 101 Shp;
-#X text 226 101 Frq;
-#X obj 228 601 outlet sync;
-#X text 255 322 frq sync;
-#X text 286 101 Vol;
-#X text -1 -233 Contains the abstraction [pink~] from iemlib (c) Thomas
-Musil 2000 - 2005, f 74;
+#X obj 648 -591 cnv 8 150 16 empty empty Sound\\\ Art\\\ Tool-Kit 14
+8 0 10 #dfdfdf #131255 0;
 #X connect 0 0 7 0;
 #X connect 1 0 14 0;
 #X connect 2 0 5 0;
-#X connect 2 0 84 0;
+#X connect 2 0 81 0;
 #X connect 3 0 4 0;
 #X connect 8 0 16 2;
 #X connect 9 0 16 1;
 #X connect 10 0 16 3;
 #X connect 11 0 16 0;
-#X connect 13 0 25 0;
+#X connect 13 0 22 0;
 #X connect 14 0 6 0;
 #X connect 16 0 12 0;
 #X connect 18 0 0 0;
-#X connect 19 0 44 0;
+#X connect 19 0 41 0;
 #X connect 20 0 2 0;
 #X connect 21 0 1 0;
-#X connect 25 0 0 0;
-#X connect 25 0 3 0;
-#X connect 44 0 3 0;
+#X connect 22 0 0 0;
+#X connect 22 0 3 0;
+#X connect 41 0 3 0;
 #X coords 0 -1 1 1 210 240 2 100 100;
