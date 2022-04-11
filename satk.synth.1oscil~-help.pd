@@ -1,16 +1,16 @@
-#N canvas 2311 -404 712 1141 10;
-#X floatatom 107 650 5 0 0 0 - - - 0;
-#X floatatom 174 670 5 0 0 0 - - - 0;
-#X floatatom 242 690 5 0 0 0 - - - 0;
-#X floatatom 310 710 5 0 0 0 - - - 0;
-#X text 147 650 Osc1 Waveshape (Set with integers 0-7);
-#X text 214 670 Osc1 Octave (Using standard octave designations 1-9)
+#N canvas 2356 -340 712 776 10;
+#X floatatom 107 320 5 0 0 0 - - - 0;
+#X floatatom 174 340 5 0 0 0 - - - 0;
+#X floatatom 242 360 5 0 0 0 - - - 0;
+#X floatatom 310 380 5 0 0 0 - - - 0;
+#X text 147 320 Osc1 Waveshape (Set with integers 0-7);
+#X text 214 340 Osc1 Octave (Using standard octave designations 1-9)
 ;
-#X text 282 690 Osc1 Frequency in Pitch Class (0-11 in FLOATING POINT)
+#X text 282 360 Osc1 Frequency in Pitch Class (0-11 in FLOATING POINT)
 ;
-#X text 360 710 Osc1 Linear Gain (0-1 in FLOATING POINT);
+#X text 360 380 Osc1 Linear Gain (0-1 in FLOATING POINT);
 #X text 17 58 Travis Houldcroft || travishouldcroft.com;
-#X obj 3 451 cnv 1 700 1 empty \$0-helpPatchSecDivider empty 9 20 0
+#X obj 3 121 cnv 1 700 1 empty \$0-helpPatchSecDivider empty 9 20 0
 18 #a0a0a0 #202020 0;
 #N canvas 1838 -134 1149 842 help-audio-out 0;
 #X obj 32 30 inlet~;
@@ -152,48 +152,23 @@ Mute 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X connect 49 0 50 0;
 #X connect 51 0 9 0;
 #X coords 0 -1 1 1 127 110 2 250 100;
-#X restore 369 876 pd help-audio-out;
-#X obj 25 149 cnv 14 18 14 empty empty 0 2 8 0 12 #606060 #dcdcdc 0
-;
-#X obj 25 209 cnv 14 18 14 empty empty 3 2 8 0 12 #606060 #dcdcdc 0
-;
-#X obj 25 169 cnv 14 18 14 empty empty 1 2 8 0 12 #606060 #dcdcdc 0
-;
-#X obj 25 189 cnv 14 18 14 empty empty 2 2 8 0 12 #606060 #dcdcdc 0
-;
-#X text 47 147 (float);
-#X text 97 147 Oscillator 1 Shape (0-7);
-#X text 47 167 (float);
-#X text 97 167 Oscillator 1 Octave (1-9);
-#X text 47 187 (float);
-#X text 97 187 Oscillator 1 Frequency (Hz);
-#X text 97 207 Oscillator 1 Volume (0.0-1.0);
-#X text 47 207 (float);
-#X text 48 262 (sig);
-#X text 98 262 Signal output (linear amplitude 0.0-1.0);
-#X text 693 1078 _;
-#X obj 107 994 throw~ \$0-1oscHelp;
-#X obj 369 855 catch~ \$0-1oscHelp;
+#X restore 369 546 pd help-audio-out;
+#X text 693 748 _;
+#X obj 107 664 throw~ \$0-1oscHelp;
+#X obj 369 525 catch~ \$0-1oscHelp;
 #X text 15 87 A 1 oscillator synth voice \, akin to a single voice
 on the MiniMoog. Has GUI control of waveshape \, octave \, frequency
 \, and volume \, plus inlets for external control of all parameters.
-, f 111;
-#X obj 25 283 cnv 14 18 14 empty empty 1 2 8 0 12 #606060 #dcdcdc 0
-;
-#X text 47 283 (float);
-#X obj 25 263 cnv 14 18 14 empty empty 0 2 8 0 12 #606060 #dcdcdc 0
-;
-#X text 97 283 Frequency value in pitch class \, for synchronizing
-with other oscillators, f 72;
-#X text 23 565 Outlet (0) produces the oscillator signal \, while outlet
+, f 95;
+#X text 23 235 Outlet (0) produces the oscillator signal \, while outlet
 (1) sends out the oscillator's frequency value between 0-11 (floating
 point pitch class) for synchronization with other oscillators., f
 110;
-#X text 23 604 Inlets and outlets have been labelled to provide quick
+#X text 23 274 Inlets and outlets have been labelled to provide quick
 implementation and to assist those getting started in sonic arts.,
 f 110;
-#X floatatom 310 995 5 0 0 0 - - - 0;
-#X text 24 475 Integers 0-7 sent to the (0) inlet choose a waveshape
+#X floatatom 310 665 5 0 0 0 - - - 0;
+#X text 24 145 Integers 0-7 sent to the (0) inlet choose a waveshape
 \, or the GUI controls can be used. Integers 1-9 sent to the (1) inlet
 set the range \, which is in line with standard common-music-practice
 octave designations \, so that a range of "4" will produce 261.63 (middle
@@ -204,22 +179,14 @@ accepts floating point values \, so frequencies outside of 12TET can
 be produced (quarter tones \, for example \, can easily be heard by
 adding ".5" to a pitch class integer). The final inlet and fader controls
 the signal's volume \, which is on a scale from 0.0-1.0., f 111;
-#X text 24 455 tdh.synth.1oscil~ is a single oscillator voice that
+#X text 24 125 tdh.synth.1oscil~ is a single oscillator voice that
 can be used as the building block to a larger synth source., f 111
 ;
 #X obj 3 5 cnv 15 700 40 empty \$0-helpPatchTitleBar satk.synth.1oscil~
 9 20 0 18 #580050 #dce4fc 0;
-#X obj 2 118 cnv 2 700 3 empty \$0-helpPatchSecLabelInlets Inlets 20
-15 0 16 #a0a0a0 #202020 0;
-#X obj 3 229 cnv 2 700 3 empty \$0-helpPatchSecLabelOutlets Outlets
-20 15 0 16 #a0a0a0 #202020 0;
-#X obj 3 363 cnv 2 700 3 empty \$0-helpPatchSecLabelNotes Notes 20
-15 0 16 #a0a0a0 #202020 0;
-#X obj 3 323 cnv 2 700 3 empty \$0-helpPatchSecLabelArgs Arguments
-20 15 0 16 #a0a0a0 #202020 0;
 #X obj 3 81 cnv 1 700 1 empty \$0-helpPatchSecDivider empty 9 20 0
 18 #a0a0a0 #202020 0;
-#N canvas 2413 319 621 281 help-init 0;
+#N canvas 2508 191 584 355 help-init 0;
 #N canvas 1813 -209 1435 1029 cnv-set 0;
 #N canvas 1440 23 349 258 canvas-ctrl 0;
 #X obj 291 1 inlet;
@@ -2248,24 +2215,69 @@ in [message( objects get saved to the patch., f 84;
 titles and graphics for ABSTRACTIONS., f 84;
 #X msg 426 179 700;
 #X msg 191 176 symbol satk.synth.1oscil~;
+#X obj 188 273 r \$0-showRefButton;
+#X msg 188 294 vis 1;
+#X obj 188 315 s \$0-reference;
 #X connect 2 0 3 0;
 #X connect 3 0 11 0;
 #X connect 3 0 10 0;
 #X connect 10 0 0 1;
 #X connect 11 0 0 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
 #X restore 621 53 pd help-init;
 #X obj 549 8 cnv 8 150 32 empty empty SATK 14 8 0 14 #dfdfdf #131255
 0;
 #X obj 549 25 cnv 8 150 16 empty empty Sound\\\ Art\\\ Tool-Kit 14
 8 0 10 #dfdfdf #131255 0;
-#X obj 107 743 satk.synth.1oscil~;
-#X text 19 389 Requires tdh.lib to function;
-#X text 19 409 Contains the abstraction [pink~] from iemlib;
-#X connect 0 0 47 0;
-#X connect 1 0 47 1;
-#X connect 2 0 47 2;
-#X connect 3 0 47 3;
-#X connect 27 0 10 0;
-#X connect 27 0 10 1;
-#X connect 47 0 26 0;
-#X connect 47 1 35 0;
+#X obj 107 413 satk.synth.1oscil~;
+#N canvas 1626 23 713 443 reference 0;
+#X obj 560 74 namecanvas \$0-reference;
+#X obj 25 89 cnv 14 18 14 empty empty 0 2 8 0 12 #606060 #dcdcdc 0
+;
+#X obj 25 149 cnv 14 18 14 empty empty 3 2 8 0 12 #606060 #dcdcdc 0
+;
+#X obj 25 109 cnv 14 18 14 empty empty 1 2 8 0 12 #606060 #dcdcdc 0
+;
+#X obj 25 129 cnv 14 18 14 empty empty 2 2 8 0 12 #606060 #dcdcdc 0
+;
+#X text 47 87 (float);
+#X text 97 87 Oscillator 1 Shape (0-7);
+#X text 47 107 (float);
+#X text 97 107 Oscillator 1 Octave (1-9);
+#X text 47 127 (float);
+#X text 97 127 Oscillator 1 Frequency (Hz);
+#X text 97 147 Oscillator 1 Volume (0.0-1.0);
+#X text 47 147 (float);
+#X text 48 202 (sig);
+#X text 98 202 Signal output (linear amplitude 0.0-1.0);
+#X obj 25 223 cnv 14 18 14 empty empty 1 2 8 0 12 #606060 #dcdcdc 0
+;
+#X text 47 223 (float);
+#X obj 25 203 cnv 14 18 14 empty empty 0 2 8 0 12 #606060 #dcdcdc 0
+;
+#X text 97 223 Frequency value in pitch class \, for synchronizing
+with other oscillators, f 72;
+#X obj 2 58 cnv 2 700 3 empty \$0-helpPatchSecLabelInlets Inlets 20
+15 0 16 #a0a0a0 #202020 0;
+#X obj 3 169 cnv 2 700 3 empty \$0-helpPatchSecLabelOutlets Outlets
+20 15 0 16 #a0a0a0 #202020 0;
+#X obj 3 303 cnv 2 700 3 empty \$0-helpPatchSecLabelNotes Notes 20
+15 0 16 #a0a0a0 #202020 0;
+#X obj 3 263 cnv 2 700 3 empty \$0-helpPatchSecLabelArgs Arguments
+20 15 0 16 #a0a0a0 #202020 0;
+#X text 19 329 Requires tdh.lib to function;
+#X text 19 349 Contains the abstraction [pink~] from iemlib;
+#X obj 3 5 cnv 15 700 40 empty \$0-helpPatchTitleBar satk.synth.1oscil~
+9 20 0 18 #580050 #dce4fc 0;
+#X restore 539 52 pd reference;
+#X obj 598 88 bng 15 250 50 0 \$0-showRefButton empty Show\ Reference
+17 7 0 10 #e3c6ff #202020 #202020;
+#X connect 0 0 25 0;
+#X connect 1 0 25 1;
+#X connect 2 0 25 2;
+#X connect 3 0 25 3;
+#X connect 13 0 10 0;
+#X connect 13 0 10 1;
+#X connect 25 0 12 0;
+#X connect 25 1 17 0;
