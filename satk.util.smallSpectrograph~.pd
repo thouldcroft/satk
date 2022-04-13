@@ -2736,7 +2736,7 @@ in [message( objects get saved to the patch., f 84;
 0;
 #X obj 51 307 cnv 1 348 2 empty empty empty 1 7 0 10 #404040 #404040
 0;
-#X obj 51 294 cnv 12 348 14 empty \$0-objectName Small\\\ Spectrograph
+#X obj 51 294 cnv 12 348 14 empty \$0-objectName Small\ Spectrograph
 1 7 0 10 #dcdcdc #404040 0;
 #X obj 51 310 cnv 10 348 12 empty empty Thru 0 6 0 8 #dfdfdf #404040
 0;
@@ -2753,4 +2753,4 @@ in [message( objects get saved to the patch., f 84;
 #X connect 21 0 0 0;
 #X connect 21 0 20 0;
 #X connect 23 0 13 0;
-#X coords 0 -1 1 1 350 205 1 50 125;
+#X coords 0 -1 1 1 350 205 2 50 125;

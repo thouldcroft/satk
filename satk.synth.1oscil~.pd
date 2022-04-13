@@ -2426,7 +2426,7 @@ in [message( objects get saved to the patch., f 84;
 #X obj 81 522 outlet~;
 #X obj 58 60 loadbang;
 #X obj 277 404 expr if($f1 < 0.011 \, 0 \, $f1), f 15;
-#N canvas 1768 -209 1432 636 oscillators1 0;
+#N canvas 1768 -209 1432 636 oscillators1 1;
 #X obj 62 390 osc~;
 #X obj 62 327 tdh.util.declick;
 #X obj 181 327 tdh.util.declick;
