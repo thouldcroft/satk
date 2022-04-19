@@ -6,7 +6,7 @@
 0;
 #X obj 748 21 cnv 8 150 16 empty empty Sound\\\ Art\\\ Tool-Kit 14
 8 0 10 #dfdfdf #131255 0;
-#N canvas 2508 191 584 355 help-init 1;
+#N canvas 2508 191 584 355 help-init 0;
 #N canvas 1813 -209 1435 1029 cnv-set 0;
 #N canvas 1440 23 349 258 canvas-ctrl 0;
 #X obj 291 1 inlet;

@@ -1,87 +1,14 @@
-#N canvas 1719 -389 713 641 10;
-#X text 22 91 A 2-channel stereo hard disk recorder;
-#N canvas 0 22 450 300 mic-input 0;
-#X obj 136 207 outlet~;
-#X obj 136 165 adc~ 1;
-#X msg 136 145 set \$1;
-#X floatatom 186 124 5 0 0 1 - - - 0;
-#X obj 136 186 *~;
-#X obj 186 144 tgl 15 0 empty empty Mute 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X text 221 124 Input Channel;
-#X obj 134 74 loadbang;
-#X msg 136 95 1;
-#X text 185 164 Out;
-#X obj 184 99 cnv 2 123 2 empty empty Audio\\\ Input 1 12 0 14 #e0e0e0
-#404040 0;
-#X connect 1 0 4 0;
-#X connect 2 0 1 0;
-#X connect 3 0 2 0;
-#X connect 4 0 0 0;
-#X connect 5 0 4 1;
-#X connect 7 0 8 0;
-#X connect 8 0 3 0;
-#X connect 8 0 5 0;
-#X coords 0 -1 1 1 125 86 2 183 96;
-#X restore 106 142 pd mic-input;
-#X obj 244 263 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
-#X obj 313 283 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
-#X text 266 263 "Bang" to start recording;
-#X text 336 283 "Bang" to stop recording;
-#N canvas 1898 122 450 300 audio-out 0;
-#X obj -70 30 inlet~;
-#X obj 50 30 inlet~;
-#X obj 103 143 tgl 15 0 empty empty DSP\\\ On/Off 17 7 0 10 #fcfcfc
-#000000 #000000 0 1;
-#X text 101 101 In Ch1;
-#X text 183 102 In Ch2;
-#X obj 103 163 hsl 64 15 0.01 1 1 0 empty empty Volume 72 7 0 10 #fcfcfc
-#000000 #000000 0 1;
-#X obj 50 220 *~;
-#X obj 102 120 cnv 2 123 2 empty empty Audio\\\ Output 1 8 0 14 #e0e0e0
-#404040 0;
-#X obj 183 144 tgl 15 0 empty empty Mute 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj -70 200 *~;
-#X obj -70 250 dac~ 1 2;
-#X msg 103 230 \; pd dsp \$1;
-#X text -100 260 _;
-#X connect 0 0 9 0;
-#X connect 1 0 6 0;
-#X connect 2 0 11 0;
-#X connect 5 0 6 1;
-#X connect 5 0 9 1;
-#X connect 6 0 10 1;
-#X connect 8 0 6 1;
-#X connect 8 0 9 1;
-#X connect 9 0 10 0;
-#X coords 0 -1 1 1 127 82 2 100 100;
-#X restore 106 522 pd audio-out;
-#X text 8 352 Start & Stop Recording, f 12;
-#X text 84 356 -->;
-#X text 343 337 Time in seconds of the current recording, f 21;
-#X text 320 342 <--;
-#X text 320 377 <--;
-#X text 344 372 Each recording gets numbered for every record since
-the patch containing the module was opened. Number is included in filename.
-, f 21;
-#X text 9 162 * TO DO *;
-#X text 9 182 Create a mono file when only one signal is connected
-\, or at least make a dual mono file when only one signal is connected
-, f 14;
-#X obj 106 302 tdh.satk/satk.util.record~;
-#X text 17 49 Travis Houldcroft || travishouldcroft.com;
-#X obj 3 2 cnv 15 700 40 empty \$0-helpPatchTitleBar satk.type.name
+#N canvas 2907 81 706 658 10;
+#X text 17 48 Travis Houldcroft || travishouldcroft.com;
+#X obj 3 1 cnv 15 700 40 empty \$0-helpPatchTitleBar satk.util.4chMixer~
 9 20 0 18 #580050 #dce4fc 0;
-#X obj 3 124 cnv 1 700 1 empty \$0-helpPatchSecDivider empty 9 20 0
+#X obj 3 123 cnv 1 700 1 empty \$0-helpPatchSecDivider empty 9 20 0
 18 #a0a0a0 #202020 0;
-#X obj 3 78 cnv 1 700 1 empty \$0-helpPatchSecDivider empty 9 20 0
+#X obj 3 77 cnv 1 700 1 empty \$0-helpPatchSecDivider empty 9 20 0
 18 #a0a0a0 #202020 0;
-#X obj 548 5 cnv 8 150 32 empty empty SATK 14 8 0 14 #dfdfdf #131255
+#X obj 548 4 cnv 8 150 32 empty empty SATK 14 8 0 14 #dfdfdf #131255
 0;
-#X obj 548 22 cnv 8 150 16 empty empty Sound\\\ Art\\\ Tool-Kit 14
+#X obj 548 21 cnv 8 150 16 empty empty Sound\\\ Art\\\ Tool-Kit 14
 8 0 10 #dfdfdf #131255 0;
 #N canvas 2508 191 584 355 help-init 0;
 #N canvas 1813 -209 1435 1029 cnv-set 0;
@@ -171,8 +98,8 @@ the patch containing the module was opened. Number is included in filename.
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 700 40 empty \$0-test_canvas satk.type.name 20
-15 0 16 #a0a0a0 #202020 0;
+#X obj 738 322 cnv 2 700 40 empty \$0-test_canvas satk.util.4chMixer~
+20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
 #X obj 170 88 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
@@ -497,8 +424,8 @@ bgclr 1 \, lblclr 12, f 123;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 700 40 empty \$0-test_canvas satk.type.name 20
-15 0 16 #a0a0a0 #202020 0;
+#X obj 738 322 cnv 2 700 40 empty \$0-test_canvas satk.util.4chMixer~
+20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
 #X obj 170 88 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
@@ -800,8 +727,8 @@ and pasted for easy initializing formatting)., f 89;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 700 40 empty \$0-test_canvas satk.type.name 20
-15 0 16 #a0a0a0 #202020 0;
+#X obj 738 322 cnv 2 700 40 empty \$0-test_canvas satk.util.4chMixer~
+20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
 #X obj 170 88 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
@@ -1103,8 +1030,8 @@ and pasted for easy initializing formatting)., f 89;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 700 40 empty \$0-test_canvas satk.type.name 20
-15 0 16 #a0a0a0 #202020 0;
+#X obj 738 322 cnv 2 700 40 empty \$0-test_canvas satk.util.4chMixer~
+20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
 #X obj 170 88 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
@@ -1406,8 +1333,8 @@ and pasted for easy initializing formatting)., f 89;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 700 40 empty \$0-test_canvas satk.type.name 20
-15 0 16 #a0a0a0 #202020 0;
+#X obj 738 322 cnv 2 700 40 empty \$0-test_canvas satk.util.4chMixer~
+20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
 #X obj 170 88 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
@@ -1709,8 +1636,8 @@ and pasted for easy initializing formatting)., f 89;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 700 40 empty \$0-test_canvas satk.type.name 20
-15 0 16 #a0a0a0 #202020 0;
+#X obj 738 322 cnv 2 700 40 empty \$0-test_canvas satk.util.4chMixer~
+20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
 #X obj 170 88 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
@@ -2114,7 +2041,7 @@ titles and graphics for ABSTRACTIONS., f 84;
 #X obj 188 273 r \$0-showRefButton;
 #X msg 188 294 vis 1;
 #X obj 188 315 s \$0-reference;
-#X msg 191 176 symbol satk.type.name;
+#X msg 191 176 symbol satk.util.4chMixer~;
 #X connect 2 0 3 0;
 #X connect 3 0 14 0;
 #X connect 3 0 10 0;
@@ -2122,72 +2049,72 @@ titles and graphics for ABSTRACTIONS., f 84;
 #X connect 11 0 12 0;
 #X connect 12 0 13 0;
 #X connect 14 0 0 0;
-#X restore 621 53 pd help-init;
-#N canvas 1626 23 713 443 reference 1;
+#X restore 621 52 pd help-init;
+#N canvas 1626 23 713 443 reference 0;
 #X obj 560 54 namecanvas \$0-reference;
-#X obj 25 149 cnv 14 18 14 empty empty 3 2 8 0 12 #606060 #dcdcdc 0
-;
-#X obj 25 109 cnv 14 18 14 empty empty 1 2 8 0 12 #606060 #dcdcdc 0
-;
-#X obj 25 129 cnv 14 18 14 empty empty 2 2 8 0 12 #606060 #dcdcdc 0
-;
-#X text 48 222 (sig);
-#X text 98 222 Signal output (linear amplitude 0.0-1.0);
-#X obj 25 223 cnv 14 18 14 empty empty 1 2 8 0 12 #606060 #dcdcdc 0
-;
-#X text 47 243 (float);
-#X text 97 243 Frequency value in pitch class \, for synchronizing
-with other oscillators, f 72;
 #X obj 2 78 cnv 2 700 3 empty \$0-helpPatchSecLabelInlets Inlets 20
 15 0 16 #a0a0a0 #202020 0;
-#X obj 3 189 cnv 2 700 3 empty \$0-helpPatchSecLabelOutlets Outlets
+#X obj 3 169 cnv 2 700 3 empty \$0-helpPatchSecLabelOutlets Outlets
 20 15 0 16 #a0a0a0 #202020 0;
-#X obj 3 323 cnv 2 700 3 empty \$0-helpPatchSecLabelNotes Notes 20
+#X obj 3 275 cnv 2 700 3 empty \$0-helpPatchSecLabelNotes Notes 20
 15 0 16 #a0a0a0 #202020 0;
-#X obj 3 283 cnv 2 700 3 empty \$0-helpPatchSecLabelArgs Arguments
+#X obj 3 235 cnv 2 700 3 empty \$0-helpPatchSecLabelArgs Arguments
 20 15 0 16 #a0a0a0 #202020 0;
-#X text 19 349 Requires tdh.lib to function;
-#X text 19 369 Contains the abstraction [pink~] from iemlib;
-#X obj 3 5 cnv 15 700 40 empty \$0-helpPatchTitleBar satk.type.name
+#X obj 3 5 cnv 15 700 40 empty \$0-helpPatchTitleBar satk.util.4chMixer~
 9 20 0 18 #580050 #dce4fc 0;
-#X obj 25 169 cnv 14 18 14 empty empty 3 2 8 0 12 #606060 #dcdcdc 0
+#X obj 135 86 cnv 14 18 14 empty empty 1 2 8 0 12 #606060 #dcdcdc 0
 ;
-#X obj 25 243 cnv 14 18 14 empty empty 2 2 8 0 12 #606060 #dcdcdc 0
+#X obj 135 126 cnv 14 18 14 empty empty 10 2 8 0 12 #606060 #dcdcdc
+0;
+#X obj 135 106 cnv 14 18 14 empty empty 2 2 8 0 12 #606060 #dcdcdc
+0;
+#X obj 135 186 cnv 14 18 14 empty empty 1 2 8 0 12 #606060 #dcdcdc
+0;
+#X obj 135 206 cnv 14 18 14 empty empty 2 2 8 0 12 #606060 #dcdcdc
+0;
+#X obj 135 146 cnv 14 18 14 empty empty 10 2 8 0 12 #606060 #dcdcdc
+0;
+#X text 155 84 (sig);
+#X text 205 84 Channel 1 signal;
+#X text 155 104 (sig);
+#X text 155 124 (sig);
+#X text 155 144 (sig);
+#X text 205 104 Channel 2 signal;
+#X text 205 124 Channel 3 signal;
+#X text 205 144 Channel 4 signal;
+#X text 157 185 (sig);
+#X text 207 185 All signals summed together that have content panned
+to the left, f 66;
+#X text 157 205 (sig);
+#X text 207 205 All signals summed together that have content panned
+to the right, f 66;
+#X text 133 242 None;
+#X text 127 282 Requires tdh.lib \, else library \, cyclone library
 ;
-#X obj 6 418 cnv 8 500 8 empty empty Inlets 20 15 0 14 #e0e0e0 #404040
-0;
-#X text 26 447 0;
-#X text 48 447 -;
-#X obj 6 528 cnv 8 500 8 empty empty Outlets 20 15 0 14 #e0e0e0 #404040
-0;
-#X text 26 557 0;
-#X text 48 557 -;
-#X obj 6 660 cnv 4 499 4 empty empty empty 20 12 0 14 #e0e0e0 #404040
-0;
-#X obj 6 608 cnv 8 500 8 empty empty Arguments 20 15 0 14 #e0e0e0 #404040
-0;
-#X text 26 640 None;
-#X text 48 464 -;
-#X text 48 480 -;
-#X text 48 497 -;
-#X text 26 464 1;
-#X text 26 480 2;
-#X text 26 497 3;
-#X text 51 108 (sig) Ch1 Input;
-#X text 51 128 (sig) Ch2 Input;
-#X text 51 148 (bang) Start Recording;
-#X text 51 168 (bang) Stop Recording;
-#X text 70 557 (sig) Ch1 Input Pass-Thru;
-#X text 26 574 0;
-#X text 48 574 -;
-#X text 70 574 (sig) Ch2 Input Pass-Thru;
-#X restore 539 53 pd reference;
-#X obj 598 92 bng 15 250 50 0 \$0-showRefButton empty Show\\\ Reference
+#X restore 539 52 pd reference;
+#X obj 598 91 bng 15 250 50 0 \$0-showRefButton empty Show\\\ Reference
 17 7 0 10 #e3c6ff #202020 #202020;
-#X text 136 242 <-- Input Mic Signals (or any signal);
-#X connect 1 0 15 0;
-#X connect 1 0 15 1;
-#X connect 2 0 15 2;
-#X connect 3 0 15 3;
-#X connect 15 0 6 0;
-#X connect 15 1 6 1;
+#X obj 128 228 tdh.satk/satk.util.4chMixer~;
+#X text 3 259 Volume Sliders -->;
+#X text 104 378 -->;
+#X text 1 337 Volume in dBFS \, Channel Mute \, Post (PS) or Pre (PR)
+Metering Control, f 16;
+#X text 104 410 -->;
+#X text 2 405 Pan control with numeric display, f 16;
+#X text 104 449 -->;
+#X text 3 437 Channel Scribble Strip - Click in the field \, type the
+channel name \, hit RETURN, f 16;
+#X obj 473 181 osc~ 440;
+#X obj 128 181 osc~ 110;
+#X obj 300 181 osc~ 220;
+#X obj 646 181 osc~ 880;
+#X obj 128 518 tdh.lib/tdh.util.audioOut~;
+#X text 19 87 A 4 channel mixer that combines 4 different signals \,
+with individual panning and volume control \, as well as a master control
+channel., f 94;
+#X connect 9 0 21 0;
+#X connect 9 1 21 1;
+#X connect 17 0 9 2;
+#X connect 18 0 9 0;
+#X connect 19 0 9 1;
+#X connect 20 0 9 3;

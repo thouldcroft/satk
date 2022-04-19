@@ -1,126 +1,72 @@
-#N canvas 2088 -314 1026 756 10;
-#X text 145 133 -;
-#X text 145 253 -;
-#X text 127 316 None;
-#X text 167 133 (float) gate signal to start the envelope \, 0 starts
-\, 1 stops;
-#X text 145 153 -;
-#X text 167 153 (float) attack time in ms for envelope to ramp from
-0 to 1;
-#X text 145 174 -;
-#X text 145 195 -;
-#X text 167 174 (float) decay time in ms for envelope to ramp from
-1 (end of attack phase) to the sustain level, f 96;
-#X text 167 195 (float) sustain level in linear amplitude for signal
-to sustain at after the attack and decay phases until receiving the
-gate signal, f 134;
-#X text 145 215 -;
-#X text 167 215 (float) release time in ms for signal to ramp from
-sustain level to 0 Triggered by the gate off signal., f 104;
-#X text 97 365 Ramp of values is currently 0 to 1 \, but changing the
-range of values to another scale linearly is moderately easy to do
-and outlined below, f 138;
-#X text 0 1258 _;
-#X obj 100 578 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#N canvas 2217 -282 1012 836 10;
+#X text 0 818 _;
+#X obj 100 278 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
-#X floatatom 160 628 5 0 0 0 - - - 0;
-#X floatatom 221 668 5 0 0 0 - - - 0;
-#X floatatom 282 718 5 0 0 0 - - - 0;
-#X floatatom 343 778 5 0 0 0 - - - 0;
-#X text 120 578 Gate - (1) starts the envelope and then remains at
-the sustain stage \, (0) ends the envelope by ramping from the sustain
-to 0, f 62;
-#X text 360 858 All parameters/controls can be set through inlets or
+#X floatatom 148 318 5 0 0 0 - - - 0;
+#X floatatom 197 358 5 0 0 0 - - - 0;
+#X floatatom 245 400 5 0 0 0 - - - 0;
+#X floatatom 294 480 5 0 0 0 - - - 0;
+#X text 368 656 All parameters/controls can be set through inlets or
 GUI, f 23;
-#X obj 20 938 osc~ 440;
-#X obj 20 968 *~;
-#X text 145 273 -;
-#X text 166 276 (float) ramp of values from 0 to 1 and then back down
-to 0 at data rate, f 71;
-#X obj 20 996 dac~ 1 2;
-#X obj 831 1093 dac~ 1 2;
-#X obj 831 1033 osc~ 220;
-#X obj 552 821 dac~ 1 2;
-#X obj 552 759 osc~ 220;
-#X obj 552 678 *~ 1540;
-#X obj 552 723 +~ 220;
-#X text 612 678 Maximum value minus starting value (produces 0 to (max_val
+#X obj 20 668 osc~ 440;
+#X obj 20 698 *~;
+#X obj 20 726 dac~ 1 2;
+#X obj 831 803 dac~ 1 2;
+#X obj 831 743 osc~ 220;
+#X obj 552 531 dac~ 1 2;
+#X obj 552 469 osc~ 220;
+#X obj 552 388 *~ 1540;
+#X obj 552 433 +~ 220;
+#X text 612 388 Maximum value minus starting value (produces 0 to (max_val
 - start_val) ), f 61;
-#X text 610 728 Starting value (produces start_val to max_val), f
+#X text 610 438 Starting value (produces start_val to max_val), f
 61;
-#X text 642 638 <-- 0 to 1;
-#X obj 552 788 *~, f 15;
-#X text 522 548 Using the envelope change the oscillator's frequency
+#X text 642 348 <-- 0 to 1;
+#X obj 552 498 *~, f 15;
+#X text 522 258 Using the envelope change the oscillator's frequency
 from 220 Hz to 1760 Hz, f 17;
-#X text 660 778 Using the same envelope to also change the volume of
+#X text 659 487 Using the same envelope to also change the volume of
 the oscillator (otherwise you would hear it done on when you open the
 help patch!), f 35;
-#X text 10 418 An envelope in synthesizer terminology is a ramp of
+#X text 10 128 An envelope in synthesizer terminology is a ramp of
 values \, typically from a minimum to a maximum \, and then back down
 to a minimum. An ADSR envelope has four stages in its ramp from start
 to finish \, and the start is triggered by a gate signal to start (a
 number greater than 0 in this case) \, and then a gate signal to end
 (a 0 in this case)., f 81;
-#X text 10 498 When the envelope module receives a "1" at its GATE
-inlet (or from the graphic control) \, it ramps up from 0 to 1 over
-the ATTACK time \, in ms. Once it hits 1 it ramps to the SUSTAIN LEVEL
-over the DECAY TIME in ms. The envelope will then remain at the sustain
-level until the module receives a "0" \, when it will then ramp from
-the SUSTAIN LEVEL to 0 over the RELEASE time., f 81;
-#X text 200 628 Attack Time - Determines the time in ms that the envelope
-ramps from 0 to 1, f 49;
-#X text 260 668 Decay Time - Determines the time the envelope ramps
-from 1 to the sustain level, f 39;
-#X text 320 718 Sustain Level - The level the envelope will sustain
-at following the release until the gate signal is 0, f 29;
-#X text 380 778 Release Time - Time in ms to ramp from the sustain
-level to 0, f 19;
-#X obj 831 1065 *~ 0.5;
-#X obj 831 1013 mtof;
-#X obj 918 1013 / 127;
-#X obj 831 988 makenote 64 150;
-#X obj 831 962 * 80;
-#X text 586 436 You can use the ramp of envelope values 0 to 1 as a
+#X text 188 318 Attack Time - Determines the time in ms that the envelope
+ramps from 0 to 1, f 52;
+#X text 236 358 Decay Time - Determines the time the envelope ramps
+from 1 to the sustain level, f 44;
+#X text 340 468 Release Time - Time in ms to ramp from the sustain
+level to 0, f 27;
+#X obj 831 775 *~ 0.5;
+#X obj 831 723 mtof;
+#X obj 918 723 / 127;
+#X obj 831 698 makenote 64 150;
+#X obj 831 672 * 80;
+#X text 586 146 You can use the ramp of envelope values 0 to 1 as a
 scalar by multiplying a fixed value (produces 0 to fixed-value);
-#X text 550 855 Also outputs envelope at data rate \, so you can use
+#X text 550 565 Also outputs envelope at data rate \, so you can use
 it to control MIDI if you want to!;
-#X text 810 904 (Using the envelope ramp to change MIDI pitch with
+#X text 810 614 (Using the envelope ramp to change MIDI pitch with
 [makenote], f 26;
-#X obj 127 134 cnv 14 14 14 empty empty 0 4 8 0 12 #606060 #dcdcdc
-0;
-#X obj 127 154 cnv 14 14 14 empty empty 1 4 8 0 12 #606060 #dcdcdc
-0;
-#X obj 127 174 cnv 14 14 14 empty empty 2 4 8 0 12 #606060 #dcdcdc
-0;
-#X obj 127 194 cnv 14 14 14 empty empty 3 4 8 0 12 #606060 #dcdcdc
-0;
-#X obj 127 214 cnv 14 14 14 empty empty 4 4 8 0 12 #606060 #dcdcdc
-0;
-#X obj 127 254 cnv 14 14 14 empty empty 0 4 8 0 12 #606060 #dcdcdc
-0;
-#X obj 127 274 cnv 14 14 14 empty empty 1 4 8 0 12 #606060 #dcdcdc
-0;
-#X text 166 254 (sig) ramp of values from 0 to 1 and then back down
-to 0 at signal rate, f 71;
-#X obj 640 475 satk.util.adsr~;
-#X obj 547 893 satk.util.adsr~;
-#X obj 100 814 satk.util.adsr~;
+#X obj 640 185 satk.util.adsr~;
+#X obj 547 603 satk.util.adsr~;
 #X text 17 48 Travis Houldcroft || travishouldcroft.com;
-#X obj 3 1 cnv 15 1000 40 empty \$0-helpPatchTitleBar SATKHelpTemplate
+#X obj 3 1 cnv 15 1000 40 empty \$0-helpPatchTitleBar satk.util.adsr~
 9 20 0 18 #580050 #dce4fc 0;
-#X obj 2 123 cnv 2 1000 3 empty \$0-helpPatchSecLabelInlets Inlets
-20 15 0 16 #a0a0a0 #202020 0;
-#X obj 3 247 cnv 2 1000 3 empty \$0-helpPatchSecLabelOutlets Outlets
-20 15 0 16 #a0a0a0 #202020 0;
-#X obj 3 357 cnv 2 1000 3 empty \$0-helpPatchSecLabelNotes Notes 20
-15 0 16 #a0a0a0 #202020 0;
-#X obj 3 407 cnv 1 1000 1 empty \$0-helpPatchSecDivider empty 9 20
+#X obj 3 117 cnv 1 1000 1 empty \$0-helpPatchSecDivider empty 9 20
 0 18 #a0a0a0 #202020 0;
-#X obj 3 307 cnv 2 1000 3 empty \$0-helpPatchSecLabelArgs Arguments
-20 15 0 16 #a0a0a0 #202020 0;
 #X obj 3 77 cnv 1 1000 1 empty \$0-helpPatchSecDivider empty 9 20 0
 18 #a0a0a0 #202020 0;
-#N canvas 1440 319 621 281 help-init 0;
+#X text 19 90 A multi-sement ramp generator in the style of common
+synthesizer envelope, f 76;
+#X obj 848 4 cnv 8 150 32 empty empty SATK 14 8 0 14 #dfdfdf #131255
+0;
+#X obj 848 21 cnv 8 150 16 empty empty Sound\\\ Art\\\ Tool-Kit 14
+8 0 10 #dfdfdf #131255 0;
+#N canvas 2508 191 584 355 help-init 0;
 #N canvas 1813 -209 1435 1029 cnv-set 0;
 #N canvas 1440 23 349 258 canvas-ctrl 0;
 #X obj 291 1 inlet;
@@ -208,7 +154,7 @@ to 0 at signal rate, f 71;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 1000 40 empty \$0-test_canvas SATKHelpTemplate
+#X obj 738 322 cnv 2 1000 40 empty \$0-test_canvas satk.util.adsr~
 20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
@@ -534,7 +480,7 @@ bgclr 1 \, lblclr 12, f 123;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 1000 40 empty \$0-test_canvas SATKHelpTemplate
+#X obj 738 322 cnv 2 1000 40 empty \$0-test_canvas satk.util.adsr~
 20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
@@ -837,7 +783,7 @@ and pasted for easy initializing formatting)., f 89;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 1000 40 empty \$0-test_canvas SATKHelpTemplate
+#X obj 738 322 cnv 2 1000 40 empty \$0-test_canvas satk.util.adsr~
 20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
@@ -1140,7 +1086,7 @@ and pasted for easy initializing formatting)., f 89;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 1000 40 empty \$0-test_canvas SATKHelpTemplate
+#X obj 738 322 cnv 2 1000 40 empty \$0-test_canvas satk.util.adsr~
 20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
@@ -1443,7 +1389,7 @@ and pasted for easy initializing formatting)., f 89;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 1000 40 empty \$0-test_canvas SATKHelpTemplate
+#X obj 738 322 cnv 2 1000 40 empty \$0-test_canvas satk.util.adsr~
 20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
@@ -1746,7 +1692,7 @@ and pasted for easy initializing formatting)., f 89;
 #X text 0 18 Canvas Name;
 #X obj 284 2 cnv 5 1 260 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
-#X obj 738 322 cnv 2 1000 40 empty \$0-test_canvas SATKHelpTemplate
+#X obj 738 322 cnv 2 1000 40 empty \$0-test_canvas satk.util.adsr~
 20 15 0 16 #a0a0a0 #202020 0;
 #X obj 415 328 s \$0-test_canvas;
 #X obj 210 187 spigot;
@@ -2147,43 +2093,121 @@ in [message( objects get saved to the patch., f 84;
 #X text 486 168 EDIT HERE to change patch WIDTH, f 12;
 #X text 16 4 This subpatch (and nested subpatches) helps set the uniform
 titles and graphics for ABSTRACTIONS., f 84;
-#X msg 191 177 symbol SATKHelpTemplate;
+#X obj 188 273 r \$0-showRefButton;
+#X msg 188 294 vis 1;
+#X obj 188 315 s \$0-reference;
 #X msg 426 179 1000;
+#X msg 191 176 symbol satk.util.adsr~;
 #X connect 2 0 3 0;
-#X connect 3 0 10 0;
-#X connect 3 0 11 0;
-#X connect 10 0 0 0;
-#X connect 11 0 0 1;
-#X restore 920 49 pd help-init;
-#X obj 848 4 cnv 8 150 32 empty empty SATK 14 8 0 14 #dfdfdf #131255
+#X connect 3 0 14 0;
+#X connect 3 0 13 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 13 0 0 1;
+#X connect 14 0 0 0;
+#X restore 921 52 pd help-init;
+#N canvas 2529 9 1029 441 reference 0;
+#X obj 560 54 namecanvas \$0-reference;
+#X obj 115 129 cnv 14 18 14 empty empty 3 2 8 0 12 #606060 #dcdcdc
 0;
-#X obj 848 21 cnv 8 150 16 empty empty Sound\\\ Art\\\ Tool-Kit 14
-8 0 10 #dfdfdf #131255 0;
-#X text 19 90 A multi-sement ramp generator in the style of common
-synthesizer envelope, f 76;
-#X connect 14 0 62 0;
-#X connect 15 0 62 1;
-#X connect 16 0 62 2;
-#X connect 17 0 62 3;
-#X connect 18 0 62 4;
-#X connect 21 0 22 0;
-#X connect 22 0 25 0;
-#X connect 22 0 25 1;
-#X connect 27 0 44 0;
-#X connect 29 0 35 0;
-#X connect 30 0 31 0;
-#X connect 31 0 29 0;
-#X connect 35 0 28 0;
-#X connect 35 0 28 1;
-#X connect 44 0 26 0;
-#X connect 44 0 26 1;
-#X connect 45 0 27 0;
-#X connect 46 0 44 1;
-#X connect 47 0 45 0;
-#X connect 47 1 46 0;
-#X connect 48 0 47 0;
-#X connect 60 0 30 0;
-#X connect 60 0 35 1;
-#X connect 61 1 48 0;
-#X connect 62 0 22 1;
+#X obj 115 85 cnv 14 18 14 empty empty 1 2 8 0 12 #606060 #dcdcdc 0
+;
+#X obj 115 109 cnv 14 18 14 empty empty 2 2 8 0 12 #606060 #dcdcdc
+0;
+#X obj 115 243 cnv 14 18 14 empty empty 1 2 8 0 12 #606060 #dcdcdc
+0;
+#X obj 2 78 cnv 2 1000 3 empty \$0-helpPatchSecLabelInlets Inlets 20
+15 0 16 #a0a0a0 #202020 0;
+#X obj 3 229 cnv 2 1000 3 empty \$0-helpPatchSecLabelOutlets Outlets
+20 15 0 16 #a0a0a0 #202020 0;
+#X obj 3 333 cnv 2 1000 3 empty \$0-helpPatchSecLabelNotes Notes 20
+15 0 16 #a0a0a0 #202020 0;
+#X obj 3 293 cnv 2 1000 3 empty \$0-helpPatchSecLabelArgs Arguments
+20 15 0 16 #a0a0a0 #202020 0;
+#X obj 3 5 cnv 15 1000 40 empty \$0-helpPatchTitleBar satk.util.adsr~
+9 20 0 18 #580050 #dce4fc 0;
+#X obj 115 149 cnv 14 18 14 empty empty 4 2 8 0 12 #606060 #dcdcdc
+0;
+#X obj 115 263 cnv 14 18 14 empty empty 2 2 8 0 12 #606060 #dcdcdc
+0;
+#X text 137 107 (float) attack time in ms for envelope to ramp from
+0 to 1;
+#X text 137 128 (float) decay time in ms for envelope to ramp from
+1 (end of attack phase) to the sustain level, f 96;
+#X text 137 176 (float) release time in ms for signal to ramp from
+sustain level to 0 Triggered by the gate off signal., f 104;
+#X text 138 263 (float) ramp of values from 0 to 1 and then back down
+to 0 at data rate, f 71;
+#X text 138 241 (sig) ramp of values from 0 to 1 and then back down
+to 0 at signal rate, f 71;
+#X obj 115 176 cnv 14 18 14 empty empty 5 2 8 0 12 #606060 #dcdcdc
+0;
+#X text 107 343 Ramp of values is currently 0 to 1 \, but changing
+the range of values to another scale linearly is moderately easy to
+do and outlined below, f 138;
+#X obj 3 377 cnv 1 1000 1 empty \$0-helpPatchSecDivider empty 9 20
+0 18 #a0a0a0 #202020 0;
+#X text 137 196 (float) release time in ms for signal to ramp from
+sustain level to 0 Triggered by the gate off signal., f 104;
+#X obj 115 196 cnv 14 18 14 empty empty 6 2 8 0 12 #606060 #dcdcdc
+0;
+#X text 187 82 gate signal to start the envelope \, a value > 0 starts
+the envelope \, 1 stops the envelope. When in MIDI Velocity Mode \,
+a velocity value should be sent here to trigger the gate and to set
+the sustain value., f 121;
+#X text 136 84 (float);
+#X text 136 150 (float);
+#X text 187 149 sustain level in linear amplitude for signal to sustain
+at after the attack and decay phases until receiving the gate signal.
+When in MIDI velocity mode \, any value here or in the GUI is ignored
+and the MIDI velocity sent to the GATE is used for sustain., f 134
+;
+#X restore 839 52 pd reference;
+#X obj 898 91 bng 15 250 50 0 \$0-showRefButton empty Show\\\ Reference
+17 7 0 10 #e3c6ff #202020 #202020;
+#X obj 343 526 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X text 361 525 MIDI Velocity - When enabled \, the signal sent to
+the gate inlet will be interpreted as a MIDI velocity value \, adn
+the sustain level will be set according to that MIDI velocity., f
+23;
+#X text 10 198 When the envelope module receives a value > 0 at its
+GATE inlet (or from the graphic control) \, it ramps up from 0 to 1
+over the ATTACK time \, in ms. Once it hits 1 it ramps to the SUSTAIN
+LEVEL over the DECAY TIME in ms. The envelope will then remain at the
+sustain level until the module receives a "0" \, when it will then
+ramp from the SUSTAIN LEVEL to 0 over the RELEASE time., f 81;
+#X text 120 275 Gate - (> 0) starts the envelope and then remains at
+the sustain stage until a (0) is sent here \, ending the envelope by
+ramping from the sustain to 0, f 63;
+#X text 283 391 Sustain Level - The level the envelope will sustain
+at following the release until the gate signal is 0 This level is ignored
+when MIDI values are used for the sustain., f 36;
+#X obj 101 552 tdh.satk/satk.util.adsr~;
+#X connect 1 0 51 0;
+#X connect 2 0 51 1;
+#X connect 3 0 51 2;
+#X connect 4 0 51 3;
+#X connect 5 0 51 4;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 8 0 9 1;
+#X connect 11 0 26 0;
+#X connect 13 0 19 0;
+#X connect 14 0 15 0;
+#X connect 15 0 13 0;
+#X connect 19 0 12 0;
+#X connect 19 0 12 1;
+#X connect 26 0 10 0;
+#X connect 26 0 10 1;
+#X connect 27 0 11 0;
+#X connect 28 0 26 1;
+#X connect 29 0 27 0;
+#X connect 29 1 28 0;
+#X connect 30 0 29 0;
+#X connect 34 0 14 0;
+#X connect 34 0 19 1;
+#X connect 35 1 30 0;
+#X connect 46 0 51 5;
+#X connect 51 0 8 1;
 #X coords 0 0 1 1 250 150 0;
