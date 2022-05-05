@@ -1,1 +1,2 @@
-#N canvas 486 252 450 300 10;
+#N canvas 2383 -38 641 705 10;
+#X obj 45 38 satk.synth.1oscil~;
