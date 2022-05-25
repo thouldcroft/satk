@@ -1,314 +1,4 @@
-#N canvas 1442 -473 2560 1395 10;
-#X obj 644 888 r \$0-g1end-s;
-#X obj 535 888 r \$0-g1start-s;
-#X obj 520 710 r \$0-g1-s;
-#X obj 753 888 r \$0-g1dur-s;
-#X obj 562 768 r \$0-g1del-s;
-#X obj 1270 717 r \$0-g4-s;
-#X obj 1161 719 r \$0-g3-s;
-#X obj 1035 720 r \$0-g2-s;
-#X obj 520 1052 outlet g1;
-#X obj 1035 1052 outlet g2;
-#X obj 506 1052 cnv 14 14 14 empty empty 1 4 8 0 12 #606060 #dcdcdc
-0;
-#X obj 1020 1052 cnv 14 14 14 empty empty 2 4 8 0 12 #606060 #dcdcdc
-0;
-#X obj 1145 1052 cnv 14 14 14 empty empty 3 4 8 0 12 #606060 #dcdcdc
-0;
-#X obj 511 491 cnv 14 14 14 empty empty 0 4 8 0 12 #606060 #dcdcdc
-0;
-#X obj 547 793 f;
-#X obj 520 915 f;
-#X obj 629 915 f;
-#X obj 629 888 cnv 14 14 14 empty empty R 6 8 0 8 #fce0c4 #7c7c7c 0
-;
-#X obj 519 888 cnv 14 14 14 empty empty R 6 8 0 8 #fcc4c4 #7c7c7c 0
-;
-#X obj 546 768 cnv 14 14 14 empty empty R 6 8 0 8 #b8b8b8 #404040 0
-;
-#X obj 505 710 cnv 14 14 14 empty empty R 6 8 0 8 #dcdcdc #7c7c7c 0
-;
-#X obj 737 888 cnv 14 14 14 empty empty R 6 8 0 8 #fcfcc4 #7c7c7c 0
-;
-#X obj 1146 720 cnv 14 14 14 empty empty R 6 8 0 8 #00fc04 #7c7c7c
-0;
-#X obj 1254 718 cnv 14 14 14 empty empty R 6 8 0 8 #0400fc #dfdfdf
-0;
-#X obj 663 673 cnv 14 14 14 empty empty S 6 8 0 8 #00fc04 #7c7c7c 0
-;
-#X obj 586 673 cnv 14 14 14 empty empty S 6 8 0 8 #fc8000 #7c7c7c 0
-;
-#X obj 741 673 cnv 14 14 14 empty empty S 6 8 0 8 #0400fc #dfdfdf 0
-;
-#X obj 27 547 cnv 5 5 5 empty \$0-vari-tab-1 empty 2 10 0 14 #e0e0e0
-#404040 0;
-#X obj 37 547 cnv 5 5 5 empty empty empty 2 10 0 14 #b8b8b8 #404040
-0;
-#X obj 47 547 cnv 5 5 5 empty empty empty 2 10 0 14 #fcc4c4 #404040
-0;
-#X obj 57 547 cnv 5 5 5 empty empty empty 2 10 0 14 #fce0c4 #404040
-0;
-#X obj 1025 750 cnv 5 5 5 empty \$0-vari-tab-1 empty 2 10 0 14 #fc8000
-#404040 0;
-#X obj 1145 752 cnv 5 5 5 empty \$0-vari-tab-1 empty 2 10 0 14 #00fc04
-#404040 0;
-#X obj 1260 752 cnv 5 5 5 empty \$0-vari-tab-1 empty 2 10 0 14 #0400fc
-#fcfcfc 0;
-#X obj 66 547 cnv 5 5 5 empty empty ☐ 0 2 0 14 #fcfcc4 #dfdfdf 0
-;
-#X obj 738 915 f;
-#X obj 520 731 t b b;
-#X obj 520 821 del;
-#X obj 520 959 pack f f f, f 37;
-#X msg 520 996 \$1 \, \$2 \$3;
-#X obj 520 1025 line;
-#X text 645 768 Delay time of gesture start;
-#X text 559 731 Gesture trigger;
-#X text 762 914 Gesture duration;
-#X text 654 914 Gesture destination value, f 11;
-#X text 544 914 Gesture start value, f 11;
-#X text 588 996 A gesture is a linear progression of values from a
-start point to an end point over a certain duration, f 26;
-#X obj 61 579 cnv 5 5 5 empty empty ❴ -3 3 0 22 #ffffff #ff8300 0
-;
-#X obj 55 604 cnv 10 5 5 empty empty ❴ 2 7 0 22 #ffffff #00ff04 0
-;
-#X obj 55 634 cnv 10 5 5 empty empty ❴ 2 7 0 22 #ffffff #0400ff 0
-;
-#N canvas 1440 -209 740 384 \$0-gesture2 0;
-#X obj 81 97 f;
-#X obj 54 219 f;
-#X obj 163 219 f;
-#X obj 273 219 f;
-#X obj 54 35 t b b;
-#X obj 54 125 del;
-#X obj 54 263 pack f f f, f 37;
-#X msg 54 300 \$1 \, \$2 \$3;
-#X obj 54 329 line;
-#X text 179 72 Delay time of gesture start;
-#X text 93 35 Gesture trigger;
-#X text 307 218 Gesture duration;
-#X text 188 218 Gesture destination value, f 11;
-#X text 78 218 Gesture start value, f 11;
-#X text 122 300 A gesture is a linear progression of values from a
-start point to an end point over a certain duration, f 26;
-#X obj 96 72 r \$0-g2del-s;
-#X obj 69 192 r \$0-g2start-s;
-#X obj 178 192 r \$0-g2end-s;
-#X obj 288 192 r \$0-g2dur-s;
-#X obj 54 350 outlet;
-#X obj 54 7 inlet;
-#X obj 81 71 cnv 14 14 14 empty empty R 6 8 0 8 #fc8000 #7c7c7c 0;
-#X obj 53 192 cnv 14 14 14 empty empty R 6 8 0 8 #fc8000 #7c7c7c 0
-;
-#X obj 163 192 cnv 14 14 14 empty empty R 6 8 0 8 #fc8000 #7c7c7c 0
-;
-#X obj 273 192 cnv 14 14 14 empty empty R 6 8 0 8 #fc8000 #7c7c7c 0
-;
-#X obj 54 149 t b b b b, f 55;
-#X obj 381 275 spigot;
-#X obj 381 296 s \$0-chain;
-#X text 413 171 GUI toggles [spigot] open and sends this gesture's
-trigger to the chain outlet, f 17;
-#X obj 503 242 cnv 14 14 14 empty empty S 6 8 0 8 #e3c6ff #7c7c7c 0
-;
-#X obj 414 242 r \$0-g2Chain-s;
-#X connect 0 0 5 1;
-#X connect 1 0 6 0;
-#X connect 2 0 6 1;
-#X connect 3 0 6 2;
-#X connect 4 0 5 0;
-#X connect 4 1 0 0;
-#X connect 5 0 25 0;
-#X connect 6 0 7 0;
-#X connect 7 0 8 0;
-#X connect 8 0 19 0;
-#X connect 15 0 0 1;
-#X connect 16 0 1 1;
-#X connect 17 0 2 1;
-#X connect 18 0 3 1;
-#X connect 20 0 4 0;
-#X connect 25 0 1 0;
-#X connect 25 1 2 0;
-#X connect 25 2 3 0;
-#X connect 25 3 26 0;
-#X connect 26 0 27 0;
-#X connect 30 0 26 1;
-#X restore 1035 749 pd \$0-gesture2;
-#X obj 1020 720 cnv 14 14 14 empty empty R 6 8 0 8 #fc8000 #7c7c7c
-0;
-#N canvas 1440 -209 740 384 \$0-gesture3 0;
-#X obj 71 97 f;
-#X obj 44 219 f;
-#X obj 153 219 f;
-#X obj 263 219 f;
-#X obj 44 35 t b b;
-#X obj 44 125 del;
-#X obj 44 263 pack f f f, f 37;
-#X msg 44 300 \$1 \, \$2 \$3;
-#X obj 44 329 line;
-#X text 169 72 Delay time of gesture start;
-#X text 83 35 Gesture trigger;
-#X text 297 218 Gesture duration;
-#X text 178 218 Gesture destination value, f 11;
-#X text 68 218 Gesture start value, f 11;
-#X text 112 300 A gesture is a linear progression of values from a
-start point to an end point over a certain duration, f 26;
-#X obj 44 350 outlet;
-#X obj 44 7 inlet;
-#X obj 71 71 cnv 14 14 14 empty empty R 6 8 0 8 #00ff04 #7c7c7c 0;
-#X obj 43 192 cnv 14 14 14 empty empty R 6 8 0 8 #00ff04 #7c7c7c 0
-;
-#X obj 153 192 cnv 14 14 14 empty empty R 6 8 0 8 #00ff04 #7c7c7c 0
-;
-#X obj 263 192 cnv 14 14 14 empty empty R 6 8 0 8 #00ff04 #7c7c7c 0
-;
-#X obj 86 72 r \$0-g3del-s;
-#X obj 59 192 r \$0-g3start-s;
-#X obj 168 192 r \$0-g3end-s;
-#X obj 278 192 r \$0-g3dur-s;
-#X obj 377 275 spigot;
-#X obj 377 296 s \$0-chain;
-#X text 409 171 GUI toggles [spigot] open and sends this gesture's
-trigger to the chain outlet, f 17;
-#X obj 499 242 cnv 14 14 14 empty empty S 6 8 0 8 #e3c6ff #7c7c7c 0
-;
-#X obj 44 149 t b b b b, f 56;
-#X obj 410 241 r \$0-g3Chain-s;
-#X connect 0 0 5 1;
-#X connect 1 0 6 0;
-#X connect 2 0 6 1;
-#X connect 3 0 6 2;
-#X connect 4 0 5 0;
-#X connect 4 1 0 0;
-#X connect 5 0 29 0;
-#X connect 6 0 7 0;
-#X connect 7 0 8 0;
-#X connect 8 0 15 0;
-#X connect 16 0 4 0;
-#X connect 21 0 0 1;
-#X connect 22 0 1 1;
-#X connect 23 0 2 1;
-#X connect 24 0 3 1;
-#X connect 25 0 26 0;
-#X connect 29 0 1 0;
-#X connect 29 1 2 0;
-#X connect 29 2 3 0;
-#X connect 29 3 25 0;
-#X connect 30 0 25 1;
-#X restore 1160 747 pd \$0-gesture3;
-#N canvas 1440 -209 740 384 \$0-gesture3 0;
-#X obj 71 97 f;
-#X obj 44 219 f;
-#X obj 153 219 f;
-#X obj 263 219 f;
-#X obj 44 35 t b b;
-#X obj 44 125 del;
-#X obj 44 263 pack f f f, f 37;
-#X msg 44 300 \$1 \, \$2 \$3;
-#X obj 44 329 line;
-#X text 169 72 Delay time of gesture start;
-#X text 83 35 Gesture trigger;
-#X text 297 218 Gesture duration;
-#X text 178 218 Gesture destination value, f 11;
-#X text 68 218 Gesture start value, f 11;
-#X text 112 300 A gesture is a linear progression of values from a
-start point to an end point over a certain duration, f 26;
-#X obj 44 350 outlet;
-#X obj 44 7 inlet;
-#X obj 71 71 cnv 14 14 14 empty empty R 6 8 0 8 #0400ff #dfdfdf 0;
-#X obj 43 192 cnv 14 14 14 empty empty R 6 8 0 8 #0400ff #dfdfdf 0
-;
-#X obj 153 192 cnv 14 14 14 empty empty R 6 8 0 8 #0400ff #dfdfdf 0
-;
-#X obj 263 192 cnv 14 14 14 empty empty R 6 8 0 8 #0400ff #dfdfdf 0
-;
-#X obj 86 72 r \$0-g4del-s;
-#X obj 59 192 r \$0-g4start-s;
-#X obj 168 192 r \$0-g4end-s;
-#X obj 278 192 r \$0-g4dur-s;
-#X obj 377 275 spigot;
-#X obj 377 296 s \$0-chain;
-#X text 409 171 GUI toggles [spigot] open and sends this gesture's
-trigger to the chain outlet, f 17;
-#X obj 499 242 cnv 14 14 14 empty empty S 6 8 0 8 #e3c6ff #7c7c7c 0
-;
-#X obj 44 149 t b b b b, f 56;
-#X obj 410 242 r \$0-g4Chain-s;
-#X connect 0 0 5 1;
-#X connect 1 0 6 0;
-#X connect 2 0 6 1;
-#X connect 3 0 6 2;
-#X connect 4 0 5 0;
-#X connect 4 1 0 0;
-#X connect 5 0 29 0;
-#X connect 6 0 7 0;
-#X connect 7 0 8 0;
-#X connect 8 0 15 0;
-#X connect 16 0 4 0;
-#X connect 21 0 0 1;
-#X connect 22 0 1 1;
-#X connect 23 0 2 1;
-#X connect 24 0 3 1;
-#X connect 25 0 26 0;
-#X connect 29 0 1 0;
-#X connect 29 1 2 0;
-#X connect 29 2 3 0;
-#X connect 29 3 25 0;
-#X connect 30 0 25 1;
-#X restore 1270 747 pd \$0-gesture3;
-#X obj 1160 1052 outlet g3;
-#X obj 1270 1052 outlet g4;
-#X obj 525 673 s \$0-g1-r;
-#X obj 510 673 cnv 14 14 14 empty empty S 6 8 0 8 #dcdcdc #7c7c7c 0
-;
-#X obj 510 620 cnv 14 14 14 empty empty R 6 8 0 8 #9c00fc #dfdfdf 0
-;
-#X obj 64 520 cnv 5 5 5 empty \$0-vari-tab-1 empty 2 10 0 14 #9c00fc
-#fcfcfc 0;
-#X obj 602 673 s \$0-g2-r;
-#X obj 679 673 s \$0-g3-r;
-#X obj 756 673 s \$0-g4-r;
-#X obj 525 641 t b b b b, f 39;
-#X obj 527 491 inlet all;
-#X obj 621 491 cnv 14 14 14 empty empty 1 4 8 0 12 #606060 #dcdcdc
-0;
-#X obj 637 491 inlet gest1;
-#X obj 1302 491 cnv 14 14 14 empty empty 2 4 8 0 12 #606060 #dcdcdc
-0;
-#X obj 1318 491 inlet gest2;
-#X obj 1402 491 cnv 14 14 14 empty empty 3 4 8 0 12 #606060 #dcdcdc
-0;
-#X obj 1418 491 inlet gest3;
-#X obj 1496 491 cnv 14 14 14 empty empty 4 4 8 0 12 #606060 #dcdcdc
-0;
-#X obj 1512 491 inlet gest4;
-#X obj 1402 533 cnv 14 14 14 empty empty S 6 8 0 8 #00fc04 #7c7c7c
-0;
-#X obj 1302 533 cnv 14 14 14 empty empty S 6 8 0 8 #fc8000 #7c7c7c
-0;
-#X obj 1497 533 cnv 14 14 14 empty empty S 6 8 0 8 #0400fc #dfdfdf
-0;
-#X obj 637 533 s \$0-g1-r;
-#X obj 622 533 cnv 14 14 14 empty empty S 6 8 0 8 #dcdcdc #7c7c7c 0
-;
-#X obj 1318 533 s \$0-g2-r;
-#X obj 1418 533 s \$0-g3-r;
-#X obj 1512 533 s \$0-g4-r;
-#X obj 512 533 cnv 14 14 14 empty empty S 6 8 0 8 #9c00fc #dfdfdf 0
-;
-#X obj 527 533 s \$0-allGest-s;
-#X obj 1255 1052 cnv 14 14 14 empty empty 4 4 8 0 12 #606060 #dcdcdc
-0;
-#X text 76 491 All;
-#X text 139 491 G1;
-#X text 212 491 G2;
-#X text 283 491 G3;
-#X text 349 491 G4;
-#X text 219 707 G3;
-#X text 287 707 G4;
-#X text 76 707 G1;
-#X text 145 707 G2;
+#N canvas 1440 -476 2560 1395 10;
 #X obj 125 81 cnv 14 18 14 empty empty 0 2 8 0 12 #606060 #dcdcdc 0
 ;
 #X obj 125 146 cnv 14 18 14 empty empty 3 2 8 0 12 #606060 #dcdcdc
@@ -326,105 +16,8 @@ trigger to the chain outlet, f 17;
 #X obj 125 251 cnv 14 18 14 empty empty 2 2 8 0 12 #606060 #dcdcdc
 0;
 #X text 24 363 22/02/20 - ver 0.1, f 21;
-#X obj 78 684 cnv 15 285 20 empty empty Gesture 20 9 0 14 #e0e0e0 #404040
-0;
-#X obj 921 533 cnv 14 14 14 empty empty S 6 8 0 8 #fce0c4 #7c7c7c 0
-;
-#X obj 814 533 cnv 14 14 14 empty empty S 6 8 0 8 #fcc4c4 #7c7c7c 0
-;
-#X obj 1015 533 cnv 14 14 14 empty empty S 6 8 0 8 #fcfcc4 #7c7c7c
-0;
-#X obj 717 533 cnv 14 14 14 empty empty S 6 8 0 8 #b8b8b8 #404040 0
-;
-#X obj 733 533 s \$0-g1del-r;
-#X obj 830 533 s \$0-g1start-r;
-#X obj 936 533 s \$0-g1end-r;
-#X obj 1031 533 s \$0-g1dur-r;
-#N canvas 1593 -10 1215 428 g2routing 0;
-#X obj 36 57 inlet;
-#X obj 36 82 route bang delay start end dur, f 74;
-#X obj 99 110 cnv 14 14 14 empty empty S 6 8 0 8 #ff8300 #404040 0
-;
-#X obj 36 110 outlet;
-#X obj 194 110 cnv 14 14 14 empty empty S 6 8 0 8 #ff8300 #404040 0
-;
-#X obj 301 110 cnv 14 14 14 empty empty S 6 8 0 8 #ff8300 #404040 0
-;
-#X obj 397 110 cnv 14 14 14 empty empty S 6 8 0 8 #ff8300 #404040 0
-;
-#X obj 115 110 s \$0-g2del-r;
-#X obj 210 110 s \$0-g2start-r;
-#X obj 316 110 s \$0-g2end-r;
-#X obj 412 110 s \$0-g2dur-r;
-#X connect 0 0 1 0;
-#X connect 1 0 3 0;
-#X connect 1 1 7 0;
-#X connect 1 2 8 0;
-#X connect 1 3 9 0;
-#X connect 1 4 10 0;
-#X restore 1318 512 pd g2routing;
-#N canvas 1593 -10 525 218 g3routing 0;
-#X obj 36 57 inlet;
-#X obj 36 82 route bang delay start end dur, f 74;
-#X obj 99 110 cnv 14 14 14 empty empty S 6 8 0 8 #00ff04 #404040 0
-;
-#X obj 36 110 outlet;
-#X obj 194 110 cnv 14 14 14 empty empty S 6 8 0 8 #00ff04 #404040 0
-;
-#X obj 301 110 cnv 14 14 14 empty empty S 6 8 0 8 #00ff04 #404040 0
-;
-#X obj 397 110 cnv 14 14 14 empty empty S 6 8 0 8 #00ff04 #404040 0
-;
-#X obj 115 110 s \$0-g3del-r;
-#X obj 210 110 s \$0-g3start-r;
-#X obj 316 110 s \$0-g3end-r;
-#X obj 412 110 s \$0-g3dur-r;
-#X connect 0 0 1 0;
-#X connect 1 0 3 0;
-#X connect 1 1 7 0;
-#X connect 1 2 8 0;
-#X connect 1 3 9 0;
-#X connect 1 4 10 0;
-#X restore 1418 512 pd g3routing;
-#N canvas 1593 -10 525 218 g4routing 0;
-#X obj 36 57 inlet;
-#X obj 36 82 route bang delay start end dur, f 74;
-#X obj 99 110 cnv 14 14 14 empty empty S 6 8 0 8 #0400ff #dfdfdf 0
-;
-#X obj 36 110 outlet;
-#X obj 194 110 cnv 14 14 14 empty empty S 6 8 0 8 #0400ff #dfdfdf 0
-;
-#X obj 301 110 cnv 14 14 14 empty empty S 6 8 0 8 #0400ff #dfdfdf 0
-;
-#X obj 397 110 cnv 14 14 14 empty empty S 6 8 0 8 #0400ff #dfdfdf 0
-;
-#X obj 115 110 s \$0-g4del-r;
-#X obj 210 110 s \$0-g4start-r;
-#X obj 316 110 s \$0-g4end-r;
-#X obj 412 110 s \$0-g4dur-r;
-#X connect 0 0 1 0;
-#X connect 1 0 3 0;
-#X connect 1 1 7 0;
-#X connect 1 2 8 0;
-#X connect 1 3 9 0;
-#X connect 1 4 10 0;
-#X restore 1512 514 pd g4routing;
-#X obj 1308 515 cnv 5 5 5 empty \$0-vari-tab-1 empty 2 10 0 14 #fc8000
-#404040 0;
-#X obj 1405 515 cnv 5 5 5 empty \$0-vari-tab-1 empty 2 10 0 14 #00fc04
-#404040 0;
-#X obj 1500 515 cnv 5 5 5 empty \$0-vari-tab-1 empty 2 10 0 14 #0400fc
-#fcfcfc 0;
-#X text 639 619 Trigger all gestures simultaneously (delays still affect
-start times), f 69;
-#X text 638 557 [route] allows the 3 trigger inlets to also accept
-the messages "delay" \, "start" \, "end" \, and "dur" followed by a
-float value to set the paramters of each gesture externally, f 74
-;
-#X text 1591 512 <- all other routing;
 #X obj 125 166 cnv 14 18 14 empty empty 4 2 8 0 12 #606060 #dcdcdc
 0;
-#X obj 525 620 r \$0-allGest-s;
 #X text 18 48 Travis Houldcroft || travishouldcroft.com;
 #X obj 1 2 cnv 15 1400 40 empty \$0-abstrPatchTitleBar satk.seq.gesture
 9 20 0 18 #f430f0 #404040 0;
@@ -2820,36 +2413,450 @@ same as inlet 1 for gesture 2, f 80;
 #X text 247 165 "Bang" triggers gesture 4 \, messages set parameters
 same as inlet 1 for gesture 2, f 80;
 #X text 147 270 (float);
-#X obj 520 845 t b b b b, f 55;
-#X text 331 707 CHAIN;
-#X obj 847 982 spigot;
-#X obj 880 949 r \$0-g1Chain-s;
-#X obj 847 1003 s \$0-chain;
-#X text 879 878 GUI toggles [spigot] open and sends this gesture's
+#X text 24 379 22/04/04 - ver 0.2, f 21;
+#X obj 564 886 r \$0-g1end-s;
+#X obj 455 886 r \$0-g1start-s;
+#X obj 440 708 r \$0-g1-s;
+#X obj 673 886 r \$0-g1dur-s;
+#X obj 482 766 r \$0-g1del-s;
+#X obj 1190 715 r \$0-g4-s;
+#X obj 1081 717 r \$0-g3-s;
+#X obj 955 718 r \$0-g2-s;
+#X obj 440 1050 outlet g1;
+#X obj 955 1050 outlet g2;
+#X obj 426 1050 cnv 14 14 14 empty empty 1 4 8 0 12 #606060 #dcdcdc
+0;
+#X obj 940 1050 cnv 14 14 14 empty empty 2 4 8 0 12 #606060 #dcdcdc
+0;
+#X obj 1065 1050 cnv 14 14 14 empty empty 3 4 8 0 12 #606060 #dcdcdc
+0;
+#X obj 431 489 cnv 14 14 14 empty empty 0 4 8 0 12 #606060 #dcdcdc
+0;
+#X obj 467 791 f;
+#X obj 440 913 f;
+#X obj 549 913 f;
+#X obj 549 886 cnv 14 14 14 empty empty R 6 8 0 8 #fce0c4 #7c7c7c 0
+;
+#X obj 439 886 cnv 14 14 14 empty empty R 6 8 0 8 #fcc4c4 #7c7c7c 0
+;
+#X obj 466 766 cnv 14 14 14 empty empty R 6 8 0 8 #b8b8b8 #404040 0
+;
+#X obj 425 708 cnv 14 14 14 empty empty R 6 8 0 8 #dcdcdc #7c7c7c 0
+;
+#X obj 657 886 cnv 14 14 14 empty empty R 6 8 0 8 #fcfcc4 #7c7c7c 0
+;
+#X obj 1066 718 cnv 14 14 14 empty empty R 6 8 0 8 #00fc04 #7c7c7c
+0;
+#X obj 1174 716 cnv 14 14 14 empty empty R 6 8 0 8 #0400fc #dfdfdf
+0;
+#X obj 583 671 cnv 14 14 14 empty empty S 6 8 0 8 #00fc04 #7c7c7c 0
+;
+#X obj 506 671 cnv 14 14 14 empty empty S 6 8 0 8 #fc8000 #7c7c7c 0
+;
+#X obj 661 671 cnv 14 14 14 empty empty S 6 8 0 8 #0400fc #dfdfdf 0
+;
+#X obj 27 545 cnv 5 5 5 empty \$0-vari-tab-1 empty 2 10 0 14 #e0e0e0
+#404040 0;
+#X obj 37 545 cnv 5 5 5 empty empty empty 2 10 0 14 #b8b8b8 #404040
+0;
+#X obj 47 545 cnv 5 5 5 empty empty empty 2 10 0 14 #fcc4c4 #404040
+0;
+#X obj 57 545 cnv 5 5 5 empty empty empty 2 10 0 14 #fce0c4 #404040
+0;
+#X obj 945 748 cnv 5 5 5 empty \$0-vari-tab-1 empty 2 10 0 14 #fc8000
+#404040 0;
+#X obj 1065 750 cnv 5 5 5 empty \$0-vari-tab-1 empty 2 10 0 14 #00fc04
+#404040 0;
+#X obj 1180 750 cnv 5 5 5 empty \$0-vari-tab-1 empty 2 10 0 14 #0400fc
+#fcfcfc 0;
+#X obj 66 545 cnv 5 5 5 empty empty ☐ 0 2 0 14 #fcfcc4 #dfdfdf 0
+;
+#X obj 658 913 f;
+#X obj 440 729 t b b;
+#X obj 440 819 del;
+#X obj 440 957 pack f f f, f 37;
+#X msg 440 994 \$1 \, \$2 \$3;
+#X obj 440 1023 line;
+#X text 565 766 Delay time of gesture start;
+#X text 479 729 Gesture trigger;
+#X text 682 912 Gesture duration;
+#X text 574 912 Gesture destination value, f 11;
+#X text 464 912 Gesture start value, f 11;
+#X text 508 994 A gesture is a linear progression of values from a
+start point to an end point over a certain duration, f 26;
+#X obj 61 577 cnv 5 5 5 empty empty ❴ -3 3 0 22 #ffffff #ff8300 0
+;
+#X obj 55 602 cnv 10 5 5 empty empty ❴ 2 7 0 22 #ffffff #00ff04 0
+;
+#X obj 55 632 cnv 10 5 5 empty empty ❴ 2 7 0 22 #ffffff #0400ff 0
+;
+#N canvas 1440 -209 740 384 \$0-gesture2 0;
+#X obj 81 97 f;
+#X obj 54 219 f;
+#X obj 163 219 f;
+#X obj 273 219 f;
+#X obj 54 35 t b b;
+#X obj 54 125 del;
+#X obj 54 263 pack f f f, f 37;
+#X msg 54 300 \$1 \, \$2 \$3;
+#X obj 54 329 line;
+#X text 179 72 Delay time of gesture start;
+#X text 93 35 Gesture trigger;
+#X text 307 218 Gesture duration;
+#X text 188 218 Gesture destination value, f 11;
+#X text 78 218 Gesture start value, f 11;
+#X text 122 300 A gesture is a linear progression of values from a
+start point to an end point over a certain duration, f 26;
+#X obj 96 72 r \$0-g2del-s;
+#X obj 69 192 r \$0-g2start-s;
+#X obj 178 192 r \$0-g2end-s;
+#X obj 288 192 r \$0-g2dur-s;
+#X obj 54 350 outlet;
+#X obj 54 7 inlet;
+#X obj 81 71 cnv 14 14 14 empty empty R 6 8 0 8 #fc8000 #7c7c7c 0;
+#X obj 53 192 cnv 14 14 14 empty empty R 6 8 0 8 #fc8000 #7c7c7c 0
+;
+#X obj 163 192 cnv 14 14 14 empty empty R 6 8 0 8 #fc8000 #7c7c7c 0
+;
+#X obj 273 192 cnv 14 14 14 empty empty R 6 8 0 8 #fc8000 #7c7c7c 0
+;
+#X obj 54 149 t b b b b, f 55;
+#X obj 381 275 spigot;
+#X obj 381 296 s \$0-chain;
+#X text 413 171 GUI toggles [spigot] open and sends this gesture's
 trigger to the chain outlet, f 17;
-#X obj 912 1003 cnv 14 14 14 empty empty S 6 8 0 8 #e3c6ff #7c7c7c
+#X obj 503 242 cnv 14 14 14 empty empty S 6 8 0 8 #e3c6ff #7c7c7c 0
+;
+#X obj 414 242 r \$0-g2Chain-s;
+#X connect 0 0 5 1;
+#X connect 1 0 6 0;
+#X connect 2 0 6 1;
+#X connect 3 0 6 2;
+#X connect 4 0 5 0;
+#X connect 4 1 0 0;
+#X connect 5 0 25 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 19 0;
+#X connect 15 0 0 1;
+#X connect 16 0 1 1;
+#X connect 17 0 2 1;
+#X connect 18 0 3 1;
+#X connect 20 0 4 0;
+#X connect 25 0 1 0;
+#X connect 25 1 2 0;
+#X connect 25 2 3 0;
+#X connect 25 3 26 0;
+#X connect 26 0 27 0;
+#X connect 30 0 26 1;
+#X restore 955 747 pd \$0-gesture2;
+#X obj 940 718 cnv 14 14 14 empty empty R 6 8 0 8 #fc8000 #7c7c7c 0
+;
+#N canvas 1440 -209 740 384 \$0-gesture3 0;
+#X obj 71 97 f;
+#X obj 44 219 f;
+#X obj 153 219 f;
+#X obj 263 219 f;
+#X obj 44 35 t b b;
+#X obj 44 125 del;
+#X obj 44 263 pack f f f, f 37;
+#X msg 44 300 \$1 \, \$2 \$3;
+#X obj 44 329 line;
+#X text 169 72 Delay time of gesture start;
+#X text 83 35 Gesture trigger;
+#X text 297 218 Gesture duration;
+#X text 178 218 Gesture destination value, f 11;
+#X text 68 218 Gesture start value, f 11;
+#X text 112 300 A gesture is a linear progression of values from a
+start point to an end point over a certain duration, f 26;
+#X obj 44 350 outlet;
+#X obj 44 7 inlet;
+#X obj 71 71 cnv 14 14 14 empty empty R 6 8 0 8 #00ff04 #7c7c7c 0;
+#X obj 43 192 cnv 14 14 14 empty empty R 6 8 0 8 #00ff04 #7c7c7c 0
+;
+#X obj 153 192 cnv 14 14 14 empty empty R 6 8 0 8 #00ff04 #7c7c7c 0
+;
+#X obj 263 192 cnv 14 14 14 empty empty R 6 8 0 8 #00ff04 #7c7c7c 0
+;
+#X obj 86 72 r \$0-g3del-s;
+#X obj 59 192 r \$0-g3start-s;
+#X obj 168 192 r \$0-g3end-s;
+#X obj 278 192 r \$0-g3dur-s;
+#X obj 377 275 spigot;
+#X obj 377 296 s \$0-chain;
+#X text 409 171 GUI toggles [spigot] open and sends this gesture's
+trigger to the chain outlet, f 17;
+#X obj 499 242 cnv 14 14 14 empty empty S 6 8 0 8 #e3c6ff #7c7c7c 0
+;
+#X obj 44 149 t b b b b, f 56;
+#X obj 410 241 r \$0-g3Chain-s;
+#X connect 0 0 5 1;
+#X connect 1 0 6 0;
+#X connect 2 0 6 1;
+#X connect 3 0 6 2;
+#X connect 4 0 5 0;
+#X connect 4 1 0 0;
+#X connect 5 0 29 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 15 0;
+#X connect 16 0 4 0;
+#X connect 21 0 0 1;
+#X connect 22 0 1 1;
+#X connect 23 0 2 1;
+#X connect 24 0 3 1;
+#X connect 25 0 26 0;
+#X connect 29 0 1 0;
+#X connect 29 1 2 0;
+#X connect 29 2 3 0;
+#X connect 29 3 25 0;
+#X connect 30 0 25 1;
+#X restore 1080 745 pd \$0-gesture3;
+#N canvas 1440 -209 740 384 \$0-gesture3 0;
+#X obj 71 97 f;
+#X obj 44 219 f;
+#X obj 153 219 f;
+#X obj 263 219 f;
+#X obj 44 35 t b b;
+#X obj 44 125 del;
+#X obj 44 263 pack f f f, f 37;
+#X msg 44 300 \$1 \, \$2 \$3;
+#X obj 44 329 line;
+#X text 169 72 Delay time of gesture start;
+#X text 83 35 Gesture trigger;
+#X text 297 218 Gesture duration;
+#X text 178 218 Gesture destination value, f 11;
+#X text 68 218 Gesture start value, f 11;
+#X text 112 300 A gesture is a linear progression of values from a
+start point to an end point over a certain duration, f 26;
+#X obj 44 350 outlet;
+#X obj 44 7 inlet;
+#X obj 71 71 cnv 14 14 14 empty empty R 6 8 0 8 #0400ff #dfdfdf 0;
+#X obj 43 192 cnv 14 14 14 empty empty R 6 8 0 8 #0400ff #dfdfdf 0
+;
+#X obj 153 192 cnv 14 14 14 empty empty R 6 8 0 8 #0400ff #dfdfdf 0
+;
+#X obj 263 192 cnv 14 14 14 empty empty R 6 8 0 8 #0400ff #dfdfdf 0
+;
+#X obj 86 72 r \$0-g4del-s;
+#X obj 59 192 r \$0-g4start-s;
+#X obj 168 192 r \$0-g4end-s;
+#X obj 278 192 r \$0-g4dur-s;
+#X obj 377 275 spigot;
+#X obj 377 296 s \$0-chain;
+#X text 409 171 GUI toggles [spigot] open and sends this gesture's
+trigger to the chain outlet, f 17;
+#X obj 499 242 cnv 14 14 14 empty empty S 6 8 0 8 #e3c6ff #7c7c7c 0
+;
+#X obj 44 149 t b b b b, f 56;
+#X obj 410 242 r \$0-g4Chain-s;
+#X connect 0 0 5 1;
+#X connect 1 0 6 0;
+#X connect 2 0 6 1;
+#X connect 3 0 6 2;
+#X connect 4 0 5 0;
+#X connect 4 1 0 0;
+#X connect 5 0 29 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 15 0;
+#X connect 16 0 4 0;
+#X connect 21 0 0 1;
+#X connect 22 0 1 1;
+#X connect 23 0 2 1;
+#X connect 24 0 3 1;
+#X connect 25 0 26 0;
+#X connect 29 0 1 0;
+#X connect 29 1 2 0;
+#X connect 29 2 3 0;
+#X connect 29 3 25 0;
+#X connect 30 0 25 1;
+#X restore 1190 745 pd \$0-gesture3;
+#X obj 1080 1050 outlet g3;
+#X obj 1190 1050 outlet g4;
+#X obj 445 671 s \$0-g1-r;
+#X obj 430 671 cnv 14 14 14 empty empty S 6 8 0 8 #dcdcdc #7c7c7c 0
+;
+#X obj 430 618 cnv 14 14 14 empty empty R 6 8 0 8 #9c00fc #dfdfdf 0
+;
+#X obj 64 518 cnv 5 5 5 empty \$0-vari-tab-1 empty 2 10 0 14 #9c00fc
+#fcfcfc 0;
+#X obj 522 671 s \$0-g2-r;
+#X obj 599 671 s \$0-g3-r;
+#X obj 676 671 s \$0-g4-r;
+#X obj 445 639 t b b b b, f 39;
+#X obj 447 489 inlet all;
+#X obj 541 489 cnv 14 14 14 empty empty 1 4 8 0 12 #606060 #dcdcdc
 0;
-#X obj 1025 761 cnv 5 5 5 empty \$0-vari-tab-1 empty 2 10 0 14 #e3c6ff
+#X obj 557 489 inlet gest1;
+#X obj 1162 489 cnv 14 14 14 empty empty 2 4 8 0 12 #606060 #dcdcdc
+0;
+#X obj 1178 489 inlet gest2;
+#X obj 1262 489 cnv 14 14 14 empty empty 3 4 8 0 12 #606060 #dcdcdc
+0;
+#X obj 1278 489 inlet gest3;
+#X obj 1356 489 cnv 14 14 14 empty empty 4 4 8 0 12 #606060 #dcdcdc
+0;
+#X obj 1372 489 inlet gest4;
+#X obj 1262 531 cnv 14 14 14 empty empty S 6 8 0 8 #00fc04 #7c7c7c
+0;
+#X obj 1162 531 cnv 14 14 14 empty empty S 6 8 0 8 #fc8000 #7c7c7c
+0;
+#X obj 1357 531 cnv 14 14 14 empty empty S 6 8 0 8 #0400fc #dfdfdf
+0;
+#X obj 557 531 s \$0-g1-r;
+#X obj 542 531 cnv 14 14 14 empty empty S 6 8 0 8 #dcdcdc #7c7c7c 0
+;
+#X obj 1178 531 s \$0-g2-r;
+#X obj 1278 531 s \$0-g3-r;
+#X obj 1372 531 s \$0-g4-r;
+#X obj 432 531 cnv 14 14 14 empty empty S 6 8 0 8 #9c00fc #dfdfdf 0
+;
+#X obj 447 531 s \$0-allGest-s;
+#X obj 1175 1050 cnv 14 14 14 empty empty 4 4 8 0 12 #606060 #dcdcdc
+0;
+#X text 76 489 All;
+#X text 139 489 G1;
+#X text 212 489 G2;
+#X text 283 489 G3;
+#X text 349 489 G4;
+#X text 219 705 G3;
+#X text 287 705 G4;
+#X text 76 705 G1;
+#X text 145 705 G2;
+#X obj 78 682 cnv 15 285 20 empty empty Gesture 20 9 0 14 #e0e0e0 #404040
+0;
+#X obj 841 531 cnv 14 14 14 empty empty S 6 8 0 8 #fce0c4 #7c7c7c 0
+;
+#X obj 734 531 cnv 14 14 14 empty empty S 6 8 0 8 #fcc4c4 #7c7c7c 0
+;
+#X obj 935 531 cnv 14 14 14 empty empty S 6 8 0 8 #fcfcc4 #7c7c7c 0
+;
+#X obj 637 531 cnv 14 14 14 empty empty S 6 8 0 8 #b8b8b8 #404040 0
+;
+#X obj 653 531 s \$0-g1del-r;
+#X obj 750 531 s \$0-g1start-r;
+#X obj 856 531 s \$0-g1end-r;
+#X obj 951 531 s \$0-g1dur-r;
+#N canvas 1506 356 1215 428 g2routing 0;
+#X obj 36 57 inlet;
+#X obj 99 110 cnv 14 14 14 empty empty S 6 8 0 8 #ff8300 #404040 0
+;
+#X obj 36 110 outlet;
+#X obj 194 110 cnv 14 14 14 empty empty S 6 8 0 8 #ff8300 #404040 0
+;
+#X obj 301 110 cnv 14 14 14 empty empty S 6 8 0 8 #ff8300 #404040 0
+;
+#X obj 397 110 cnv 14 14 14 empty empty S 6 8 0 8 #ff8300 #404040 0
+;
+#X obj 115 110 s \$0-g2del-r;
+#X obj 210 110 s \$0-g2start-r;
+#X obj 316 110 s \$0-g2end-r;
+#X obj 412 110 s \$0-g2dur-r;
+#X obj 501 110 s \$0-g2Chain-r;
+#X obj 36 82 route bang delay start end dur chain, f 92;
+#X connect 0 0 11 0;
+#X connect 11 0 2 0;
+#X connect 11 1 6 0;
+#X connect 11 2 7 0;
+#X connect 11 3 8 0;
+#X connect 11 4 9 0;
+#X connect 11 5 10 0;
+#X restore 1178 510 pd g2routing;
+#N canvas 1593 -10 698 218 g3routing 0;
+#X obj 36 57 inlet;
+#X obj 99 110 cnv 14 14 14 empty empty S 6 8 0 8 #00ff04 #404040 0
+;
+#X obj 36 110 outlet;
+#X obj 194 110 cnv 14 14 14 empty empty S 6 8 0 8 #00ff04 #404040 0
+;
+#X obj 301 110 cnv 14 14 14 empty empty S 6 8 0 8 #00ff04 #404040 0
+;
+#X obj 397 110 cnv 14 14 14 empty empty S 6 8 0 8 #00ff04 #404040 0
+;
+#X obj 115 110 s \$0-g3del-r;
+#X obj 210 110 s \$0-g3start-r;
+#X obj 316 110 s \$0-g3end-r;
+#X obj 412 110 s \$0-g3dur-r;
+#X obj 36 82 route bang delay start end dur chain, f 91;
+#X obj 496 111 s \$0-g3Chain-r;
+#X connect 0 0 10 0;
+#X connect 10 0 2 0;
+#X connect 10 1 6 0;
+#X connect 10 2 7 0;
+#X connect 10 3 8 0;
+#X connect 10 4 9 0;
+#X connect 10 5 11 0;
+#X restore 1278 510 pd g3routing;
+#N canvas 1593 -10 595 218 g4routing 0;
+#X obj 16 57 inlet;
+#X obj 79 110 cnv 14 14 14 empty empty S 6 8 0 8 #0400ff #dfdfdf 0
+;
+#X obj 16 110 outlet;
+#X obj 174 110 cnv 14 14 14 empty empty S 6 8 0 8 #0400ff #dfdfdf 0
+;
+#X obj 281 110 cnv 14 14 14 empty empty S 6 8 0 8 #0400ff #dfdfdf 0
+;
+#X obj 377 110 cnv 14 14 14 empty empty S 6 8 0 8 #0400ff #dfdfdf 0
+;
+#X obj 95 110 s \$0-g4del-r;
+#X obj 190 110 s \$0-g4start-r;
+#X obj 296 110 s \$0-g4end-r;
+#X obj 392 110 s \$0-g4dur-r;
+#X obj 16 82 route bang delay start end dur chain, f 91;
+#X obj 476 111 s \$0-g4Chain-r;
+#X connect 0 0 10 0;
+#X connect 10 0 2 0;
+#X connect 10 1 6 0;
+#X connect 10 2 7 0;
+#X connect 10 3 8 0;
+#X connect 10 4 9 0;
+#X connect 10 5 11 0;
+#X restore 1372 512 pd g4routing;
+#X obj 1168 513 cnv 5 5 5 empty \$0-vari-tab-1 empty 2 10 0 14 #fc8000
 #404040 0;
-#X obj 1145 761 cnv 5 5 5 empty \$0-vari-tab-1 empty 2 10 0 14 #e3c6ff
+#X obj 1265 513 cnv 5 5 5 empty \$0-vari-tab-1 empty 2 10 0 14 #00fc04
 #404040 0;
-#X obj 1260 761 cnv 5 5 5 empty \$0-vari-tab-1 empty 2 10 0 14 #e3c6ff
+#X obj 1360 513 cnv 5 5 5 empty \$0-vari-tab-1 empty 2 10 0 14 #0400fc
+#fcfcfc 0;
+#X text 559 617 Trigger all gestures simultaneously (delays still affect
+start times), f 69;
+#X text 558 555 [route] allows the 3 trigger inlets to also accept
+the messages "delay" \, "start" \, "end" \, and "dur" followed by a
+float value to set the paramters of each gesture externally, f 74
+;
+#X text 1451 510 <- all other routing, f 8;
+#X obj 445 618 r \$0-allGest-s;
+#X obj 440 843 t b b b b, f 55;
+#X text 331 705 CHAIN;
+#X obj 767 980 spigot;
+#X obj 800 947 r \$0-g1Chain-s;
+#X obj 767 1001 s \$0-chain;
+#X text 799 876 GUI toggles [spigot] open and sends this gesture's
+trigger to the chain outlet, f 17;
+#X obj 832 1001 cnv 14 14 14 empty empty S 6 8 0 8 #e3c6ff #7c7c7c
+0;
+#X obj 945 759 cnv 5 5 5 empty \$0-vari-tab-1 empty 2 10 0 14 #e3c6ff
 #404040 0;
-#X obj 1434 1027 r \$0-chain;
-#X obj 1434 1048 outlet chain;
-#X obj 1419 1048 cnv 14 14 14 empty empty 5 4 8 0 12 #606060 #dcdcdc
+#X obj 1065 759 cnv 5 5 5 empty \$0-vari-tab-1 empty 2 10 0 14 #e3c6ff
+#404040 0;
+#X obj 1180 759 cnv 5 5 5 empty \$0-vari-tab-1 empty 2 10 0 14 #e3c6ff
+#404040 0;
+#X obj 1354 1025 r \$0-chain;
+#X obj 1354 1046 outlet chain;
+#X obj 1339 1046 cnv 14 14 14 empty empty 5 4 8 0 12 #606060 #dcdcdc
 0;
-#X obj 1499 1027 cnv 14 14 14 empty empty R 6 8 0 8 #e3c6ff #7c7c7c
+#X obj 1419 1025 cnv 14 14 14 empty empty R 6 8 0 8 #e3c6ff #7c7c7c
 0;
-#X obj 390 554 cnv 5 2 100 empty empty empty 20 12 0 14 #c7c6ff #404040
+#X obj 390 552 cnv 5 2 100 empty empty empty 20 12 0 14 #c7c6ff #404040
 0;
-#X obj 375 548 cnv 5 5 5 empty empty ─ -2 3 0 30 #fcfcfc #c7c6ff
+#X obj 375 546 cnv 5 5 5 empty empty ─ -2 3 0 30 #fcfcfc #c7c6ff
 0;
-#X obj 375 582 cnv 5 5 5 empty empty ─ -2 3 0 30 #fcfcfc #c7c6ff
+#X obj 375 580 cnv 5 5 5 empty empty ─ -2 3 0 30 #fcfcfc #c7c6ff
 0;
-#X obj 375 615 cnv 5 5 5 empty empty ─ -2 3 0 30 #fcfcfc #c7c6ff
+#X obj 375 613 cnv 5 5 5 empty empty ─ -2 3 0 30 #fcfcfc #c7c6ff
 0;
-#X obj 375 650 cnv 5 5 5 empty empty ─ -2 3 0 30 #fcfcfc #c7c6ff
+#X obj 375 648 cnv 5 5 5 empty empty ─ -2 3 0 30 #fcfcfc #c7c6ff
 0;
 #N canvas 2340 183 606 253 chainTglDisp 0;
 #X obj 38 51 r \$0-g1Chain-s;
@@ -2898,116 +2905,108 @@ other gestures to not be able to send to the chain output, f 16;
 #X connect 18 0 21 0;
 #X connect 22 0 4 0;
 #X connect 23 0 3 0;
-#X restore 1425 752 pd chainTglDisp;
-#X obj 1524 756 cnv 5 5 5 empty \$0-vari-tab-1 empty 2 10 0 14 #c7c6ff
+#X restore 1345 750 pd chainTglDisp;
+#X obj 1444 754 cnv 5 5 5 empty \$0-vari-tab-1 empty 2 10 0 14 #c7c6ff
 #404040 0;
-#X obj 1532 1045 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
-#X text 24 379 22/04/04 - ver 0.2, f 21;
-#X obj 91 762 cnv 4 250 1 empty empty **\\\ TO\\\ DO\\\ ** 0 -6 0 12
-#ff0400 #ff0400 0;
-#X text 88 775 • Chain settings need to be set-able from the gesture
-inlets, f 39;
-#X obj 637 512 route bang delay start end dur chain, f 97;
-#X obj 1129 533 s \$0-g1Chain-r;
-#X obj 968 949 cnv 14 14 14 empty empty R 6 8 0 8 #c7c6ff #606060 0
+#X obj 557 510 route bang delay start end dur chain, f 97;
+#X obj 1049 531 s \$0-g1Chain-r;
+#X obj 888 947 cnv 14 14 14 empty empty R 6 8 0 8 #c7c6ff #606060 0
 ;
-#X obj 1113 534 cnv 14 14 14 empty empty S 6 8 0 8 #c7c6ff #606060
+#X obj 1033 532 cnv 14 14 14 empty empty S 6 8 0 8 #c7c6ff #606060
 0;
-#X obj 395 607 cnv 14 14 14 empty empty R 6 8 0 8 #c7c6ff #606060 0
+#X obj 395 605 cnv 14 14 14 empty empty R 6 8 0 8 #c7c6ff #606060 0
 ;
-#X obj 396 581 cnv 14 14 14 empty empty S 6 8 0 8 #c7c6ff #606060 0
+#X obj 396 579 cnv 14 14 14 empty empty S 6 8 0 8 #c7c6ff #606060 0
 ;
-#X obj 77 537 cnv 15 285 32 empty empty empty 20 9 0 14 #e3c6ff #404040
+#X obj 77 535 cnv 15 285 32 empty empty empty 20 9 0 14 #e3c6ff #404040
 0;
-#X obj 77 574 cnv 15 285 32 empty empty empty 20 9 0 14 #e3c6ff #404040
+#X obj 77 572 cnv 15 285 32 empty empty empty 20 9 0 14 #e3c6ff #404040
 0;
-#X obj 77 610 cnv 15 285 32 empty empty empty 20 9 0 14 #e3c6ff #404040
+#X obj 77 608 cnv 15 285 32 empty empty empty 20 9 0 14 #e3c6ff #404040
 0;
-#X obj 77 646 cnv 15 285 32 empty empty empty 20 9 0 14 #e3c6ff #404040
+#X obj 77 644 cnv 15 285 32 empty empty empty 20 9 0 14 #e3c6ff #404040
 0;
-#X obj 82 541 bng 15 250 50 0 \$0-g1-s \$0-g1-r Gesture\\\ 1 17 7 0
+#X obj 82 539 bng 15 250 50 0 \$0-g1-s \$0-g1-r Gesture\\\ 1 17 7 0
 10 #fcfcfc #000000 #000000;
-#X obj 82 577 bng 15 250 50 0 \$0-g2-s \$0-g2-r Gesture\\\ 2 17 7 0
+#X obj 82 575 bng 15 250 50 0 \$0-g2-s \$0-g2-r Gesture\\\ 2 17 7 0
 10 #fcfcfc #000000 #000000;
-#X obj 82 613 bng 15 250 50 0 \$0-g3-s \$0-g3-r Gesture\\\ 3 17 7 0
+#X obj 82 611 bng 15 250 50 0 \$0-g3-s \$0-g3-r Gesture\\\ 3 17 7 0
 10 #fcfcfc #000000 #000000;
-#X obj 82 649 bng 15 250 50 0 \$0-g4-s \$0-g4-r Gesture\\\ 4 17 7 0
+#X obj 82 647 bng 15 250 50 0 \$0-g4-s \$0-g4-r Gesture\\\ 4 17 7 0
 10 #fcfcfc #000000 #000000;
-#X floatatom 200 540 5 0 0 3 StVal \$0-g1start-r \$0-g1start-s 0;
-#X floatatom 240 540 5 0 0 3 EndVal \$0-g1end-r \$0-g1end-s 0;
-#X floatatom 280 540 5 0 0 3 Dur \$0-g1dur-r \$0-g1dur-s 0;
-#X floatatom 200 576 5 0 0 3 StVal \$0-g2start-r \$0-g2start-s 0;
-#X floatatom 240 576 5 0 0 3 EndVal \$0-g2end-r \$0-g2end-s 0;
-#X floatatom 280 576 5 0 0 3 Dur \$0-g2dur-r \$0-g2dur-s 0;
-#X floatatom 200 612 5 0 0 3 StVal \$0-g3start-r \$0-g3start-s 0;
-#X floatatom 240 612 5 0 0 3 EndVal \$0-g3end-r \$0-g3end-s 0;
-#X floatatom 280 612 5 0 0 3 Dur \$0-g3dur-r \$0-g3dur-s 0;
-#X floatatom 200 648 5 0 0 3 StVal \$0-g4start-r \$0-g4start-s 0;
-#X floatatom 240 648 5 0 0 3 EndVal \$0-g4end-r \$0-g4end-s 0;
-#X floatatom 280 648 5 0 0 3 Dur \$0-g4dur-r \$0-g4dur-s 0;
-#X floatatom 160 540 5 0 0 3 Delay \$0-g1del-r \$0-g1del-s 0;
-#X floatatom 160 576 5 0 0 3 Delay \$0-g2del-r \$0-g2del-s 0;
-#X floatatom 160 612 5 0 0 3 Delay \$0-g3del-r \$0-g3del-s 0;
-#X floatatom 160 648 5 0 0 3 Delay \$0-g4del-r \$0-g4del-s 0;
-#X obj 324 540 tgl 14 0 \$0-g1Chain-s \$0-g1Chain-r Chain 0 24 0 10
+#X floatatom 200 538 5 0 0 3 StVal \$0-g1start-r \$0-g1start-s 0;
+#X floatatom 240 538 5 0 0 3 EndVal \$0-g1end-r \$0-g1end-s 0;
+#X floatatom 280 538 5 0 0 3 Dur \$0-g1dur-r \$0-g1dur-s 0;
+#X floatatom 200 574 5 0 0 3 StVal \$0-g2start-r \$0-g2start-s 0;
+#X floatatom 240 574 5 0 0 3 EndVal \$0-g2end-r \$0-g2end-s 0;
+#X floatatom 280 574 5 0 0 3 Dur \$0-g2dur-r \$0-g2dur-s 0;
+#X floatatom 200 610 5 0 0 3 StVal \$0-g3start-r \$0-g3start-s 0;
+#X floatatom 240 610 5 0 0 3 EndVal \$0-g3end-r \$0-g3end-s 0;
+#X floatatom 280 610 5 0 0 3 Dur \$0-g3dur-r \$0-g3dur-s 0;
+#X floatatom 200 646 5 0 0 3 StVal \$0-g4start-r \$0-g4start-s 0;
+#X floatatom 240 646 5 0 0 3 EndVal \$0-g4end-r \$0-g4end-s 0;
+#X floatatom 280 646 5 0 0 3 Dur \$0-g4dur-r \$0-g4dur-s 0;
+#X floatatom 160 538 5 0 0 3 Delay \$0-g1del-r \$0-g1del-s 0;
+#X floatatom 160 574 5 0 0 3 Delay \$0-g2del-r \$0-g2del-s 0;
+#X floatatom 160 610 5 0 0 3 Delay \$0-g3del-r \$0-g3del-s 0;
+#X floatatom 160 646 5 0 0 3 Delay \$0-g4del-r \$0-g4del-s 0;
+#X obj 324 538 tgl 14 0 \$0-g1Chain-s \$0-g1Chain-r Chain 0 24 0 10
 #fcfcfc #000000 #000000 0 1;
-#X obj 324 576 tgl 14 0 \$0-g2Chain-s \$0-g2Chain-r Chain 0 24 0 10
+#X obj 324 574 tgl 14 0 \$0-g2Chain-s \$0-g2Chain-r Chain 0 24 0 10
 #fcfcfc #000000 #000000 0 1;
-#X obj 324 612 tgl 14 0 \$0-g3Chain-s \$0-g3Chain-r Chain 0 24 0 10
+#X obj 324 610 tgl 14 0 \$0-g3Chain-s \$0-g3Chain-r Chain 0 24 0 10
 #fcfcfc #000000 #000000 0 1;
-#X obj 324 648 tgl 14 0 \$0-g4Chain-s \$0-g4Chain-r Chain 0 24 0 10
+#X obj 324 646 tgl 14 0 \$0-g4Chain-s \$0-g4Chain-r Chain 0 24 0 10
 #fcfcfc #000000 #000000 0 1;
-#X obj 77 515 cnv 15 285 18 empty empty empty 20 9 0 14 #e3c6ff #404040
+#X obj 77 513 cnv 15 285 18 empty empty empty 20 9 0 14 #e3c6ff #404040
 0;
-#X obj 82 517 bng 15 250 50 0 \$0-allGest-s \$0-allGest-r All\\\ Gestures
+#X obj 82 515 bng 15 250 50 0 \$0-allGest-s \$0-allGest-r All\\\ Gestures
 17 7 0 10 #fcfcfc #000000 #000000;
-#X connect 0 0 16 1;
-#X connect 1 0 15 1;
-#X connect 2 0 36 0;
-#X connect 3 0 35 1;
-#X connect 4 0 14 1;
-#X connect 5 0 53 0;
-#X connect 6 0 52 0;
-#X connect 7 0 50 0;
-#X connect 14 0 37 1;
-#X connect 15 0 38 0;
-#X connect 16 0 38 1;
-#X connect 35 0 38 2;
-#X connect 36 0 37 0;
-#X connect 36 1 14 0;
-#X connect 37 0 152 0;
-#X connect 38 0 39 0;
-#X connect 39 0 40 0;
-#X connect 40 0 8 0;
-#X connect 50 0 9 0;
-#X connect 52 0 54 0;
-#X connect 53 0 55 0;
-#X connect 63 0 56 0;
-#X connect 63 1 60 0;
-#X connect 63 2 61 0;
-#X connect 63 3 62 0;
-#X connect 64 0 82 0;
-#X connect 66 0 177 0;
-#X connect 68 0 111 0;
-#X connect 70 0 112 0;
-#X connect 72 0 113 0;
-#X connect 111 0 78 0;
-#X connect 112 0 79 0;
-#X connect 113 0 80 0;
-#X connect 121 0 63 0;
-#X connect 152 0 15 0;
-#X connect 152 1 16 0;
-#X connect 152 2 35 0;
-#X connect 152 3 154 0;
-#X connect 154 0 156 0;
-#X connect 155 0 154 1;
-#X connect 162 0 163 0;
-#X connect 162 0 173 0;
-#X connect 177 0 76 0;
-#X connect 177 1 107 0;
-#X connect 177 2 108 0;
-#X connect 177 3 109 0;
-#X connect 177 4 110 0;
-#X connect 177 5 178 0;
+#X connect 41 0 57 1;
+#X connect 42 0 56 1;
+#X connect 43 0 77 0;
+#X connect 44 0 76 1;
+#X connect 45 0 55 1;
+#X connect 46 0 94 0;
+#X connect 47 0 93 0;
+#X connect 48 0 91 0;
+#X connect 55 0 78 1;
+#X connect 56 0 79 0;
+#X connect 57 0 79 1;
+#X connect 76 0 79 2;
+#X connect 77 0 78 0;
+#X connect 77 1 55 0;
+#X connect 78 0 153 0;
+#X connect 79 0 80 0;
+#X connect 80 0 81 0;
+#X connect 81 0 49 0;
+#X connect 91 0 50 0;
+#X connect 93 0 95 0;
+#X connect 94 0 96 0;
+#X connect 104 0 97 0;
+#X connect 104 1 101 0;
+#X connect 104 2 102 0;
+#X connect 104 3 103 0;
+#X connect 105 0 123 0;
+#X connect 107 0 174 0;
+#X connect 109 0 143 0;
+#X connect 111 0 144 0;
+#X connect 113 0 145 0;
+#X connect 143 0 119 0;
+#X connect 144 0 120 0;
+#X connect 145 0 121 0;
+#X connect 152 0 104 0;
+#X connect 153 0 56 0;
+#X connect 153 1 57 0;
+#X connect 153 2 76 0;
+#X connect 153 3 155 0;
+#X connect 155 0 157 0;
+#X connect 156 0 155 1;
+#X connect 163 0 164 0;
+#X connect 174 0 117 0;
+#X connect 174 1 139 0;
+#X connect 174 2 140 0;
+#X connect 174 3 141 0;
+#X connect 174 4 142 0;
+#X connect 174 5 175 0;
 #X coords 0 -1 1 1 290 232 2 75 490;
