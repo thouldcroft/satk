@@ -1,8 +1,8 @@
 #N canvas 39 38 1473 916 10;
-#X obj 109 252 vradio 15 1 0 8 \$0-shape-s \$0-shape-r Shape -5 -6 0 10 #fcfcfc #000000 #000000 0;
-#X obj 242 253 vsl 15 128 0.01 100 1 0 \$0-volSlider-s \$0-volSlider-r Vol -1 -7 0 10 #ffffff #000000 #000000 0 1;
-#X obj 202 252 vsl 15 128 0 1 0 0 \$0-freqSlider-s \$0-freqSlider-r Freq -5 -7 0 10 #ffffff #000000 #000000 0 1;
-#X obj 162 251 vradio 15 1 0 9 \$0-range-s \$0-range-r Range -5 -6 0 10 #fcfcfc #000000 #000000 0;
+#X obj 109 252 vradio 15 1 0 8 \$0-shape-s \$0-shape-r Shape -5 -6 0 10 #c6feff #000000 #000000 0;
+#X obj 242 253 vsl 15 128 0.01 100 1 0 \$0-volSlider-s \$0-volSlider-r Vol -1 -7 0 10 #c6feff #000000 #000000 0 1;
+#X obj 202 252 vsl 15 128 0 1 0 0 \$0-freqSlider-s \$0-freqSlider-r Freq -5 -7 0 10 #c6feff #000000 #000000 0 1;
+#X obj 162 251 vradio 15 1 0 9 \$0-range-s \$0-range-r Range -5 -6 0 10 #c6feff #000000 #000000 0;
 #X obj 397 625 s \$0-gain1;
 #X obj 49 569 r \$0-freq1;
 #X obj 103 609 r \$0-gain1;
@@ -2701,13 +2701,13 @@
 #X obj 632 946 s \$0-amAmtNumbox-r;
 #X obj 516 946 s \$0-amAmtSlider-r;
 #X obj 632 892 r \$0-amAmtNumbox-s;
-#X obj 275 261 vsl 15 55 0 1 0 0 \$0-fmAmtSlider-s \$0-fmAmtSlider-r Amt 0 -9 0 10 #ffffff #000000 #000000 0 1;
+#X obj 275 261 vsl 15 55 0 1 0 0 \$0-fmAmtSlider-s \$0-fmAmtSlider-r Amt 0 -9 0 10 #c6feff #000000 #000000 0 1;
 #X text 274 236 FM;
 #X text 274 365 AM;
 #X floatatom 270 321 5 0 500 1 - \$0-fmAmtNumbox-r \$0-fmAmtNumbox-s 8;
 #X floatatom 271 451 5 0 250 1 - \$0-amAmtNumbox-r \$0-amAmtNumbox-s 8;
-#X obj 275 391 vsl 15 55 0 1 0 0 \$0-amAmtSlider-s \$0-amAmtSlider-r Amt 0 -9 0 10 #ffffff #000000 #000000 0 1;
-#X obj 110 403 hsl 50 15 0 1 0 0 \$0-glideSlider-s \$0-glideSlider-r Glide -2 -6 0 10 #ffffff #000000 #000000 0 1;
+#X obj 275 391 vsl 15 55 0 1 0 0 \$0-amAmtSlider-s \$0-amAmtSlider-r Amt 0 -9 0 10 #c6feff #000000 #000000 0 1;
+#X obj 110 403 hsl 50 15 0 1 0 0 \$0-glideSlider-s \$0-glideSlider-r Glide -2 -6 0 10 #c6feff #000000 #000000 0 1;
 #X floatatom 107 420 5 0 0 1 - \$0-glideNumbox-r \$0-glideNumbox-s 8;
 #N canvas 444 38 1068 755 numSlideSet 0;
 #X obj 17 541 cnv 14 18 14 empty empty 0 2 8 0 12 #606060 #dcdcdc 0;
@@ -2791,7 +2791,7 @@
 #X obj 394 755 cnv 5 400 1 empty empty empty 20 12 0 14 #7c7c7c #404040 0;
 #X obj 394 868 cnv 5 400 1 empty empty empty 20 12 0 14 #7c7c7c #404040 0;
 #X obj 393 971 cnv 5 400 1 empty empty empty 20 12 0 14 #7c7c7c #404040 0;
-#X obj 198 449 vradio 15 1 0 2 \$0-polarity-s \$0-polarity-r Polarity 0 -6 0 10 #fcfcfc #000000 #000000 0;
+#X obj 198 449 vradio 15 1 0 2 \$0-polarity-s \$0-polarity-r Polarity 0 -6 0 10 #c6feff #000000 #000000 0;
 #X text 214 449 Bi;
 #X text 214 463 Uni;
 #N canvas 1062 279 450 544 polarityChoice 0;
@@ -3106,7 +3106,7 @@
 #X obj 690 321 cnv 14 14 14 empty empty R 6 8 0 8 #c4fcc4 #7c7c7c 0;
 #X obj 690 361 cnv 14 14 14 empty empty S 6 8 0 8 #c4fcc4 #7c7c7c 0;
 #X text 389 208 ---------------------------------------------------------;
-#X obj 107 465 tgl 15 0 \$0-embed-s \$0-embed-r Embed 17 7 0 10 #ffffff #000000 #000000 0 1;
+#X obj 107 465 tgl 15 0 \$0-embed-s \$0-embed-r Embed 17 7 0 10 #c6feff #000000 #000000 0 1;
 #X obj 747 131 s \$0-fmAmtNumbox-r;
 #X obj 928 129 s \$0-amAmtNumbox-r;
 #X obj 285 222 cnv 10 5 12 empty empty Pol 0 6 0 8 #dfdfdf #404040 0;

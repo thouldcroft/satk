@@ -1,4 +1,4 @@
-#N canvas 500 38 1012 916 10;
+#N canvas 339 38 1025 916 10;
 #X obj 342 494 noise~;
 #X text 173 546 Change cut-off frequency-->;
 #X text 6 566 Adjust Q (aka bandwidth - for bandpass filter only) -->;
@@ -149,9 +149,9 @@
 #X text 197 241 Filtered signal;
 #X text 121 280 None;
 #X obj 342 515 tdh.lib/tdh.sigproc.mmfilt~;
-#X obj 213 679 tdh.lib/tdh.util.spectrograph~;
+#X obj 342 641 tdh.lib/tdh.util.spectrograph~;
 #X text 17 48 Travis Houldcroft || travishouldcroft.com;
-#X obj 3 1 cnv 15 1000 40 empty \$0-helpPatchTitleBar tdh.sigproc.mmfilt~ 9 20 0 18 #f430f0 #404040 0;
+#X obj 3 1 cnv 15 1000 40 empty \$0-helpPatchTitleBar tdh.sigproc.mmfilt~ 9 20 0 18 #3c50fc #a0a0a0 0;
 #N canvas 891 319 621 362 help-init 0;
 #N canvas 77 38 1435 916 cnv-set 0;
 #N canvas 1440 23 349 258 canvas-ctrl 0;
@@ -1753,7 +1753,7 @@
 #X restore 52 150 pd how-to-use-canvas-ctrl;
 #X text 268 150 Click here to explore how to change the canvas properties with a message, f 72;
 #X obj 244 155 cnv 5 5 5 empty empty ⟵ -3 3 0 30 #fcfcfc #9c00fc 0;
-#X msg 343 319 doll 1 \, rec helpPatchTitleBar \, size 15 \, visw 701 \, vish 40 \, lblfon 0 \, lblsz 18 \, lblx 9 \, lbly 20 \, bgclr 19 \, lblclr 2, f 123;
+#X msg 343 319 doll 1 \, rec helpPatchTitleBar \, size 15 \, visw 701 \, vish 40 \, lblfon 0 \, lblsz 18 \, lblx 9 \, lbly 20 \, bgclr 18 \, lblclr 1, f 123;
 #X connect 2 0 15 1;
 #X connect 3 0 15 0;
 #X connect 4 0 14 0;
@@ -1816,7 +1816,7 @@
 #X obj 3 413 cnv 2 1000 3 empty \$0-helpPatchSecLabelNotes Notes 20 15 0 16 #a0a0a0 #202020 0;
 #X text 21 445 Notes;
 #X obj 3 303 cnv 2 1000 3 empty \$0-helpPatchSecLabelArgs Arguments 20 15 0 16 #a0a0a0 #202020 0;
-#X obj 3 1 cnv 15 1000 40 empty \$0-helpPatchTitleBar tdh.sigproc.mmfilt~ 9 20 0 18 #f430f0 #404040 0;
+#X obj 3 1 cnv 15 1000 40 empty \$0-helpPatchTitleBar tdh.sigproc.mmfilt~ 9 20 0 18 #3c50fc #a0a0a0 0;
 #X obj 125 201 cnv 14 18 14 empty empty 1 2 8 0 12 #9f9f9f #ffffff 0;
 #X text 227 312 Description;
 #X text 177 312 (type);
@@ -1849,8 +1849,7 @@
 #X text 147 140 (type);
 #X restore 816 49 pd reference;
 #X obj 885 96 bng 15 250 50 0 \$0-showRefButton empty Show\ Reference 17 8 0 12 #c7c6ff #202020 #404040;
-#X obj 843 5 cnv 8 150 32 empty empty SATK 14 8 0 14 #dfdfdf #131255 0;
-#X obj 843 22 cnv 8 150 16 empty empty Sound\ Art\ Tool-Kit 14 8 0 10 #dfdfdf #131255 0;
+#X obj 916 22 cnv 8 83 16 empty empty tdh.lib 14 8 0 14 #dfdfdf #131255 0;
 #X connect 0 0 36 0;
 #X connect 36 0 24 0;
 #X connect 36 0 24 1;
