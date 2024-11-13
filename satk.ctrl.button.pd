@@ -2077,7 +2077,7 @@
 #X connect 19 0 9 0;
 #X connect 19 1 4 0;
 #X restore 609 99 pd savestate1;
-#X floatatom 29 179 5 0 0 1 MIDI\ Pitch pitch_\$0-r pitch_\$0-s 0;
+#X floatatom 29 179 5 0 0 1 MIDI\ Trigger pitch_\$0-r pitch_\$0-s 0;
 #X obj 349 159 notein;
 #X obj 349 189 stripnote;
 #X obj 349 249 sel;
@@ -2091,7 +2091,7 @@
 #X obj 339 129 cnv 7 9 14 empty empty S 2 7 0 8 #9c00fc #ffffff 0;
 #X obj 169 129 cnv 7 9 14 empty empty S 2 7 0 8 #0400fc #ffffff 0;
 #X obj 29 198 tgl 16 0 \$0-embed-s \$0-embed-r Embed 20 8 0 10 #c6feff #000000 #000000 0 1;
-#X obj 102 104 cnv 10 9 9 empty empty Pitch 0 6 0 8 #dfdfdf #404040 0;
+#X obj 102 104 cnv 10 9 9 empty empty TrPch 0 6 0 8 #dfdfdf #404040 0;
 #X connect 12 0 16 0;
 #X connect 17 0 13 0;
 #X connect 21 0 22 0;

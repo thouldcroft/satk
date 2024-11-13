@@ -11,7 +11,7 @@
 #X obj 135 626 r \$0-gain1;
 #X obj 54 726 outlet~;
 #X obj 46 136 loadbang;
-#N canvas 40 38 1472 562 oscillators1 0;
+#N canvas 40 38 1472 562 oscillators1 1;
 #X obj 2 360 osc~;
 #X obj 1171 352 noise~;
 #X msg 52 100 0;
@@ -323,15 +323,15 @@
 #X connect 61 0 70 0;
 #X connect 62 0 68 0;
 #X connect 63 0 69 0;
-#X connect 64 0 68 1;
-#X connect 65 0 69 1;
+#X connect 64 0 68 2;
+#X connect 65 0 69 2;
 #X connect 66 0 63 1;
 #X connect 66 0 62 1;
 #X connect 66 0 61 1;
 #X connect 66 0 60 1;
 #X connect 66 0 59 1;
 #X connect 66 0 56 1;
-#X connect 67 0 70 1;
+#X connect 67 0 70 2;
 #X connect 68 0 8 0;
 #X connect 69 0 9 0;
 #X connect 70 0 7 0;
